@@ -1,0 +1,74 @@
+.benefits
+    background-repeat: no-repeat
+    background-position: -463px 228px
+    &__inner
+    &__content
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__text
+        max-width: rem(640px)
+        font-size: rem(20px)
+        font-family: $font-family-montserrat
+        padding-left: rem(36px)
+        +r(1439)
+            font-size: rem(16px)
+            margin-right: rem(30px)
+    &__btns
+        margin-bottom: rem(70px)
+    &__wrap
+        margin-bottom: rem(15px)
+    &__title
+        margin-bottom: rem(27px)
+        font-size: rem(30px)
+        font-weight: 700
+        +r(1439)
+            font-size: rem(24px)
+    &__list
+        margin-bottom: 0
+    &__item
+        font-size: rem(18px)
+        line-height: 2.5
+        padding-left: rem(29px)
+        font-weight: 700
+        +r(1439)
+            font-size: rem(14px)
+        &:not(:last-child)
+            margin-bottom: 0
+        .icon
+            color: $gray-900
+        span
+            transform: none
+            top: 14px
+    &__slider
+        padding-right: rem(88px)
+        +r(1439)
+            padding-right: rem(44px)
+
+.benefits-slider
+    position: relative
+    &__arrows
+        position: absolute
+        display: flex
+        left: 0
+        bottom: 0
+    &__prev,
+    &__next
+        width: rem(61px)
+        height: rem(61px)
+        background-color: $white
+        text-align: center
+        vertical-align: middle
+        line-height: rem(61px)
+        color: $gray-900
+    &__prev
+        margin-right: rem(2px)
+    &__wrap
+        max-width: rem(780px)
+    &__item
+        img
+            display: block
+            max-height: calc(100vh - 258px)
+            min-height: rem(400px)
+            width: auto
+            max-width: 100%

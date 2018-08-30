@@ -4,24 +4,16 @@ title: Index page
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
-	{# variable example #}
-	<h1>{{title}}</h1>
 
 	
-	{# partial example #}
+	{# Start header #}
 	{% include "partials/_header.html" %}
+	{# END header #}
 
-	{# mixin example #}
-	{{mixins.icon('facebook')}}
+	{# Start main-slider #}
+	{% include "partials/home/_main-slider.html" %}
+	{# END main-slider #}
 
 
-	{# data usage example #}
-		{% import "data/data.html" as tests %}
-		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %}
-	{# end of example #}
 
 {% endblock %}

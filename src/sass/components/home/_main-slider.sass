@@ -1,0 +1,54 @@
+.main-slider
+    position: relative
+.dots
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: rem(38px)
+    counter-reset: section
+            
+            
+
+.dot
+    position: relative
+    width: rem(8px)
+    height: rem(8px)
+    background-color: rgba(255,255,255,.7)
+    border-radius: 50%
+    transition: $custom-forms-transition
+    box-sizing: initial
+    &:not(:last-child)
+        margin-bottom: rem(30px)
+    &.active
+        background-color: rgba(255,255,255,0)
+        opacity: 1
+        &:after
+            border-color: $white
+        &:before
+            opacity: 1
+            visibility: visible
+    &:before
+        counter-increment: section
+        content: counter(section)
+        position: absolute
+        left: rem(-33px)
+        top: 50%
+        transform: translateY(-50%)
+        font-size: rem(15px)
+        opacity: 0
+        visibility: hidden
+        transition: $transition-fade, visibility .15s
+    &:after
+        content: ""
+        position: absolute
+        width: rem(8px)
+        height: rem(8px)
+        border: rem(4px solid transparent)
+        border-radius: 50%
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &:nth-of-type(-n+9)
+        &:before
+            content: "0"counter(section)
+    

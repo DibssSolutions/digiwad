@@ -1,5 +1,77 @@
 body
-	background: #FFF
-	+css-lock(16, 50, 600, 1000)
-	line-height: 1.4
+	position: relative
+
+
+.btn-color-white
+    color: $white
+.btn
+	&_bold
+		font-weight: 700
+	&_xxl
+		font-size: rem(21px)
+	&_xl
+		font-size: rem(20px)
+	&_m
+		font-size: rem(18px)
+	&_xs
+		font-size: rem(14px)
+.btn_xl
+    +r(1439)
+        font-size: rem(16px)
+
+.width173
+    width: rem(173px)
+    +r(1439)
+        width: rem(120px)
+.width212
+		width: rem(212px)
+.width192
+		width: rem(192px)
+.width197
+    width: rem(197px)
+
+.branded-list
+	&__item
+        position: relative
+        padding-left: rem(36px)
+        font-weight: 300
+        font-size: rem(23px)
+        +r(1439)
+            font-size: rem(18px)
+        &:not(:last-child)
+            margin-bottom: rem(29px)
+        span
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            display: block
+            width: rem(17px)
+            height: rem(17px)
+            overflow: hidden
+            background-color: #fff
+            border-radius: 50%
+            font-size: 0
+        .icon-icon
+            font-size: rem(20px)
+            position: relative
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+.social
+    display: flex
+    &__item
+        width: rem(36px)
+        height: rem(36px)
+        border-radius: 50%
+        background-color: $primary
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: rem(19px)
+        &:not(:last-child)
+            margin-right: rem(22px)
+        .icon
+            color: $gray-900
 

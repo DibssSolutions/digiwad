@@ -1,0 +1,46 @@
+.why-join
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: contain
+    &__inner
+    &__content
+        padding-left: rem(50px)
+    &__title
+        font-size: rem(74px)
+        font-weight: 700
+        color: $primary
+        margin-bottom: rem(20px)
+        padding-left: rem(104px)
+        +r(1439)
+            font-size: rem(50px)
+    &__text
+        padding-left: rem(159px)
+        font-family: $font-family-montserrat
+        margin-bottom: rem(115px)
+        +r(1439)
+            margin-bottom: rem(50px)
+    &__advantages
+        position: relative
+        font-size: rem(28px)
+        margin-bottom: rem(45px)
+        font-weight: 600
+        +r(1439)
+            font-size: rem(20px)
+        &:before
+            content: ""
+            position: absolute
+            width: rem(123px)
+            height: rem(2px)
+            background-color: $primary
+            left: rem(-159px)
+            top: 50%
+            transform: translateY(-50%)
+    &__list
+    &__item
+        .icon
+            color: $gray-900
+    &__slogan
+        opacity: 0.7
+        font-weight: 700
+        font-size: 26px
+

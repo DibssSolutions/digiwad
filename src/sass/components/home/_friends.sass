@@ -1,0 +1,48 @@
+.friends
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: cover
+    &__content
+        display: flex
+        align-items: center
+        justify-content: space-between
+        +r(1439)
+            // flex-direction: column
+    &__text
+        max-width: rem(650px)
+        padding-left: rem(45px)
+        font-size: rem(20px)
+        flex: none
+        margin-right: rem(110px)
+        +r(1439)
+            // padding-left: 0
+            // margin-right: 0
+            // text-align: center
+            // margin-bottom: rem(30px)
+            font-size: rem(16px)
+            max-width: rem(40px)
+            margin-right: rem(40px)
+    &__title
+        font-family: $font-family-montserrat
+        font-size: rem(54px)
+        font-weight: 800
+        margin-bottom: rem(65px)
+        +r(1439)
+            font-size: rem(40px)
+            margin-bottom: rem(30px)
+    &__advantages
+        color: $primary
+    &__list
+        display: flex
+        flex-wrap: wrap
+        padding-right: rem(155px)
+        +r(1439)
+            padding-right: rem(45px)
+    &__item
+        justify-content: center
+        align-items: center
+        &:nth-child(-n + 6)
+            margin-bottom: rem(75px)
+        img
+            display: block
+            max-width: 100%

@@ -1,0 +1,57 @@
+.slide
+    width: 100%
+    height: 100vh
+    overflow: auto
+    +vertical
+    &__text
+        position: relative
+        z-index: 1
+    &__inner
+        padding-top: rem(126px)
+        display: inline-block
+        vertical-align: middle
+        text-align: left
+        font-size: 1rem
+    &__img
+        img
+            display: block
+            max-height: calc(100vh - 258px)
+            min-height: rem(400px)
+            width: auto
+            max-width: 100%
+    &__footer
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+
+.marketplace
+    &__inner
+    &__content
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__text
+        max-width: rem(705px)
+        font-size: rem(20px)
+        +r(1439)
+            font-size: rem(16px)
+            max-width: rem(550px)
+    &__title
+        font-size: rem(55px)
+        font-weight: 700
+        font-family: $font-family-montserrat
+        margin-bottom: rem(30px)
+        +r(1439)
+            font-size: rem(40px)
+        span
+            color: $primary
+    &__btns
+        margin-top: rem(42px)
+    &__img
+        margin-left: rem(-460px)
+        padding-right: rem(60px)
+        +r(1439)
+            padding-right: 0
+
+

@@ -1,0 +1,41 @@
+.join
+    background-repeat: no-repeat
+    background-position: rem(960px 41px)
+    &__inner
+    &__content
+        display: flex
+        align-items: center
+    &__img
+    &__text
+        max-width: rem(885px)
+        margin-left: rem(-230px)
+        font-size: rem(24px)
+        font-family: $font-family-montserrat
+        +r(1439)
+            font-size: rem(18px)
+            max-width: rem(635px)
+    &__title
+        font-size: rem(55px)
+        font-weight: 700
+        color: $primary
+        margin-bottom: rem(30px)
+        +r(1439)
+            font-size: rem(40px)
+    &__wrap
+        padding-left: rem(90px)
+    &__advantages
+        position: relative
+        font-size: rem(30px)
+        margin-bottom: rem(20px)
+        font-weight: 700
+        +r(1439)
+            font-size: rem(24px)
+        &:before
+            content: ""
+            position: absolute
+            width: rem(123px)
+            height: rem(2px)
+            background-color: $primary
+            left: rem(-150px)
+            top: 50%
+            transform: translateY(-50%)
