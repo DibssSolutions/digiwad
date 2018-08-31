@@ -1,6 +1,6 @@
 .benefits
     background-repeat: no-repeat
-    background-position: -463px 228px
+    background-position: rem(-300px 200px)
     &__inner
     &__content
         display: flex
@@ -15,7 +15,10 @@
             font-size: rem(16px)
             margin-right: rem(30px)
     &__btns
+        display: flex
         margin-bottom: rem(70px)
+        +r(1439)
+            margin-bottom: rem(45px)
     &__wrap
         margin-bottom: rem(15px)
     &__title
@@ -39,7 +42,9 @@
             color: $gray-900
         span
             transform: none
-            top: 14px
+            top: rem(14px)
+            +r(1439)
+                top: rem(9px)
     &__slider
         padding-right: rem(88px)
         +r(1439)
@@ -61,6 +66,11 @@
         vertical-align: middle
         line-height: rem(61px)
         color: $gray-900
+        +r(1439)
+            width: rem(41px)
+            height: rem(41px)
+            line-height: rem(41px)
+            font-size: rem(14px)
     &__prev
         margin-right: rem(2px)
     &__wrap

@@ -70,8 +70,14 @@ body
         align-items: center
         justify-content: center
         font-size: rem(19px)
+        +r(1439)
+            width: rem(22px)
+            height: rem(22px)
+            font-size: rem(14px)
         &:not(:last-child)
             margin-right: rem(22px)
+            +r(1439)
+                margin-right: rem(15px)
         .icon
             color: $gray-900
 

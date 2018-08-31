@@ -9,19 +9,21 @@
             </div>
             <ul class="friends__list row">
                 {% for item in [
-                    {logo: "Blizzard_Entertainment_Logo@2x.png"},
-                    {logo: "Twitch_logo@2x.png"},
-                    {logo: "Blizzard_Entertainment_Logo@2x.png"},
-                    {logo: "ea-games@2x.png"},
-                    {logo: "riot-games-1@2x.png"},
-                    {logo: "ea-games@2x.png"},
-                    {logo: "Blizzard_Entertainment_Logo@2x.png"},
-                    {logo: "Twitch_logo@2x.png"},
-                    {logo: "Blizzard_Entertainment_Logo@2x.png"}
+                    {logo: "Blizzard_Entertainment_Logo.svg"},
+                    {logo: "Twitch_logo.svg"},
+                    {logo: "Blizzard_Entertainment_Logo.svg"},
+                    {logo: "ea-games.svg"},
+                    {logo: "riot-games-1.svg"},
+                    {logo: "ea-games.svg"},
+                    {logo: "Blizzard_Entertainment_Logo.svg"},
+                    {logo: "Twitch_logo.svg"},
+                    {logo: "Blizzard_Entertainment_Logo.svg"}
                 ] %}
 
                 <li class="friends__item col-md-4">
-                    <img src="./img/{{item.logo}}" alt="logo">
+                    <div class="logos-wrap">
+                        <img src="./img/svgo/{{item.logo}}" alt="logo">
+                    </div>
                 </li>
                     
                 {% endfor %}

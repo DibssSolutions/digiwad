@@ -22,11 +22,14 @@
     +r(1439)
         font-size: rem(16px)
         margin-top: rem(11px)
+    +md
+        display: none
     &__list
         display: flex
         align-items: center
     &__item
         position: relative
+        overflow: hidden
         &:not(:last-child)
             margin-right: rem(60px)
             +r(1439)
@@ -36,8 +39,9 @@
             text-decoration: none
         &:hover
             &:after
-                opacity: 1
-                visibility: visible
+                // opacity: 1
+                // visibility: visible
+                transform: translateX(0)
         &:after
             content: ""
             position: absolute
@@ -47,22 +51,26 @@
             bottom: rem(1px)
             background-color: $teal
             z-index: -1
-            opacity: 0
-            visibility: hidden
-            transition: opacity .15s, visibility .15s
+            // opacity: 0
+            // visibility: hidden
+            transition: opacity .5s, visibility .5s, transform .4s
+            transform: translateX(-100%)
             +r(1439)
                 height: rem(5px)
 
-    .active
+    .is-active
         &:after
-            opacity: 1
-            visibility: visible
+            // opacity: 1
+            // visibility: visible
             z-index: -1
+            transform: translateX(0)
 .login-block
     float: right
     margin-top: rem(7px)
     +r(1439)
         margin-top: 0
+    +md
+        display: none
     .btn-color-white
             margin-right: rem(68px)
             +r(1439)
@@ -88,6 +96,7 @@
     background-color: $white
     border-radius: rem(10px)
     overflow: hidden
+    z-index: 5
     opacity: 0
     visibility: hidden
     transition: $transition-fade, visibility .15s
@@ -106,3 +115,149 @@
             color: $white
             text-decoration: none
             background-color: $primary
+
+/*Sandwich*/
+.toggle-mnu
+    +md
+        display: block
+    position: relative
+    float: right
+    width: rem(40px)
+    height: rem(40px)
+    display: none
+    z-index: 100
+    border: none
+    background-color: transparent
+    &:before
+        content: ""
+        position: absolute
+        top: rem(-10px)
+        left: rem(-10px)
+        right: rem(-10px)
+        bottom: rem(-10px)
+    &:focus
+        outline: none
+
+$w: rem(40px)
+$h: rem(3px)
+
+.sandwich
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    width: $w
+    // height: $h
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    z-index: 200
+
+.sw-topper
+    display: block
+    position: relative
+    // top: -($h * 2)
+    width: $w 
+    height: $h
+    background: rgb(255, 255, 255)
+    border: none 
+    border-radius: rem(4px 4px 4px 4px)
+    transition: transform 0.5s, top 0.2s
+    transition-delay: 0.2s, 0s
+
+.sw-bottom
+    display: block
+    position: relative
+    width: $w
+    height: $h
+    // top: -($h - ($h / 2))
+    background: rgb(255, 255, 255)
+    border: none
+    border-radius: rem(4px 4px 4px 4px)
+    transition: transform 0.5s, top 0.2s
+    transition-delay: 0.2s, 0s 
+
+.sw-footer
+    display: block
+    position: relative
+    width: $w
+    height: $h
+    // top: $h
+    background: rgb(255, 255, 255)
+    border: none
+    border-radius: rem(4px 4px 4px 4px)
+    transition: all 0.5s
+    transition-delay: 0.1s
+
+.sandwich.is-active
+    .sw-topper
+        top: rem(13px)
+        transform: rotate(140deg)
+    .sw-bottom
+        top: 0
+        transform: rotate(-140deg)
+    .sw-footer
+        opacity: 0
+        top: 0
+        transform: rotate(180deg)
+
+.side-menu
+    width: rem(320px)
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    background-color: $gray-900
+    padding-top: rem(30px)
+    transform: translateX(-102%)
+    transition: transform .5s
+    &.is-active
+        transform: translateX(0)
+    &__btn
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: rem(30px)
+    .btn-color-white
+        margin-bottom: rem(15px)
+    &__list
+        text-align: center
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__item
+        position: relative
+        overflow: hidden
+        &:not(:last-child)
+            margin-bottom: rem(20px)
+        a
+            color: $white
+            text-decoration: none
+        &:hover
+            &:after
+                // opacity: 1
+                // visibility: visible
+                transform: translateX(0)
+        &:after
+            content: ""
+            position: absolute
+            width: 100%
+            height: rem(8px)
+            left: 0
+            bottom: rem(1px)
+            background-color: $teal
+            z-index: -1
+            // opacity: 0
+            // visibility: hidden
+            transition: opacity .5s, visibility .5s, transform .4s
+            transform: translateX(-102%)
+            +r(1439)
+                height: rem(5px)
+
+

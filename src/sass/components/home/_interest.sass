@@ -4,21 +4,23 @@
         display: flex
         align-items: center
         +r(1439)
-            flex-direction: column
-            padding-right: rem(50px)
+            // flex-direction: column
+            // padding-right: rem(50px)
     &__text
         font-size: rem(24px)
         font-family: $font-family-montserrat
         max-width: rem(755px)
+        flex-basis: 50%
         margin-right: rem(168px)
         padding-left: rem(35px)
         +r(1439)
             font-size: rem(18px)
-            max-width: none
-            display: flex
-            justify-content: space-between
-            padding-left: 0
-            margin-right: 0
+            margin-right: rem(20px)
+            // max-width: none
+            // display: flex
+            // justify-content: space-between
+            // padding-left: 0
+            // margin-right: 0
     &__wrap
         margin-bottom: rem(50px)
         +r(1439)
@@ -37,5 +39,10 @@
             +r(1439)
                 font-size: rem(28px)
     &__img
+        flex-basis: 50%
+        +r(1439)
+            padding-right: rem(50px)
         img
             max-width: 570px
+            +r(1439)
+                max-width: 100%
