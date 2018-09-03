@@ -8,6 +8,10 @@
         justify-content: space-between
         +r(1439)
             // flex-direction: column
+        +sm
+            flex-direction: column
+            align-items: flex-start
+            justify-content: flex-start
     &__text
         max-width: 45%
         padding-left: rem(45px)
@@ -20,6 +24,13 @@
             // margin-bottom: rem(30px)
             font-size: rem(16px)
             margin-right: rem(40px)
+        +sm
+            max-width: none
+            width: 100%
+            padding-left: 0
+            margin-right: 0
+            margin-bottom: rem(35px)
+            font-size: rem(14px)
     &__title
         font-family: $font-family-montserrat
         font-size: rem(54px)
@@ -28,6 +39,9 @@
         +r(1439)
             font-size: rem(40px)
             margin-bottom: rem(30px)
+        +sm
+            font-size: (30px)
+            margin-bottom: rem(20px)
     &__advantages
         color: $primary
     &__list
@@ -37,11 +51,24 @@
         width: 55%
         +r(1439)
             padding-right: rem(45px)
+        +sm
+            width: 100%
+            padding-right: 0
+            margin: 0 auto
+            align-items: center
     &__item
         justify-content: center
         align-items: center
-        &:nth-child(-n + 6)
-            margin-bottom: rem(75px)
+        margin-bottom: rem(75px)
+        +sm
+            margin-bottom: rem(15px)
+        &:last-child,
+        &:nth-last-child(2),
+        &:nth-last-child(3)
+            margin-bottom: 0
+        &:nth-last-child(3)
+            +sm
+                margin-bottom: rem(15px)
         img
             display: block
             max-width: 100%

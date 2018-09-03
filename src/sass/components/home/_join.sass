@@ -5,7 +5,12 @@
     &__content
         display: flex
         align-items: center
+        +md
+            flex-direction: column
+            align-items: flex-start
     &__img
+        +md
+            order: 2
     &__text
         max-width: rem(885px)
         margin-left: rem(-230px)
@@ -14,6 +19,13 @@
         +r(1439)
             font-size: rem(18px)
             max-width: rem(635px)
+        +md
+            margin-left: 0
+            margin-bottom: rem(30px)
+            width: 100%
+            max-width: none
+        +sm
+            font-size: rem(14px)
     &__title
         font-size: rem(55px)
         font-weight: 700
@@ -21,8 +33,12 @@
         margin-bottom: rem(30px)
         +r(1439)
             font-size: rem(40px)
+        +md
+            font-size: rem(30px)
     &__wrap
         padding-left: rem(90px)
+        +sm
+            padding-left: rem(50px)
     &__advantages
         position: relative
         font-size: rem(30px)
@@ -30,6 +46,8 @@
         font-weight: 700
         +r(1439)
             font-size: rem(24px)
+        +sm
+            font-size: rem(18px)
         &:before
             content: ""
             position: absolute
@@ -37,5 +55,13 @@
             height: rem(2px)
             background-color: $primary
             left: rem(-150px)
-            top: 50%
-            transform: translateY(-50%)
+            top: rem(17px)
+            +r(1439)
+                top: rem(13px)
+            +md
+                width: rem(70px)
+                left: rem(-90px)
+            +sm
+                width: rem(30px)
+                left: rem(-50px)
+                top: rem(9px)

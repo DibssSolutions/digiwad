@@ -1,4 +1,6 @@
 .contacts
+    +sm
+        padding-bottom: 0
     &__wrap
         position: relative
         padding: rem(0 0 205px)
@@ -9,12 +11,18 @@
         width: 100%
         height: 100%
         +vertical
+        +sm
+            padding-bottom: rem(365px)
     &__content
         display: flex
         align-items: center
         padding-right: rem(175px)
         +r(1439)
             padding-right: rem(44px)
+        +sm
+            flex-direction: column
+            align-items: flex-start
+            padding-right: 0
     &__map
         margin-left: rem(calc((100vw - 1746px)/(-2) - 30px))
         width: rem(calc(100% + 30px + (100vw - 1746px)/2))
@@ -23,15 +31,25 @@
             margin-left: rem(-30px)
             width: rem(calc(100% + 30px))
             margin-right: rem(50px)
+        +sm
+            margin-right: 0
+            width: 100%
+            margin-left: 0
+            order: 2
         img
             display: block
             max-height: calc(100vh - 550px)
             min-height: rem(400px)
             width: 100%
             object-fit: cover
+            +r(1439)
+                min-height: rem(300px)
     &__form
         max-width: rem(555px)
         width: 100%
+        +sm
+            max-width: none
+            margin-bottom: rem(30px)
     &__title
         font-family: $font-family-montserrat
         font-size: rem(45px)
@@ -72,12 +90,16 @@
         .inner
             display: flex
             align-items: center
+            +sm
+                flex-direction: column
     &__logo
         width: rem(210px)
         margin-left: rem(-55px)
         +r(1439)
             width: rem(150px)
             margin-left: 0
+        +sm
+            margin-bottom: rem(20px)
         img
             display: block
             width: 100%
@@ -90,6 +112,9 @@
         +r(1439)
             font-size: rem(12px)
             padding-left: rem(40px)
+        +sm
+            padding-left: 0
+            flex-basis: 100%
         &:before
             content: ""
             position: absolute
@@ -98,6 +123,8 @@
             top: 0
             bottom: 0
             left: rem(20px)
+            +sm
+                display: none
     .is-active
         &:after
             opacity: 1
@@ -108,10 +135,15 @@
         flex-direction: column
         align-items: flex-start
         margin-bottom: 0
+        +sm
+            flex-direction: row
     &__item
         position: relative
+        text-align: left
         &:not(:last-child)
             margin-bottom: rem(25px)
+            +sm
+                margin-right: rem(15px)
         a
             color: $white
             text-decoration: none
@@ -136,3 +168,5 @@
     &__social-title
         margin-bottom: rem(25px)
         text-align: left
+        +sm
+            margin-bottom: rem(10px)

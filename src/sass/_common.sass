@@ -38,8 +38,12 @@ body
         font-size: rem(23px)
         +r(1439)
             font-size: rem(18px)
+        +sm
+            font-size: rem(14px)
         &:not(:last-child)
             margin-bottom: rem(29px)
+            +sm
+                margin-bottom: rem(15px)
         span
             position: absolute
             left: 0
@@ -52,6 +56,9 @@ body
             background-color: #fff
             border-radius: 50%
             font-size: 0
+            +sm
+                top: rem(1px)
+                transform: none
         .icon-icon
             font-size: rem(20px)
             position: relative

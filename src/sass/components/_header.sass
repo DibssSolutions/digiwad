@@ -5,6 +5,10 @@
     &__wrap
         padding: rem(50px 30px 23px)
         +clr
+        +r(1439)
+            padding-top: rem(25px)
+        +sm
+            padding-top: rem(15px)
 .logo
     max-width: rem(210px)
     float: left
@@ -41,7 +45,8 @@
             &:after
                 // opacity: 1
                 // visibility: visible
-                transform: translateX(0)
+                // transform: translateX(0)
+                animation: moveIn .3s cubic-bezier(.17,.67,1,.64) forwards
         &:after
             content: ""
             position: absolute
@@ -54,7 +59,8 @@
             // opacity: 0
             // visibility: hidden
             transition: opacity .5s, visibility .5s, transform .4s
-            transform: translateX(-100%)
+            transform: translateX(-102%)
+            animation: moveOut .3s ease-in-out
             +r(1439)
                 height: rem(5px)
 
@@ -64,6 +70,7 @@
             // visibility: visible
             z-index: -1
             transform: translateX(0)
+            animation: none
 .login-block
     float: right
     margin-top: rem(7px)
@@ -142,19 +149,18 @@ $w: rem(40px)
 $h: rem(3px)
 
 .sandwich
-    display: flex
-    flex-direction: column
-    justify-content: space-around
+    // display: flex
+    // flex-direction: column
+    // justify-content: space-around
     width: $w
     // height: $h
     position: absolute
-    top: 0
-    bottom: 0
     left: 0
     right: 0
     margin: auto
     z-index: 200
-
+    top: 50%
+    transform: translateY(-50%)
 .sw-topper
     display: block
     position: relative
@@ -166,7 +172,7 @@ $h: rem(3px)
     border-radius: rem(4px 4px 4px 4px)
     transition: transform 0.5s, top 0.2s
     transition-delay: 0.2s, 0s
-
+    margin-bottom: rem(5px)
 .sw-bottom
     display: block
     position: relative
@@ -178,6 +184,7 @@ $h: rem(3px)
     border-radius: rem(4px 4px 4px 4px)
     transition: transform 0.5s, top 0.2s
     transition-delay: 0.2s, 0s 
+    margin-bottom: rem(5px)
 
 .sw-footer
     display: block
@@ -193,7 +200,7 @@ $h: rem(3px)
 
 .sandwich.is-active
     .sw-topper
-        top: rem(13px)
+        top: rem(8px)
         transform: rotate(140deg)
     .sw-bottom
         top: 0
@@ -202,7 +209,16 @@ $h: rem(3px)
         opacity: 0
         top: 0
         transform: rotate(180deg)
-
+@keyframes moveIn
+    0%
+        transform: translateX(-102%)
+    100%
+        transform: translateX(0)
+@keyframes moveOut
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(102%)
 .side-menu
     width: rem(320px)
     height: 100%
@@ -243,7 +259,8 @@ $h: rem(3px)
             &:after
                 // opacity: 1
                 // visibility: visible
-                transform: translateX(0)
+                // transform: translateX(0)
+                animation: moveIn .3s ease-out forwards
         &:after
             content: ""
             position: absolute
@@ -257,7 +274,11 @@ $h: rem(3px)
             // visibility: hidden
             transition: opacity .5s, visibility .5s, transform .4s
             transform: translateX(-102%)
+            animation: moveOut .3s ease-out
             +r(1439)
                 height: rem(5px)
+
+
+
 
 
