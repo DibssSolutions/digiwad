@@ -50,6 +50,12 @@
         +sm
             max-width: none
             margin-bottom: rem(30px)
+    &__input
+        color: $gray-300
+        +placeholder
+            color: $gray-300
+        &:focus
+            color: $gray-300
     &__title
         font-family: $font-family-montserrat
         font-size: rem(45px)
@@ -65,22 +71,6 @@
             margin-bottom: rem(15px)
         &:last-child
             margin-bottom: 0
-    &__input
-        background-color: transparent
-        border: none
-        border-bottom: 1px solid $white
-        border-radius: 0
-        resize: none
-        color: $gray-300
-        font-size: rem(18px)
-        padding: rem(13px 0)
-        +placeholder
-            color: $gray-300
-        &:focus
-            background-color: transparent
-            color: $gray-300
-            &::placeholder
-                font-size: 0
     &__submit
         margin-top: rem(40px)
         +r(1439)
@@ -170,3 +160,5 @@
         text-align: left
         +sm
             margin-bottom: rem(10px)
+
+

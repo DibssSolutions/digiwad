@@ -3,3 +3,7 @@ ProjectTitle: digiwad
 PageList:
 - file: page.html
   ready: 50
+- file: login.html
+  ready: 50
+- file: forgot-password.html
+  ready: 50

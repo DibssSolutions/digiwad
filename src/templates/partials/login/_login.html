@@ -1,0 +1,54 @@
+<div class="login">
+    <div class="login__wrap login-wrap">
+        <div class="login__inner inner login-inner">
+            <div class="login__content">
+                <h2 class="login__title login-title text-center">
+                    Login
+                </h2>
+                <div class="login__form login-form">
+                    <div class="login__error-text error-text text-center">
+                        invalid login/password
+                    </div>
+                    <form>
+                        <div class="form-group login__form-group is-error">
+                            <input type="email" autocomplete="off" class="form-control login__input input-dark" placeholder="e- mail">
+                            <span class="error-label">!</span>
+                        </div>
+                        <div class="form-group login__form-group">
+                            <input type="password" autocomplete="off" class="form-control login__input input-dark" placeholder="password">
+                            <span class="error-label">!</span>
+                        </div>
+                        <div class="login__forgot">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                        <div class="login__submit">
+                            <button type="submit" class="btn btn-primary btn-lg btn_xxl width309">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="login__no-account">
+                    <div class="login__subtitle text-center">
+                        No account yet?
+                    </div>
+                    <div class="login__btns">
+                        <a href="#" class="btn btn-primary btn_upper-case width270">Login</a>
+                        <a href="#" class="btn btn-primary btn_upper-case width270">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="login__social side-social">
+                <div class="login__social-title side-social__title">
+                    Follow Me On
+                </div>
+                <div class="social side-social__list">
+                    <a href="#" class="social__item side-social__item">{{ mixins.icon("youtube") }}</a>
+                    <a href="#" class="social__item side-social__item">{{ mixins.icon("facebook") }}</a>
+                    <a href="#" class="social__item side-social__item">{{ mixins.icon("twitter") }}</a>
+                </div>
+            </div>
+        </div>
+        {# Start footer #}
+        {% include "partials/_footer.html" %}
+        {# END footer #}
+    </div>
+</div>
