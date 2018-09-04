@@ -1,7 +1,6 @@
 .login
     width: 100%
     height: 100vh
-    overflow: auto
     +vertical
     &__wrap
 
@@ -10,23 +9,30 @@
         max-width: rem(630px)
         margin: 0 auto
         padding: rem(0 15px)
-        min-height: rem(665px)
     &__title
         margin-bottom: rem(25px)
+        +sm
+            margin-bottom: rem(15px)
     &__form
         font-size: rem(21px)
         margin-bottom: rem(85px)
+        +sm
+            font-size: rem(16px)
+            margin-bottom: rem(50px)
     &__error-text
         margin-bottom: rem(30px)
+        +sm
+            margin-bottom: rem(10px)
     &__form-group
         position: relative
         &:not(:first-of-type)
             margin-top: rem(60px)
-        &.is-error
-            .error-label
-                display: block
+            +sm
+                margin-top: rem(30px)
     &__input
         font-size: rem(20px)
+        +sm
+            font-size: rem(16px)
         +placeholder
             text-transform: uppercase
     &__forgot
@@ -35,14 +41,27 @@
         margin-top: rem(30px)
         font-size: rem(18px)
         opacity: 0.78
+        +sm
+            font-size: rem(16px)
+            margin-top: rem(10px)
         a
             text-decoration: none
             color: $white
     &__submit
         margin-top: rem(55px)
         text-align: center
+        +sm
+            margin-top: rem(30px)
     &__btns
         line-height: 1.43
+        display: flex
+        justify-content: space-between
+        +sm
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            .btn:first-child
+                margin-bottom: rem(20px)
     &__subtitle
         font-size: rem(20px)
         margin-bottom: rem(30px)
@@ -53,10 +72,18 @@
     font-family: $font-family-montserrat
     font-size: rem(73px)
     font-weight: 700
+    +r(1439)
+        font-size: rem(65px)
+    +md
+        font-size: rem(50px)
+    +sm
+        font-size: rem(40px)
 
 .error-text
     line-height: 1.43
     color: $danger
+    span
+        color: $white
 
 .error-label
     display: none
@@ -73,33 +100,6 @@
     top: 50%
     transform: translateY(-50%)
 
-.side-social
-    position: absolute
-    right: rem(10px)
-    top: 50%
-    transform: translateY(-50%)
-    display: flex
-    flex-direction: column
-    align-items: center
-    &__title
-        position: relative
-        writing-mode: tb-rl
-        padding-bottom: rem(95px)
-        &:after
-            content: ""
-            position: absolute
-            width: rem(1px)
-            height: rem(50px)
-            bottom: rem(32px)
-            background-color: $primary
-            left: 50%
-            transform: translateX(-50%)
-    &__list
-        flex-direction: column
-    &__item
-        &:not(:last-child)
-            margin-bottom: rem(13px)
-            margin-right: 0
 
 .login-wrap
         position: relative
@@ -118,3 +118,11 @@
     vertical-align: middle
     text-align: left
     font-size: 1rem
+    +sm
+        padding-top: rem(60px)
+
+.form-group.is-error
+    .error-label
+        display: block
+
+

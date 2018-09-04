@@ -6,3 +6,61 @@
     p
         margin-bottom: 0
     
+
+.side-social
+    position: absolute
+    right: rem(10px)
+    top: 50%
+    transform: translateY(-50%)
+    text-align: center
+    +sm
+        position: static
+        // display: flex
+        // align-items: center
+        // justify-content: center
+        
+    &__title
+        position: relative
+        writing-mode: vertical-lr
+        line-height: 1.2
+        padding-bottom: rem(95px)
+        display: inline-block
+        vertical-align: top
+        +sm
+            writing-mode: lr-tb
+            padding-bottom: 0
+            // padding-right: rem(95px)
+            padding-right: 0
+            margin-bottom: rem(10px)
+        &:after
+            content: ""
+            position: absolute
+            width: rem(1px)
+            height: rem(50px)
+            bottom: rem(32px)
+            background-color: $primary
+            left: rem(9px)
+            +r(1439)
+                left: rem(8px)
+            +sm
+                // bottom: auto
+                // right: rem(32px)
+                // width: rem(50px)
+                // height: rem(1px)
+                // left: auto
+                // top: rem(7px)
+                display: none
+    &__list
+        flex-direction: column
+        +sm
+            flex-direction: row
+            justify-content: center
+    &__item
+        &:not(:last-child)
+            margin-bottom: rem(13px)
+            margin-right: 0
+            +r(1439)
+                margin-right: 0
+            +sm
+                margin-right: rem(13px)
+                margin-bottom: 0

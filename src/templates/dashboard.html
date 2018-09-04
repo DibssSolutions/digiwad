@@ -1,0 +1,19 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	
+	{# Start header #}
+	{{header.block(false, true)}}
+	{# END header #}
+
+	{# Start dashboard #}
+	{% include "partials/dashboard/_dashboard.html" %}
+	{# END dashboard #}
+
+
+
+{% endblock %}

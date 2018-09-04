@@ -1,0 +1,100 @@
+<div class="login influencer">
+    <div class="login-wrap influencer__wrap">
+        <div class="login-inner inner influencer__inner">
+            <h2 class="influencer__title login-title text-center">
+                influencer
+            </h2>
+            <div class="influencer__content">
+                <div class="influencer__connect-with">
+                    <span class="influencer__text">CONNECT WITH:</span>
+                    <ul class="influencer__list">
+                        <li class="influencer__list-item influencer__list-item_google">{{ mixins.icon("google") }}</li>
+                        <li class="influencer__list-item influencer__list-item_facebook">{{ mixins.icon("facebook") }}</li>
+                        <li class="influencer__list-item influencer__list-item_twitch">{{ mixins.icon("twitch") }}</li>
+                    </ul>
+                </div>
+                <div class="influencer__form login-form">
+                    <div class="influencer__error-text error-text text-center">
+                        invalid email/password character 
+                        <span>!@#$%^&*().,_-+"</span>
+                    </div>
+                    <form>
+                        <div class="influencer__row form-row">
+                            <div class="influencer__col col-sm-6">
+                                <div class="form-group influencer__form-group is-error">
+                                    <input type="email" autocomplete="off" class="form-control influencer__input input-dark" placeholder="e- mail">
+                                    <span class="error-label">!</span>
+                                </div>
+                            </div>
+                            <div class="influencer__col col-sm-6">
+                                <p>
+                                    The password must contain:<br>
+                                    one uppercase character, one lowercase 
+                                    character, one digit, and at least 8 characters.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="influencer__row form-row">
+                            <div class="influencer__col col-sm-6">
+                                <div class="form-group influencer__form-group">
+                                    <input type="password" autocomplete="off" class="form-control influencer__input input-dark" placeholder="password">
+                                    <span class="error-label">!</span>
+                                    <div class="password-complexity">
+                                        <div class="password-complexity__row row no-gutters">
+                                            <div class="password-complexity__col col-3">
+                                                <div class="password-complexity__item password-complexity__item_low">
+                                                    low
+                                                </div>
+                                            </div>
+                                            <div class="password-complexity__col col-4">
+                                                <div class="password-complexity__item password-complexity__item_normal">
+                                                    normal
+                                                </div>
+                                            </div>
+                                            <div class="password-complexity__col col">
+                                                <div class="password-complexity__item password-complexity__item_perfectly">
+                                                    perfectly
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="influencer__col col-sm-6">
+                                <div class="form-group influencer__form-group">
+                                    <input type="password" autocomplete="off" class="form-control influencer__input input-dark" placeholder="repeat password">
+                                    <span class="error-label">!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="influencer__row form-row">
+                            <div class="influencer__col col-sm-6">
+                                <div class="form-check influencer__form-check">
+                                    <input class="form-check-input influencer__check-input" type="checkbox" value="" id="check1">
+                                    <label class="form-check-label influencer__check-label" for="check1">
+                                        I have read and agree with <a href="#">Terms of Use</a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="influencer__col col-sm-6">
+                                <div class="form-check influencer__form-check">
+                                    <input class="form-check-input influencer__check-input" type="checkbox" value="" id="check2">
+                                    <label class="form-check-label influencer__check-label" for="check2">
+                                        Subscribe me to newsletters
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="influencer__submit">
+                            <button type="submit" class="btn btn-primary btn-lg btn_xxl width309">SIGN UP</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {% include "partials/_pop-up-congratulation.html" %}
+        </div>
+        {# Start footer #}
+        {{footer.block(true)}}
+        {# END footer #}
+    </div>
+</div>

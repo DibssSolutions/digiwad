@@ -1,28 +1,55 @@
-<header class="header">
+{% macro block(fixed, login) %}
+<header class="header{% if fixed %} header_fixed{% endif %}">
     <div class="header__wrap inner">
         <div class="logo">
             <a href="#">
                 <img src="./img/logo (1)@2x.png" alt="img">
             </a>
         </div>
-        <nav class="menu-main">
-            <ul class="menu-main__list">
-                <li class="menu-main__item is-active"><a href="#">Talent</a></li>
-                <li class="menu-main__item"><a href="#">Brands & Agencies</a></li>
-                <li class="menu-main__item"><a href="#">Pricing</a></li>
-                <li class="menu-main__item"><a href="#">Contacts</a></li>
-            </ul>
-        </nav>
-        <div class="login-block">
-            <button href="#" class="btn btn-outline-primary btn_xl btn_bold btn-color-white width173">Login</button>
-            <div class="signup">
-                <button href="#" class="btn btn-primary btn_xl btn_bold width173">Sign up</button>
-                <div class="login-type">
-                    <a href="#" class="login-type__item">Influencer</a>
-                    <a href="#" class="login-type__item">Brands</a>
+        {% if login %}
+            <nav class="menu-main">
+                <ul class="menu-main__list">
+                    <li class="menu-main__item is-active"><a class="menu-main__link" href="#"><span class="menu-main__text">Dashboard</span></a></li>
+                    <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Campaigns</span></a></li>
+                    <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Influencers</span></a></li>
+                    <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Messages</span><span class="counter">1</span></a></li>
+                    <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Content</span></a></li>
+                </ul>
+            </nav>
+            <div class="account">
+                <div class="account__name">
+                    Razer
+                    <span class="account__icon"></span>
+                </div>
+                <div class="account__logo">
+                    <img src="./img/avatar.jpg" alt="avatar">
+                </div>
+                <div class="account__details">
+                    <a href="#" class="account__link">Account Settings</a>
+                    <a href="#" class="account__link">Profile Settings</a>
+                    <a href="#" class="account__link">Sign off / Logout</a>
                 </div>
             </div>
-        </div>
+        {% else %}
+            <nav class="menu-main">
+                <ul class="menu-main__list">
+                    <li class="menu-main__item is-active"><a class="menu-main__link" href="#"><span class="menu-main__text">Talent</span></a></li>
+                    <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Brands & Agencies</span></a></li>
+                    <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Pricing</span></a></li>
+                    <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Contacts</span></a></li>
+                </ul>
+            </nav>
+            <div class="login-block">
+                <button href="#" class="btn btn-outline-primary btn_xl btn_bold btn-color-white width173">Login</button>
+                <div class="signup">
+                    <button href="#" class="btn btn-primary btn_xl btn_bold width173">Sign up</button>
+                    <div class="login-type">
+                        <a href="#" class="login-type__item">Influencer</a>
+                        <a href="#" class="login-type__item">Brands</a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
         
         <button type="button" onclick="mnu()" class="toggle-mnu">
             <span class="sandwich" id="sandwich">
@@ -60,3 +87,4 @@ function mnu() {
     sideMenu.classList.toggle("is-active")
 };
 </script>
+{% endmacro %}

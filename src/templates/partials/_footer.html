@@ -1,5 +1,20 @@
+{% import "partials/_mixins.html" as mixins %}
+{% macro block(followMe) %}
 <footer class="footer text-center">
+    {% if followMe %}
+    <div class="side-social">
+        <div class="side-social__title">
+            Follow Me On
+        </div>
+        <div class="social side-social__list">
+            <a href="#" class="social__item side-social__item">{{ mixins.icon("youtube") }}</a>
+            <a href="#" class="social__item side-social__item">{{ mixins.icon("facebook") }}</a>
+            <a href="#" class="social__item side-social__item">{{ mixins.icon("twitter") }}</a>
+        </div>
+    </div>
+    {% endif %}
     <p>
             © 2017-2018 DigiWad. All rights reserved.
     </p>
 </footer>
+{% endmacro %}

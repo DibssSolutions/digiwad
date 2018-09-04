@@ -7,3 +7,9 @@ PageList:
   ready: 50
 - file: forgot-password.html
   ready: 50
+- file: influencer.html
+  ready: 50
+- file: brand.html
+  ready: 50
+- file: dashboard.html
+  ready: 50
