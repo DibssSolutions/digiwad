@@ -18,22 +18,24 @@
           <div class="logo"> <a href="#">
                 <img src="./img/logo (1)@2x.png" alt="img">
             </a> </div>
-          <nav class="menu-main">
-            <ul class="menu-main__list">
-              <li class="menu-main__item is-active"><a class="menu-main__link" href="#"><span class="menu-main__text">Talent</span></a></li>
-              <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Brands & Agencies</span></a></li>
-              <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Pricing</span></a></li>
-              <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Contacts</span></a></li>
-            </ul>
-          </nav>
-          <div class="login-block"> <button href="#" class="btn btn-outline-primary btn_xl btn_bold btn-color-white width173">Login</button>
-            <div class="signup"> <button href="#" class="btn btn-primary btn_xl btn_bold width173">Sign up</button>
-              <div class="login-type"> <a href="#" class="login-type__item">Influencer</a> <a href="#" class="login-type__item">Brands</a> </div>
+          <div class="header__nav" id="header__nav">
+            <nav class="menu-main">
+              <ul class="menu-main__list">
+                <li class="menu-main__item is-active"><a class="menu-main__link" href="#"><span class="menu-main__text">Talent</span></a></li>
+                <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Brands & Agencies</span></a></li>
+                <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Pricing</span></a></li>
+                <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Contacts</span></a></li>
+              </ul>
+            </nav>
+            <div class="login-block"> <button href="#" class="btn btn-outline-primary btn_xl btn_bold btn-color-white width173">Login</button>
+              <div class="signup"> <button href="#" class="btn btn-primary btn_xl btn_bold width173">Sign up</button>
+                <div class="login-type"> <a href="#" class="login-type__item">Influencer</a> <a href="#" class="login-type__item">Brands</a> </div>
+              </div>
             </div>
           </div> <button type="button" onclick="mnu()" class="toggle-mnu">
             <span class="sandwich" id="sandwich">
                 <span class="sw-topper"></span>
-                <span class="sw-bottom"></span>
+                <span class="sw-bottom"><span class="sw-bottom__inner"></span></span>
                 <span class="sw-footer"></span>
             </span>
         </button>
@@ -56,7 +58,7 @@
         function mnu()
         {
           var sandwich = document.getElementById("sandwich");
-          var sideMenu = document.getElementById("side-menu");
+          var sideMenu = document.getElementById("header__nav");
           sandwich.classList.toggle("is-active");
           sideMenu.classList.toggle("is-active")
         };

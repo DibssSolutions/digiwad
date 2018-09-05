@@ -9,11 +9,13 @@
 
 .side-social
     position: absolute
-    right: rem(10px)
+    right: rem(95px)
     top: 50%
     transform: translateY(-50%)
     text-align: center
-    +sm
+    +r(1439)
+        right: rem(5px)
+    +md
         position: static
         // display: flex
         // align-items: center
@@ -26,7 +28,7 @@
         padding-bottom: rem(95px)
         display: inline-block
         vertical-align: top
-        +sm
+        +md
             writing-mode: lr-tb
             padding-bottom: 0
             // padding-right: rem(95px)
@@ -42,7 +44,7 @@
             left: rem(9px)
             +r(1439)
                 left: rem(8px)
-            +sm
+            +md
                 // bottom: auto
                 // right: rem(32px)
                 // width: rem(50px)
@@ -52,7 +54,7 @@
                 display: none
     &__list
         flex-direction: column
-        +sm
+        +md
             flex-direction: row
             justify-content: center
     &__item
@@ -61,6 +63,6 @@
             margin-right: 0
             +r(1439)
                 margin-right: 0
-            +sm
+            +md
                 margin-right: rem(13px)
                 margin-bottom: 0

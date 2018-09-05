@@ -8,6 +8,10 @@
         </style>
     
         <style>
+            .a{fill:#fff}
+        </style>
+    
+        <style>
             .cls-1{fill:#191919}
         </style>
     </defs><symbol id="icon-arrow-left" viewBox="0 0 9.25 15">
@@ -16,6 +20,12 @@
 </symbol><symbol id="icon-arrow-right" viewBox="0 0 9.25 15">
     
     <path class="a" d="M0 1.75L1.75 0l7.5 7.5-7.5 7.5L0 13.25 5.75 7.5z"/>
+</symbol><symbol id="icon-close-envelope" viewBox="0 0 24.318 17.37">
+    
+    <path class="a" d="M12.159 12.159L9.151 9.526.551 16.9a1.761 1.761 0 0 0 1.2.471h20.82a1.748 1.748 0 0 0 1.2-.471l-8.6-7.374z"/>
+    <path class="a" d="M23.769.471a1.749 1.749 0 0 0-1.2-.471H1.749a1.742 1.742 0 0 0-1.2.474l11.607 9.948z"/>
+    <path class="a" d="M0 1.525v14.431l8.4-7.134z"/>
+    <path class="a" d="M15.923 8.822l8.4 7.134V1.52z"/>
 </symbol><symbol id="icon-facebook" viewBox="0 0 10 19">
     <title>
         facebook

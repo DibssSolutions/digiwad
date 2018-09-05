@@ -1,36 +1,50 @@
+{% import "partials/_mixins.html" as mixins %}
 {% macro block(fixed, login) %}
 <header class="header{% if fixed %} header_fixed{% endif %}">
-    <div class="header__wrap inner">
+    <div class="header__wrap inner{% if login %} inner_lg{% endif %}">
         <div class="logo">
             <a href="#">
                 <img src="./img/logo (1)@2x.png" alt="img">
             </a>
         </div>
         {% if login %}
-            <nav class="menu-main">
-                <ul class="menu-main__list">
-                    <li class="menu-main__item is-active"><a class="menu-main__link" href="#"><span class="menu-main__text">Dashboard</span></a></li>
-                    <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Campaigns</span></a></li>
-                    <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Influencers</span></a></li>
-                    <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Messages</span><span class="counter">1</span></a></li>
-                    <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Content</span></a></li>
-                </ul>
-            </nav>
-            <div class="account">
-                <div class="account__name">
-                    Razer
-                    <span class="account__icon"></span>
+            <div class="header__nav" id="header__nav">
+                <nav class="menu-main">
+                    <ul class="menu-main__list">
+                        <li class="menu-main__item is-active"><a class="menu-main__link" href="#"><span class="menu-main__text">Dashboard</span></a></li>
+                        <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Campaigns</span></a></li>
+                        <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Influencers</span></a></li>
+                        <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Messages</span><span class="counter">1</span></a></li>
+                        <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Content</span></a></li>
+                    </ul>
+                </nav>
+                <div class="account">
+                    <div class="account__name">
+                        Razer
+                        <span class="account__icon"></span>
+                    </div>
+                    <div class="account__logo">
+                        <img src="./img/avatar.jpg" alt="avatar">
+                    </div>
+                    <div class="account__details">
+                        <a href="#" class="account__link">Account Settings</a>
+                        <a href="#" class="account__link">Profile Settings</a>
+                        <a href="#" class="account__link">Sign off / Logout</a>
+                    </div>
                 </div>
-                <div class="account__logo">
-                    <img src="./img/avatar.jpg" alt="avatar">
-                </div>
-                <div class="account__details">
-                    <a href="#" class="account__link">Account Settings</a>
-                    <a href="#" class="account__link">Profile Settings</a>
-                    <a href="#" class="account__link">Sign off / Logout</a>
+                <div class="messages">
+                    <button type="button" class="messages__icon">
+                        {{ mixins.icon("close-envelope") }}
+                        <span class="counter messages__counter">1</span>
+                    </button>
+                    <div class="messages__details">
+                        <a href="#" class="messages__link">You have <span class="messages__number">0</span> new messages</a>
+                        <a href="#" class="messages__link">View all messages</a>
+                    </div>
                 </div>
             </div>
         {% else %}
+        <div class="header__nav" id="header__nav">
             <nav class="menu-main">
                 <ul class="menu-main__list">
                     <li class="menu-main__item is-active"><a class="menu-main__link" href="#"><span class="menu-main__text">Talent</span></a></li>
@@ -49,12 +63,13 @@
                     </div>
                 </div>
             </div>
+        </div>
         {% endif %}
         
         <button type="button" onclick="mnu()" class="toggle-mnu">
             <span class="sandwich" id="sandwich">
                 <span class="sw-topper"></span>
-                <span class="sw-bottom"></span>
+                <span class="sw-bottom"><span class="sw-bottom__inner"></span></span>
                 <span class="sw-footer"></span>
             </span>
         </button>
@@ -82,7 +97,7 @@
 <script>
 function mnu() {
     var sandwich = document.getElementById("sandwich");
-    var sideMenu = document.getElementById("side-menu");
+    var sideMenu = document.getElementById("header__nav");
     sandwich.classList.toggle("is-active");
     sideMenu.classList.toggle("is-active")
 };

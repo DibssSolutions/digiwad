@@ -3,12 +3,34 @@
     position: absolute
     z-index: 5
     &__wrap
-        padding: rem(50px 30px 23px)
+        // padding: rem(50px 30px 23px)
+        padding-top: rem(50px)
+        padding-bottom: rem(23px)
         +clr
         +r(1439)
             padding-top: rem(25px)
         +sm
             padding-top: rem(15px)
+    &__nav
+        +md
+            width: rem(320px)
+            height: 100%
+            position: fixed
+            top: 0
+            left: 0
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: flex-start
+            background-color: lighten($gray-900,10%)
+            padding-top: rem(30px)
+            transform: translateX(-102%)
+            transition: transform .5s
+            // box-shadow: 6px 0 12px rgba(#fefefe,.1)
+            // border-right: 2px solid $white
+            &.is-active
+                transform: translateX(0)
+
     &_fixed
         position: fixed
 .logo
@@ -29,15 +51,24 @@
         font-size: rem(16px)
         margin-top: rem(11px)
     +md
-        display: none
+        order: 2
+        float: none
     &__list
         display: flex
         align-items: center
+        +md
+            text-align: center
+            display: flex
+            flex-direction: column
+            align-items: center
     &__item
         &:not(:last-child)
             margin-right: rem(60px)
             +r(1439)
                 margin-right: rem(30px)
+            +md
+                margin-right: 0
+                margin-bottom: rem(35px)
         a
             color: $white
             text-decoration: none
@@ -83,7 +114,14 @@
     +r(1439)
         margin-top: 0
     +md
-        display: none
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: rem(30px)
+        float: none
+        .btn-color-white
+            margin-bottom: rem(15px)
+            margin-right: 0
     .btn-color-white
             margin-right: rem(60px)
             +r(1439)
@@ -135,8 +173,8 @@
         display: block
     position: relative
     float: right
-    width: rem(40px)
-    height: rem(40px)
+    width: rem(32px)
+    height: rem(32px)
     display: none
     z-index: 100
     border: none
@@ -151,7 +189,7 @@
     &:focus
         outline: none
 
-$w: rem(40px)
+$w: rem(32px)
 $h: rem(3px)
 
 .sandwich
@@ -170,27 +208,32 @@ $h: rem(3px)
 .sw-topper
     display: block
     position: relative
+    transform-origin: left top
     // top: -($h * 2)
     width: $w 
     height: $h
     background: rgb(255, 255, 255)
     border: none 
     border-radius: rem(4px 4px 4px 4px)
-    transition: transform 0.5s, top 0.2s
-    transition-delay: 0.2s, 0s
+    transition: transform 0.5s
+    // transition-delay: 0.2s, 0s
     margin-bottom: rem(5px)
 .sw-bottom
+    overflow: hidden
     display: block
     position: relative
-    width: $w
-    height: $h
-    // top: -($h - ($h / 2))
-    background: rgb(255, 255, 255)
-    border: none
-    border-radius: rem(4px 4px 4px 4px)
-    transition: transform 0.5s, top 0.2s
-    transition-delay: 0.2s, 0s 
-    margin-bottom: rem(5px)
+    &__inner
+        display: block
+        position: relative
+        width: $w
+        height: $h
+        // top: -($h - ($h / 2))
+        transform-origin: center center
+        background: rgb(255, 255, 255)
+        border: none
+        border-radius: rem(4px 4px 4px 4px)
+        transition: transform 0.3s ease-in-out, opacity .5s ease-in-out
+        margin-bottom: rem(5px)
 
 .sw-footer
     display: block
@@ -198,23 +241,23 @@ $h: rem(3px)
     width: $w
     height: $h
     // top: $h
+    transform-origin: left
     background: rgb(255, 255, 255)
     border: none
     border-radius: rem(4px 4px 4px 4px)
-    transition: all 0.5s
-    transition-delay: 0.1s
+    transition: transform 0.5s
+    // transition-delay: 0.1s
 
 .sandwich.is-active
     .sw-topper
-        top: rem(8px)
-        transform: rotate(140deg)
-    .sw-bottom
-        top: 0
-        transform: rotate(-140deg)
-    .sw-footer
+        // top: rem(8px)
+        transform: translate(0, -3px) rotate(45deg)
+    .sw-bottom__inner
         opacity: 0
-        top: 0
-        transform: rotate(180deg)
+        // top: 0
+        transform: translateX(-105%)
+    .sw-footer
+        transform: translate(0, 3px) rotate(-45deg)
 @keyframes moveIn
     0%
         transform: translateX(-102%)
@@ -302,6 +345,20 @@ $h: rem(3px)
     float: right
     display: flex
     align-items: center
+    position: relative
+    cursor: pointer
+    +md
+        margin-bottom: rem(30px)
+    &:hover
+        .account__details
+            opacity: 1
+            visibility: visible
+    &:after
+        content: ""
+        position: absolute
+        width: 100%
+        height: rem(21px)
+        bottom: rem(-21px)
     &__name
         position: relative
         font-size: rem(20px)
@@ -328,8 +385,114 @@ $h: rem(3px)
             display: block
             width: 100%
     &__details
+        width: rem(204px)
+        padding: rem(15px 0)
         position: absolute
+        bottom: rem(-210px)
+        right: 0
+        background-color: $white
+        border-radius: rem(8px)
+        overflow: hidden
+        z-index: 5
+        opacity: 0
+        visibility: hidden
+        transition: $transition-fade, visibility .15s
+        +md
+            right: auto
+            left: 50%
+            transform: translateX(-50%)
+            bottom: auto
+            top: calc(100% + 10px)
+    &__link
+        color: $yiq-text-dark
+        font-weight: 700
+        display: block
+        text-align: center
+        vertical-align: middle
+        line-height: 1.44
+        transition: $btn-transition
+        padding: rem(15px 0)
+        // +r(1439)
+        //     font-size: rem(16px)
+        // &:not(:last-child)
+        //     margin-bottom: rem(30px)
+        &:hover
+            color: $white
+            text-decoration: none
+            background-color: $primary
+
+.messages
+    float: right
+    margin-right: rem(42px)
+    margin-top: rem(18px)
+    position: relative
+    cursor: pointer
+    +md
+        margin: rem(0 0 30px)
+    &:hover
+        .messages__details
+            opacity: 1
+            visibility: visible
+    &:before
+        content: ""
+        position: absolute
+        width: rem(24px)
         bottom: 0
+        top: 0
+        left: rem(-24px)
+        +md
+            width: 100%
+            top: 100%
+            bottom: auto
+            height: rem(10px)
+            left: 0
+    &__icon
+        font-size: rem(17px)
+        color: $white
+        background-color: transparent
+        &:focus
+            outline: none
+
+    &__counter
+        width: rem(17px)
+        height: rem(17px)
+        font-size: rem(12px)
+        top: rem(-11px)
+        left: rem(-11px)
+        right: auto
+    .icon-close-envelope
+        display: block
+    &__details
+        position: absolute
+        width: rem(290px)
+        font-weight: 700
+        background-color: $white
+        border-radius: rem(8px)
+        top: rem(-4px)
+        left: rem(-313px)
+        overflow: hidden
+        z-index: 5
+        opacity: 0
+        visibility: hidden
+        transition: $transition-fade, visibility .15s
+        +md
+            top: calc(100% + 10px)
+            left: 50%
+            transform: translateX(-50%)
+    &__link
+        padding: rem(15px 0)
+        color: $yiq-text-dark
+        font-weight: 700
+        display: block
+        text-align: center
+        vertical-align: middle
+        line-height: 1.44
+        transition: $btn-transition
+        &:hover
+            color: $white
+            text-decoration: none
+            background-color: $primary
+
 
 
 

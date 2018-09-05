@@ -1,0 +1,205 @@
+.dashboard
+    color: $gray-900
+    font-size: rem(17px)
+    &__header
+    &__title
+        margin-bottom: 0
+        font-size: rem(17px)
+    &__inner
+    &__btn
+        margin-bottom: rem(50px)
+
+
+
+
+
+.dashboard-body
+    width: 100%
+    background-color: #FCFCFC
+
+.dashboard-header
+    height: rem(73px)
+    display: flex
+    align-items: center
+    padding: rem(0 58px)
+    border-bottom: 1px solid #D5D5D5
+
+.chat
+    font-size: rem(17px)
+    &__top
+        height: rem(60px)
+        padding: rem(0 20px)
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border-left: 1px solid #D5D5D5
+        border-bottom: 1px solid #D5D5D5
+    &__body
+        border-left: 1px solid #D5D5D5
+        padding: rem(40px 50px 15px)
+        min-height: rem(695px)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &__title
+        font-size: rem(17px)
+    &__list
+        margin-bottom: 0
+
+.chat-message
+    display: flex
+    &__body
+        position: relative
+        max-width: rem(745px)
+        background-color: #f5f5fd
+        padding: rem(34px 31px)
+        border: 1px solid #D5D5D5
+        border-radius: rem(15px)
+        line-height: 1.4
+        border-top-right-radius: rem(20px)
+        margin-right: rem(37px)
+        &:before
+            content: ""
+            position: absolute
+            right: rem(-2px)
+            top: rem(-1px)
+            width: rem(15px)
+            height: rem(28px)
+            background-color: #fcfcfc
+        &:after
+            content: ""
+            position: absolute
+            z-index: 1
+            right: rem(-37px)
+            top: rem(-1px)
+            width: rem(51px)
+            height: rem(32px)
+            background-image: url(../img/message_elem.svg)
+            background-repeat: no-repeat
+            background-position: 0 0
+    &__link
+        color: $blue-chat
+        &:hover
+            color: $blue-chat
+    &__img
+        width: rem(70px)
+        height: rem(70px)
+        border-radius: 50%
+        overflow: hidden
+        img
+            display: block
+            width: 100%
+    &_right
+        align-self: flex-end
+
+
+.interlocutor
+    display: flex
+    align-items: center
+    position: relative
+    &__img
+        width: rem(40px)
+        height: rem(40px)
+        border-radius: 50%
+        overflow: hidden
+        margin-right: rem(10px)
+        img
+            display: block
+            width: 100%
+    &__indicator
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+
+.chat-contact
+    border-left: 5px solid transparent
+    padding: rem(20px 0)
+    font-size: rem(17px)
+    border-bottom: 1px solid #D5D5D5
+    &.is-active
+        border-color: $primary
+        background-color: #E6E6E6
+    &__col
+        display: flex
+        flex-direction: column
+        justify-content: center
+    &__img
+        width: rem(120px)
+        height: rem(120px)
+        border-radius: 50%
+        overflow: hidden
+        margin: 0 auto
+        img
+            display: block
+            width: 100%
+    &__title
+        color: $primary
+        margin-bottom: rem(15px)
+    &__name
+        margin-bottom: rem(15px)
+    &__message
+        font-size: rem(14px)
+// .dashboard-inner
+.dialogue-block
+    background-color: #FCFCFC
+    position: fixed
+    right: rem(48px)
+    bottom: rem(19px)
+    width: rem(430px)
+    border: 1px solid #D5D5D5
+    border-radius: rem(8px)
+    box-shadow: 0 3px 6px rgba(#000, .16)
+    &__header
+        height: rem(46px)
+        display: flex
+        align-items: center
+        padding: rem(0 14px)
+        justify-content: flex-end
+        border-bottom: 1px solid #D5D5D5
+    &__interlocutor
+        padding-left: rem(22px)
+    &__interlocutor-img
+        width: rem(30px)
+        height: rem(30px)
+    &__body
+        height: rem(407px)
+        padding: rem(35px 22px)
+        overflow: auto
+    &__footer
+        height: rem(65px)
+        background-color: $gray-chat
+        border-bottom-left-radius: rem(8px)
+        border-bottom-right-radius: rem(8px)
+    &__message
+        max-width: rem(345px)
+.online-indicator
+    width: rem(15px)
+    height: rem(15px)
+    border-radius: 50%
+    background-color: $green
+    border: 4px solid #d2f9d5
+    position: absolute
+
+.dialogue-message
+    &__img
+        margin-right: rem(21px)
+        max-width: 100%
+        position: relative
+        img
+            display: block
+            width: 100%
+    &__indicator
+        right: rem(-3px)
+        bottom: rem(-2px)
+        position: absolute
+    &__details
+        font-size: rem(14px)
+        color: $gray-text
+    &__text
+        display: inline-block
+        line-height: 1.44
+        padding: rem(9px 25px 13px)
+        border-radius: rem(7px)
+        background-color: $gray-chat
+        p
+            margin-bottom: 0

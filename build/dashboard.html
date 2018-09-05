@@ -14,27 +14,37 @@
     <!-- BEGIN content -->
     <div class="out">
       <header class="header">
-        <div class="header__wrap inner">
+        <div class="header__wrap inner inner_lg">
           <div class="logo"> <a href="#">
                 <img src="./img/logo (1)@2x.png" alt="img">
             </a> </div>
-          <nav class="menu-main">
-            <ul class="menu-main__list">
-              <li class="menu-main__item is-active"><a class="menu-main__link" href="#"><span class="menu-main__text">Dashboard</span></a></li>
-              <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Campaigns</span></a></li>
-              <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Influencers</span></a></li>
-              <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Messages</span><span class="counter">1</span></a></li>
-              <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Content</span></a></li>
-            </ul>
-          </nav>
-          <div class="account">
-            <div class="account__name"> Razer <span class="account__icon"></span> </div>
-            <div class="account__logo"> <img src="./img/avatar.jpg" alt="avatar"> </div>
-            <div class="account__details"> <a href="#" class="account__link">Account Settings</a> <a href="#" class="account__link">Profile Settings</a> <a href="#" class="account__link">Sign off / Logout</a> </div>
+          <div class="header__nav" id="header__nav">
+            <nav class="menu-main">
+              <ul class="menu-main__list">
+                <li class="menu-main__item is-active"><a class="menu-main__link" href="#"><span class="menu-main__text">Dashboard</span></a></li>
+                <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Campaigns</span></a></li>
+                <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Influencers</span></a></li>
+                <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Messages</span><span class="counter">1</span></a></li>
+                <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Content</span></a></li>
+              </ul>
+            </nav>
+            <div class="account">
+              <div class="account__name"> Razer <span class="account__icon"></span> </div>
+              <div class="account__logo"> <img src="./img/avatar.jpg" alt="avatar"> </div>
+              <div class="account__details"> <a href="#" class="account__link">Account Settings</a> <a href="#" class="account__link">Profile Settings</a> <a href="#" class="account__link">Sign off / Logout</a> </div>
+            </div>
+            <div class="messages"> <button type="button" class="messages__icon">
+                        
+<svg class="icon icon-close-envelope"><use xlink:href="img/sprite.svg#icon-close-envelope"></use></svg>
+
+                        <span class="counter messages__counter">1</span>
+                    </button>
+              <div class="messages__details"> <a href="#" class="messages__link">You have <span class="messages__number">0</span> new messages</a> <a href="#" class="messages__link">View all messages</a> </div>
+            </div>
           </div> <button type="button" onclick="mnu()" class="toggle-mnu">
             <span class="sandwich" id="sandwich">
                 <span class="sw-topper"></span>
-                <span class="sw-bottom"></span>
+                <span class="sw-bottom"><span class="sw-bottom__inner"></span></span>
                 <span class="sw-footer"></span>
             </span>
         </button>
@@ -57,12 +67,105 @@
         function mnu()
         {
           var sandwich = document.getElementById("sandwich");
-          var sideMenu = document.getElementById("side-menu");
+          var sideMenu = document.getElementById("header__nav");
           sandwich.classList.toggle("is-active");
           sideMenu.classList.toggle("is-active")
         };
 
       </script>
+      <div class="dashboard">
+        <div class="dashboard__inner inner inner_lg">
+          <div class="dashboard__btn"> <a href="#" class="btn btn-primary width270">Create a campaign</a> </div>
+          <div class="dashboard__body dashboard-body">
+            <div class="dashboard__header dashboard-header">
+              <h5 class="dashboard__title">Dashboard</h5>
+            </div>
+            <div class="dashboard__chat chat row no-gutters">
+              <div class="chat__col col-4">
+                <ul class="chat__list">
+                  <li class="chat__contact chat-contact">
+                    <div class="row chat-contact__row no-gutters">
+                      <div class="chat-contact__col col-4">
+                        <div class="chat-contact__img"> <img src="./img/ghost@2x.jpg" alt="avatar"> </div>
+                      </div>
+                      <div class="chat-contact__col col">
+                        <div class="chat-contact__title">DigiBot</div>
+                        <div class="chat-contact__name">Razer</div>
+                        <div class="chat-contact__message"> <span class="chat-contact__author">You</span> : Do I game or like games? </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="chat__contact chat-contact">
+                    <div class="row chat-contact__row no-gutters">
+                      <div class="chat-contact__col col-4">
+                        <div class="chat-contact__img"> <img src="./img/avatar.jpg" alt="avatar"> </div>
+                      </div>
+                      <div class="chat-contact__col col">
+                        <div class="chat-contact__title">Campaigns</div>
+                        <div class="chat-contact__name">Razer</div>
+                        <div class="chat-contact__message"> <span class="chat-contact__author">You</span> : Do I game or like games? </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- <li class="chat__contact">
+
+                        </li> -->
+                </ul>
+              </div>
+              <div class="chat__col col">
+                <div class="chat__top">
+                  <h5 class="chat__title">Welcome to Digiwad!</h5>
+                  <div class="chat__interlocutor interlocutor">
+                    <div class="interlocutor__img"> <img src="./img/ghost.jpg" alt="avatar"> </div>
+                    <div class="interlocutor__name"> DigiBot </div>
+                  </div>
+                </div>
+                <div class="chat__body">
+                  <div class="chat__message chat-message chat-message_right">
+                    <div class="chat-message__body">
+                      <p> Hey test,<br> <br> We're thrilled to have you on FameBit. First things first, this is your home page. Think of it as mission control. Once you have launched a campaign we will notify you if you have new proposals and you'll have
+                        easy access to chat with any of the content creators you have hired. </p>
+                      <p> Speaking of hiring content creators, it's time to <a href="#" class="chat-message__link">start a new campaign!</a> </p>
+                    </div>
+                    <div class="chat-message__img"> <img src="./img/ghost.jpg" alt="avatar"> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dialogue-block">
+          <div class="dialogue-block__header">
+            <div class="dialogue-block__interlocutor interlocutor">
+              <div class="interlocutor__img dialogue-block__interlocutor-img"> <img src="./img/ghost.jpg" alt="avatar"> </div>
+              <div class="interlocutor__name dialogue-block__interlocutor-name"> DigiBot </div>
+              <div class="online-indicator interlocutor__indicator"> </div>
+            </div>
+          </div>
+          <div class="dialogue-block__body">
+            <div class="dialogue-block__message dialogue-message">
+              <div class="dialogue-message__row row no-gutters">
+                <div class="dialogue-message__col col-2"> </div>
+                <div class="dialogue-message__col col">
+                  <div class="dialogue-message__details"> <span class="dialogue-message__author">
+                                Digibot</span>, <span class="dialogue-message__time">Yesterday 8:20 PM</span> </div>
+                </div>
+              </div>
+              <div class="dialogue-message__row row no-gutters">
+                <div class="dialogue-message__col col-2">
+                  <div class="dialogue-message__img"> <img src="./img/ghost.jpg" alt="avatar">
+                    <div class="online-indicator dialogue-message__indicator"> </div>
+                  </div>
+                </div>
+                <div class="dialogue-message__col col">
+                  <div class="dialogue-message__text"> <span>It was delicious!</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dialogue-block__footer"></div>
+        </div>
+      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
