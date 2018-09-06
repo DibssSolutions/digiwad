@@ -132,7 +132,7 @@
 
 .chat-contact
     border-left: 5px solid transparent
-    padding: rem(20px 0)
+    padding: rem(20px 6px 20px 0)
     font-size: rem(17px)
     border-bottom: 1px solid #D5D5D5
     &.is-active
@@ -143,14 +143,17 @@
         flex-direction: column
         justify-content: center
     &__img
-        width: rem(120px)
-        height: rem(120px)
+        max-width: rem(120px)
+        max-height: rem(120px)
+        width: 100%
         border-radius: 50%
         overflow: hidden
         margin: 0 auto
         img
             display: block
             width: 100%
+            object-fit: cover
+            object-position: 50% 50%
     &__title
         color: $primary
         margin-bottom: rem(15px)
