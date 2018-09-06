@@ -122,6 +122,12 @@ body
     padding: rem(13px 0)
     +placeholder
         color: $white
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus
+    &:-webkit-autofill
+        -webkit-text-fill-color: #fff !important
+        background-color: transparent !important
     &:focus
         background-color: transparent
         color: $white
