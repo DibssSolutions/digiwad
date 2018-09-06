@@ -7,8 +7,40 @@
         font-size: rem(17px)
     &__inner
         padding-top: rem(153px)
+        +r(1439)
+            padding-top: rem(114px)
+        +md
+            padding: rem(114px 0 0)
+        +sm
+            padding: rem(100px 0 0)
     &__btn
         margin-bottom: rem(50px)
+        +md
+            margin-left: rem(10px)
+        +sm
+            margin-bottom: rem(35px)
+    &__switcher
+        display: none
+        margin-bottom: rem(15px)
+    &__switch
+        display: flex
+        align-items: center
+        background-color: transparent
+        color: $gray-900
+        +sm
+            font-size: rem(14px)
+            line-height: 1
+        &:focus
+            outline: none
+        &:hover
+            color: $primary
+        .icon
+            display: inline-block
+            font-size: rem(15px)
+            margin-right: rem(12px)
+            +sm
+                font-size: rem(12px)
+                margin-top: rem(1px)
 
 
 
@@ -19,11 +51,15 @@
     background-color: #FCFCFC
 
 .dashboard-header
-    height: rem(73px)
-    display: flex
-    align-items: center
-    padding: rem(0 58px)
+    // height: rem(73px)
+    // display: flex
+    // align-items: center
+    padding: rem(27px 58px)
     border-bottom: 1px solid #D5D5D5
+    +md
+        padding: rem(15px 20px)
+    +sm
+        padding: rem(15px 10px)
 
 .chat
     font-size: rem(17px)
@@ -35,22 +71,56 @@
         justify-content: space-between
         border-left: 1px solid #D5D5D5
         border-bottom: 1px solid #D5D5D5
+        +sm
+            padding: rem(0 10px)
+            font-size: rem(14px)
     &__body
+        overflow: auto
+        height: rem(695px)
+        +md
+            height: auto
+    &__body-wrap
         border-left: 1px solid #D5D5D5
         padding: rem(40px 50px 15px)
-        min-height: rem(695px)
         display: flex
         flex-direction: column
         align-items: flex-start
-        overflow: auto
+        +sm
+            padding: rem(25px 10px 10px)
     &__title
         font-size: rem(17px)
+        +sm
+            font-size: rem(14px)
+            margin-right: rem(10px)
     &__list
         margin-bottom: 0
+    &__col
+        +md
+            flex-basis: 100%
+            max-width: none
+
 
 .chat-message
     display: flex
     margin-bottom: rem(20px)
+    &_right
+        align-self: flex-end
+        .chat-message__body
+            order: 1
+            margin-left: 0
+            margin-right: rem(37px)
+            border-top-left-radius: rem(15px)
+            border-top-right-radius: rem(20px)
+            +sm
+                border-radius: rem(8px)
+                margin-right: rem(10px)
+            &:before
+                left: auto
+                right: rem(-2px)
+            &:after
+                transform: none
+                left: auto
+                right: rem(-37px)
     &__body
         position: relative
         max-width: rem(745px)
@@ -62,6 +132,11 @@
         border-top-left-radius: rem(20px)
         margin-left: rem(37px)
         order: 2
+        +sm
+            font-size: rem(14px)
+            padding: rem(14px 11px)
+            margin-left: rem(10px)
+            border-radius: rem(8px)
         &:before
             content: ""
             position: absolute
@@ -70,6 +145,8 @@
             width: rem(15px)
             height: rem(28px)
             background-color: #fcfcfc
+            +sm
+                display: none
         &:after
             content: ""
             position: absolute
@@ -82,6 +159,8 @@
             background-image: url(../img/message_elem.svg)
             background-repeat: no-repeat
             background-position: 0 0
+            +sm
+                display: none
     &__link
         color: $blue-chat
         &:hover
@@ -92,24 +171,16 @@
         border-radius: 50%
         overflow: hidden
         order: 1
+        flex-shrink: 0
+        +sm
+            width: rem(40px)
+            height: rem(40px)
         img
             display: block
             width: 100%
-    &_right
-        align-self: flex-end
-        .chat-message__body
-            order: 1
-            margin-left: 0
-            margin-right: rem(37px)
-            border-top-left-radius: rem(15px)
-            border-top-right-radius: rem(20px)
-            &:before
-                left: auto
-                right: rem(-2px)
-            &:after
-                transform: none
-                left: auto
-                right: rem(-37px)
+            object-fit: cover
+            object-position: 50% 50%
+
 
 
 .interlocutor
@@ -131,10 +202,15 @@
         transform: translateY(-50%)
 
 .chat-contact
+    display: block
     border-left: 5px solid transparent
-    padding: rem(20px 6px 20px 0)
+    padding: rem(20px 6px)
     font-size: rem(17px)
     border-bottom: 1px solid #D5D5D5
+    color: $gray-900
+    &:hover
+        text-decoration: none
+        color: $gray-900
     &.is-active
         border-color: $primary
         background-color: #E6E6E6
@@ -172,13 +248,25 @@
     border-radius: rem(8px)
     box-shadow: 0 3px 6px rgba(#000, .16)
     z-index: 5
+    +sm
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        width: 100%
     &__header
         height: rem(46px)
         display: flex
         align-items: center
         padding: rem(0 14px)
-        justify-content: flex-end
+        justify-content: space-between
         border-bottom: 1px solid #D5D5D5
+    &__close
+        background-color: transparent
+        color: $primary
+        &:focus
+            outline: none
+
     &__interlocutor
         padding-left: rem(22px)
     &__interlocutor-img
@@ -188,6 +276,9 @@
         height: rem(407px)
         padding: rem(35px 22px 35px)
         overflow: auto
+        +sm
+            height: calc(100vh - 111px)
+            padding: rem(20px 10px 20px)
     &__body-wrap
         min-height: 100%
         display: flex
@@ -220,6 +311,10 @@
         justify-content: space-between
         align-items: center
         padding-right: rem(15px)
+        +sm
+            padding-right: (10px)
+            font-size: rem(15px)
+            justify-content: space-around
         .icon
             display: block
     &__submit,
@@ -271,7 +366,7 @@
     &__text
         position: relative
         display: inline-block
-        padding-right: rem(21px)
+        margin-right: rem(21px)
         line-height: 1.44
         padding: rem(13px 14px 15px)
         border-radius: rem(7px)

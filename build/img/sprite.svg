@@ -16,6 +16,10 @@
         </style>
     
         <style>
+            .a{fill:#40b9a6;fill-rule:evenodd}
+        </style>
+    
+        <style>
             .cls-1{fill:#191919}
         </style>
     </defs><symbol id="icon-arrow-left" viewBox="0 0 9.25 15">
@@ -33,6 +37,9 @@
     <path class="a" d="M23.769.471a1.749 1.749 0 0 0-1.2-.471H1.749a1.742 1.742 0 0 0-1.2.474l11.607 9.948z"/>
     <path class="a" d="M0 1.525v14.431l8.4-7.134z"/>
     <path class="a" d="M15.923 8.822l8.4 7.134V1.52z"/>
+</symbol><symbol id="icon-cross" viewBox="0 0 15.5 15.5">
+    
+    <path class="a" d="M15.5 1.55L13.95 0l-6.2 6.2L1.55 0 0 1.55l6.2 6.2-6.2 6.2 1.55 1.55 6.2-6.2 6.2 6.2 1.55-1.55-6.2-6.2z"/>
 </symbol><symbol id="icon-emojis" viewBox="0 0 19.4 19.4">
     <style>
         .st0{fill:#191919}
