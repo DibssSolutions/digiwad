@@ -2,6 +2,7 @@
     width: 100%
     position: absolute
     z-index: 5
+    background-color: $gray-900
     &__wrap
         // padding: rem(50px 30px 23px)
         padding-top: rem(50px)
@@ -24,12 +25,12 @@
             justify-content: flex-start
             background-color: lighten($gray-900,10%)
             padding-top: rem(30px)
-            transform: translateX(-102%)
+            margin-left: (-320px)
             transition: transform .5s
             // box-shadow: 6px 0 12px rgba(#fefefe,.1)
             // border-right: 2px solid $white
             &.is-active
-                transform: translateX(0)
+                transform: translateX(320px)
 
     &_fixed
         position: fixed
