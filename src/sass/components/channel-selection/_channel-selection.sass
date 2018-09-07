@@ -102,11 +102,11 @@
             & ~ .channel-selection__item-text
                 &:before
                     opacity: .5
-    &__submit
-        align-self: flex-end
-        .icon
-            font-size: rem(14px)
-            margin-bottom: rem(2px)
+.compain-submit
+    align-self: flex-end
+    .icon
+        font-size: rem(14px)
+        margin-bottom: rem(2px)
 
 .compain-menu
     margin-bottom: 0
@@ -115,6 +115,11 @@
         background-color: $gray-500
         +md
             display: none
+        &:not(:last-child)
+            .compain-menu__link
+                border-right: none
+                +md
+                    border-right: 1px solid $gray-600
         &.is-active
             background-color: $white
             +md

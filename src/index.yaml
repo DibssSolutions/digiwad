@@ -15,3 +15,5 @@ PageList:
   ready: 50
 - file: channel-selection.html
   ready: 50
+- file: compain-details.html
+  ready: 50
