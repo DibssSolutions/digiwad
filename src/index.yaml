@@ -13,3 +13,5 @@ PageList:
   ready: 50
 - file: dashboard.html
   ready: 50
+- file: channel-selection.html
+  ready: 50

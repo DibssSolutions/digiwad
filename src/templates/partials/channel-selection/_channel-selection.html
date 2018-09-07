@@ -1,0 +1,64 @@
+<div class="channel-selection login">
+    <div class="channel-selection__inner inner inner_lg login-inner">
+        <div class="channel-selection__body dashboard-body">
+            <ul class="channel-selection__nav compain-menu row no-gutters">
+                {% for item in [
+                    {
+                        text: "1. Channel Selection",
+                        active: true
+                    },
+                    {
+                        text: "2. Campaign Details"
+                    },
+                    {
+                        text: "3. Audience & Budget"
+                    },
+                    {
+                        text: "4. Review & Submit"
+                    }
+                ] %}
+                <li class="channel-selection__nav-item compain-menu__item col {% if item.active %}is-active{% endif %}">
+                    <a href="#" class="compain-menu__link">
+                        <span class="compain-menu__icon">
+                            {{ mixins.icon("check") }}
+                        </span>
+                        <span class="compain-menu__text">
+                            {{ item.text }}
+                        </span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="channel-selection__content">
+                <form class="channel-selection__form">
+                    <ul class="channel-selection__list">
+                        <li class="channel-selection__list-item channel-selection__list-item_youtube">
+                            <label class="channel-selection__label">
+                                <span class="channel-selection__item-icon">{{ mixins.icon("youtube") }}</span>
+                                <input class="channel-selection__checkbox" type="checkbox">
+                                <span class="channel-selection__item-text">Choose the youtube channel</span>
+                            </label>
+                        </li>
+                        <li class="channel-selection__list-item channel-selection__list-item_facebook">
+                            <label class="channel-selection__label">
+                                <span class="channel-selection__item-icon">{{ mixins.icon("facebook") }}</span>
+                                <input class="channel-selection__checkbox" type="checkbox">
+                                <span class="channel-selection__item-text">Choose the Facebook channel</span>
+                            </label>
+                        </li>
+                        <li class="channel-selection__list-item channel-selection__list-item_twitch">
+                            <label class="channel-selection__label">
+                                <span class="channel-selection__item-icon">{{ mixins.icon("twitch") }}</span>
+                                <input class="channel-selection__checkbox" type="checkbox">
+                                <span class="channel-selection__item-text">Choose the Twitch channel</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <div class="channel-selection__submit">
+                        <button type="button" class="btn btn-outline-primary btn_bold btn-lg btn_sm">Next {{ mixins.icon("arrow-right") }}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,164 @@
+.channel-selection
+    &__inner
+        padding-top: rem(153px)
+        vertical-align: bottom
+        +r(1439)
+            padding-top: rem(114px)
+        +md
+            padding: rem(114px 0 0)
+        +sm
+            padding: rem(100px 0 0)
+    &__body
+        color: $gray-900
+        font-size: rem(20px)
+        +md
+            font-size: rem(16px)
+        +sm
+            font-size: rem(14px)
+    &__nav
+    &__content
+        padding: rem(135px 40px 40px)
+        +md
+            padding-top: rem(50px)
+        +sm
+            padding: rem(30px 10px)
+    &__form
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__list
+        margin-bottom: rem(220px)
+        +md
+            margin-bottom: rem(80px)
+        +sm
+            margin-bottom: rem(50px)
+    &__list-item
+        position: relative
+        z-index: 2
+        color: $white
+        &:not(:last-child)
+            margin-bottom: rem(50px)
+            +md
+                margin-bottom: rem(30px)
+        // &_youtube
+        //     background-color: $red-bright
+        // &_facebook
+        //     background-color: $blue
+        //     // padding-left: rem(48px)
+        // &_twitch
+        //     background-color: $indigo
+        //     // padding-left: rem(43px)
+    &__label
+        padding: rem(15px 50px 20px 32px)
+        display: flex
+        align-items: center
+        user-select: none
+        +md
+            padding: rem(15px 32px)
+        +sm
+            padding: rem(10px)
+    &__item-icon
+        display: flex
+        align-items: center
+        margin-right: rem(60px)
+        font-size: 0
+        width: rem(35px)
+        justify-content: center
+        +md
+            margin-right: rem(30px)
+        +sm
+            margin-right: rem(18px)
+        .icon
+            font-size: rem(25px)
+            img,
+            svg
+                display: block
+                max-width: 100%
+                height: auto
+    &__item-text
+        display: block
+        &:before
+            position: absolute
+            content: ""
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+            background-color: $orange
+            z-index: -1
+            .channel-selection__list-item_youtube &
+                background-color: $red-bright
+            .channel-selection__list-item_facebook &
+                background-color: $blue
+                // padding-left: rem(48px)
+            .channel-selection__list-item_twitch &
+                background-color: $indigo
+                // padding-left: rem(43px)
+    &__checkbox
+        position: absolute
+        opacity: 0
+        visibility: hidden
+        &:checked
+            & ~ .channel-selection__item-text
+                &:before
+                    opacity: .5
+    &__submit
+        align-self: flex-end
+        .icon
+            font-size: rem(14px)
+            margin-bottom: rem(2px)
+
+.compain-menu
+    margin-bottom: 0
+    &__item
+        color: $gray-900
+        background-color: $gray-500
+        +md
+            display: none
+        &.is-active
+            background-color: $white
+            +md
+                display: block
+                width: 100%
+            .compain-menu__link
+                padding: rem(14px 20px)
+                border-left: 5px solid $primary
+                +r(1439)
+                    padding: rem(10px)
+            .compain-menu__icon
+                background-color: transparent
+                border: 2px solid $primary
+                color: $primary
+    &__link
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        padding: rem(14px 24px)
+        height: 100%
+        color: $gray-900
+        font-weight: 700
+        font-size: rem(20px)
+        border: 1px solid $gray-600
+        +r(1439)
+            padding: rem(10px)
+            font-size: rem(14px)
+        &:hover
+            text-decoration: none
+            color: $gray-900
+    &__icon
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-shrink: 0
+        margin-right: rem(25px)
+        color: $white
+        width: rem(40px)
+        height: rem(40px)
+        background-color: $gray-200
+        border-radius: 50%
+        font-size: rem(17px)
+        +r(1439)
+            margin-right: rem(10px)
+            font-size: rem(12px)
+            width: rem(25px)
+            height: rem(25px)
