@@ -1,0 +1,42 @@
+<div class="compain-audience login">
+        <div class="compain-audience__inner inner inner_lg login-inner">
+            <div class="compain-audience__body dashboard-body">
+                <ul class="compain-audience__nav compain-menu row no-gutters">
+                    {% for item in [
+                        {
+                            text: "1. Channel Selection"
+                        },
+                        {
+                            text: "2. Campaign Details"
+                        },
+                        {
+                            text: "3. Audience & Budget",
+                            active: true
+                        },
+                        {
+                            text: "4. Review & Submit"
+                        }
+                    ] %}
+                    <li class="compain-audience__nav-item compain-menu__item col {% if item.active %}is-active{% endif %}">
+                        <a href="#" class="compain-menu__link">
+                            <span class="compain-menu__icon">
+                                {{ mixins.icon("check") }}
+                            </span>
+                            <span class="compain-menu__text">
+                                {{ item.text }}
+                            </span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="compain-audience__content">
+                    <form class="compain-audience__form">
+                            
+                        <div class="compain-audience__submit compain-submit">
+                            <button type="button" class="btn btn-outline-primary btn_bold btn-lg btn_sm">Next {{ mixins.icon("arrow-right") }}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
