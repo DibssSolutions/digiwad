@@ -17,3 +17,5 @@ PageList:
   ready: 50
 - file: compain-details.html
   ready: 50
+- file: compain-audience.html
+  ready: 50

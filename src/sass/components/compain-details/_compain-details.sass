@@ -18,6 +18,10 @@
     &__nav
     &__content
         padding: rem(94px 40px 40px)
+        +md
+            padding: rem(50px 40px 40px)
+        +sm
+            padding: rem(30px 10px)
     &__form
         display: flex
         flex-direction: column
@@ -35,24 +39,233 @@
         display: flex
         align-items: center
         justify-content: space-between
+        +md
+            flex-direction: column
+        &:not(:last-child)
+            margin-bottom: rem(37px)
+            +md
+                margin-bottom: rem(20px)
+        &:nth-child(3)
+            margin-bottom: rem(51px)
+            +md
+                margin-bottom: rem(41px)
+            +sm
+                margin-bottom: rem(53px)
     &__input-group
         padding-right: rem(40px)
+        +sm
+            padding-right: rem(25px)
         &:not(:last-child)
             margin-right: rem(84px)
-    &__input
-        padding-left: rem(24px)
+            +md
+                margin-right: 0
+                margin-bottom: rem(20px)
+    &__textarea-wrap
+        display: flex
+        flex-direction: column
+        max-width: rem(623px)
+        width: 100%
+        margin-left: rem(-8px)
+        +md
+            margin-left: 0
+            max-width: none
+        .compain-details__label
+            padding-left: rem(26px)
+            +md
+                padding-left: rem(24px)
+            +sm
+                padding-left: rem(15px)
+        .compain-input-text
+            padding: rem(17px 28px)
+            font-size: rem(20px)
+            +md
+                font-size: rem(18px)
+                padding-left: rem(24px)
+            +sm
+                font-size: rem(14px)
+                padding-left: rem(15px)
+        .input-group-prepend
+    &__textarea-field
+        box-shadow: 0 2px 4px rgba(#000, .16)
+        background-color: $white
+    &__textarea
+        resize: none
         border: none
+        color: $gray-900
+        font-size: rem(18px)
+        padding-left: rem(32px)
+        width: 100%
+        line-height: 1.5
+        +sm
+            padding-left: rem(15px)
+    &__submit
+        margin-top: rem(17px)
+
 
 .input-group
     &__wrap
         box-shadow: 0 2px 4px rgba(#000, .16)
         width: 100%
         display: flex
+        +sm
+            flex-direction: column
+    &__label
+        font-size: rem(12px)
+        color: $primary
+        padding-left: rem(24px)
+        +sm
+            padding-left: rem(15px)
+    &__input
+        padding-left: rem(24px)
+        border: none
+        font-family: $font-family-montserrat
+        font-weight: 500
+        font-size: rem(20px)
+        color: $gray-700
+        +sm
+            padding-left: rem(15px)
+            font-size: rem(16px)
+        // &:focus
+        //     color: $gray-700
+    &__label-bottom
+        padding-left: rem(24px)
+        font-size: rem(16px)
+        position: absolute
+        left: 0
+        bottom: rem(-45px)
+        +md
+            font-size: rem(14px)
+            bottom: rem(-20px)
+        +sm
+            bottom: rem(-35px)
+            padding-left: rem(15px)
+    &.is-validated
+        .valid-label
+            display: block
+        // .input-group__input
+        //     color: $primary
+        .input-group__wrap
+            color: $primary
+            border-left: 5px solid $primary
+        .compain-input-text
+            padding-left: rem(19px)
+            +sm
+                padding-left: rem(10px)
+
+    &.is-error
+        .error-label
+            display: block
+            border: none
+            top: auto
+            transform: none
+            bottom: rem(14px)
+            right: rem(8px)
+            font-size: rem(35px)
+            color: $red
+            +sm
+                right: 0
+        .input-group__label
+            color: $red
+        .input-group__wrap
+            color: $red
+            border-bottom: 1px solid $red
 
 .compain-input-text
     padding: rem(0 20px 0 24px)
     background-color: $white
     border: none
+    color: $gray-700
+    +sm
+        padding: rem(0 15px)
+        font-size: rem(14px)
+        line-height: 1.3
 
 .valid-label
     position: absolute
+    font-size: rem(17px)
+    color: $primary
+    right: 0
+    bottom: rem(14px)
+    display: none
+    .icon
+        display: block
+
+.compain-file
+    // height: 100%
+    &:focus
+        outline: none
+    &__input:focus~.compain-file__label::after
+        border-color: $gray-600
+    &__label
+        border: none
+        margin-bottom: 0
+        padding-left: rem(24px)
+        +sm
+            padding-left: rem(15px)
+        &:after
+            content: "Choose File"
+            font-size: rem(17px)
+            font-family: $font-family-montserrat
+            font-weight: 500
+            padding-left: rem(41px)
+            padding-right: rem(41px)
+            border: 1px solid $gray-600
+            background-color: transparent
+            height: auto
+            border-radius: 0
+            +sm
+                font-size: rem(14px)
+                padding-top: rem(12px)
+                padding-left: rem(10px)
+                padding-right: rem(10px)
+
+.compain-select
+    background-color: transparent
+    outline: none
+    .dropdown-toggle
+        height: 100%
+        outline: none
+        border: none
+        background-color: transparent
+        padding-right: rem(24px)
+        +sm
+            padding-right: rem(5px)
+            padding-top: rem(12px)
+        &:focus
+            outline: none!important
+        &:not(:disabled):active
+            background-color: transparent
+        &:not(:disabled):active:focus
+            box-shadow: none
+        &:after
+            display: none
+        &.bs-placeholder>.filter-option
+            padding-left: rem(24px)
+            color: $gray-700
+            +sm
+                padding-left: rem(15px)
+                padding-right: rem(13px)
+                font-size: rem(14px)
+                line-height: 1.3
+    &.show
+        &>.btn.dropdown-toggle
+            background-color: transparent
+    .icon
+        font-size: rem(9px)
+        color: #777777
+    .dropdown-item
+        color: $gray-700
+        &.active,
+        &:active
+            color: $gray-700
+            text-decoration: none
+            background-color: $gray-100
+    .dropdown-menu
+        &.show
+            border: none
+            box-shadow: 0 2px 4px rgba(#000, .16)
+            padding: 0
+        &.inner
+            box-shadow: none
+        .inner
+            padding: 0
