@@ -16,7 +16,7 @@ $gray-400: #F0F0FB !default;//changed MR
 $gray-500: #E8E8E8 !default; //changed MR
 $gray-600: #707070 !default; //changed MR
 $gray-700: #717171 !default; //changed MR
-$gray-800: #343a40 !default;
+$gray-800: #333333 !default; //changed MR
 $gray-900: #191919 !default; //changed MR
 $black:    #000 !default;
 
@@ -186,7 +186,7 @@ $grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
-  lg: 992px,
+  lg: 1024px,
   xl: 1200px
 ) !default;
 

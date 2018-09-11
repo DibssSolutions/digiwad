@@ -33,7 +33,7 @@
                 <form class="compain-audience__form">
                     <div class="compain-audience__form-wrap">
                         <div class="compain-audience__row row no-gutters">
-                            <div class="compain-audience__col col">
+                            <div class="compain-audience__col col-lg">
                                 <h4 class="compain-audience__title">Target Audience</h4>
                                 <div class="input-group compain-audience__input-group">
                                     <div class="input-group__wrap compain-audience__input-wrap">
@@ -103,20 +103,87 @@
                                     </div>
                                 </div>
                                 <div class="input-group compain-audience__input-group">
-                                    <div class="input-group__wrap compain-audience__input-wrap">
+                                    <div class="input-group__wrap compain-audience__input-wrap compain-audience__input-wrap_radio">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text compain-input-text">Age group</span>
+                                        </div>
+                                        <div class="compain-audience__radio">
+                                                <!-- <div class="row compain-audience__radio-row no-gutters"> -->
+                                            {% for item in [
+                                                {
+                                                    text1: "Any Age"
+                                                },
+                                                {
+                                                    text1: "35-44"
+                                                },
+                                                {
+                                                    text1: "13-17"
+                                                },
+                                                {
+                                                    text1: "45-54"
+                                                },
+                                                {
+                                                    text1: "18-24"
+                                                },
+                                                {
+                                                    text1: "55-64"
+                                                },
+                                                {
+                                                    text1: "25-34"
+                                                },
+                                                {
+                                                    text1: "65+"
+                                                }
+                                            ] %}
+                                                    <!-- <div class="col compain-audience__radio-col"> -->
+                                                        <div class="custom-control custom-radio compain-radio compain-audience__radio-item">
+                                                            <input type="radio" id="compainRadio{{ loop.index }}" name="compainRadio" class="custom-control-input compain-radio__input">
+                                                            <label class="custom-control-label compain-radio__label" for="compainRadio{{ loop.index }}">{{ item.text1 }}</label>
+                                                        </div>
+                                                        <!-- <div class="custom-control custom-radio compain-radio">
+                                                            <input type="radio" id="compainRadio1{{ loop.index }}" name="compainRadio" class="custom-control-input compain-radio__input">
+                                                            <label class="custom-control-label compain-radio__label" for="compainRadio1{{ loop.index }}">Any Age</label>
+                                                        </div> -->
+                                                    <!-- </div> -->
+                                            {% endfor %}
+                                        <!-- </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="input-group compain-audience__input-group">
+                                    <label for="image" class="compain-audience__label input-group__label">Countries</label>
+                                    <div class="input-group__wrap">
+                                        <div class="multi-field">
+                                            <div class="multi-field__input" contenteditable="true" placeholder="Countries"><span contenteditable="false" class="tag">USA<button type="button" class="tag__close">{{ mixins.icon("arrow-left") }}</button></span></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="compain-audience__col col">
-                                <h4 class="compain-audience__title">Creator Match & Subscriber Reach</h4>
+                            <div class="compain-audience__col col-lg">
+                                <div class="compain-audience__creator">
+                                    <h4 class="compain-audience__title">Creator Match & Subscriber Reach</h4>
+                                    <div class="compain-audience__text">
+                                        how many Infiltrators fall under the criteria
+                                    </div>
+                                    <div class="compain-audience__text">
+                                        What is the maximum size of the audience you can reach
+                                    </div>
+                                </div>
+                                <div class="compain-audience__budget">
+                                    <h4 class="compain-audience__title">Content Budget</h4>
+                                    <div class="compain-audience__text">
+                                            The size of the budget<span>1000$</span>
+                                    </div>
+                                    <div class="compain-audience__text">
+                                        Audience size<span>400-500k</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="compain-audience__submit compain-submit">
-                            <button type="button" class="btn btn-outline-primary btn_bold btn-lg btn_sm">Next {{ mixins.icon("arrow-right") }}</button>
-                        </div>
+                    </div>
+                    <div class="compain-audience__submit compain-submit">
+                        <button type="button" class="btn btn-outline-primary btn_bold btn-lg btn_sm">Next {{ mixins.icon("arrow-right") }}</button>
                     </div>
                 </form>
             </div>
