@@ -93,11 +93,20 @@
         border: none
         color: $gray-900
         font-size: rem(18px)
-        padding-left: rem(32px)
+        padding: rem(17px 15px 17px 28px)
+        // padding-left: rem(32px)
+        // padding-right: rem(15px)
         width: 100%
         line-height: 1.5
+        &:focus
+            +placeholder
+                font-size: 0
         +sm
             padding-left: rem(15px)
+        +placeholder
+            font-size: rem(20px)
+            line-height: 1.5
+            color: $gray-700
     &__submit
         margin-top: rem(17px)
 
@@ -175,6 +184,7 @@
     background-color: $white
     border: none
     color: $gray-700
+    font-size: rem(18px)
     +sm
         padding: rem(0 15px)
         font-size: rem(14px)
