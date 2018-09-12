@@ -1,8 +1,8 @@
 <div class="login">
-    <div class="inner inner_lg login-inner">
-        <div class="dashboard-body">
+    <div class="compain-inner inner inner_lg login-inner">
+        <div class="compain-body dashboard-body">
             <ul class="compain-menu row no-gutters">
-                {% for item in [ { text: "1. Channel Selection" }, { text: "2. Campaign Details" }, { text: "3. Audience & Budget", active: true }, { text: "4. Review & Submit" } ] %}
+                {% for item in [ { text: "1. Channel Selection" }, { text: "2. Campaign Details" }, { text: "3. Audience & Budget" }, { text: "4. Review & Submit", active: true } ] %}
                 <li class="compain-menu__item col {% if item.active %}is-active{% endif %}">
                     <a href="#" class="compain-menu__link">
                         <span class="compain-menu__icon">
@@ -27,11 +27,25 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text compain-input-text">{{ item.label }}</span>
                                     </div>
-                                    <input type="text" autocomplete="off" id="title" class="form-control input-group__input" aria-describedby="inputGroupPrepend3" readonly value="{{ item.input }}">
+                                    <div class="form-control input-group__input">{{ item.input }}</div>
                                 </div>
                             </div>
                             {% endfor %}
                         </div>
+
+                        <div class="input-group compain-textarea">
+                            <div class="compain-textarea__field">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text compain-input-text">Campaign Details</span>
+                                </div>
+                                <div class="compain-textarea__text">
+                                    This is the fully managed, end to end or customizable package that allows you to combine aspects of your marketing plan that require expertise, project management, and hands off, results driven execution.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compain-review__submit compain-submit">
+                        <button type="button" class="btn btn-primary width270">Create a campaign</button>
                     </div>
                 </form>
             </div>
