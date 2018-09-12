@@ -1,23 +1,9 @@
-<div class="channel-selection login">
-    <div class="channel-selection__inner inner inner_lg login-inner">
-        <div class="channel-selection__body dashboard-body">
-            <ul class="channel-selection__nav compain-menu row no-gutters">
-                {% for item in [
-                    {
-                        text: "1. Channel Selection",
-                        active: true
-                    },
-                    {
-                        text: "2. Campaign Details"
-                    },
-                    {
-                        text: "3. Audience & Budget"
-                    },
-                    {
-                        text: "4. Review & Submit"
-                    }
-                ] %}
-                <li class="channel-selection__nav-item compain-menu__item col {% if item.active %}is-active{% endif %}">
+<div class="login">
+    <div class="compain-inner inner inner_lg login-inner">
+        <div class="compain-body dashboard-body">
+            <ul class="compain-menu row no-gutters">
+                {% for item in [ { text: "1. Channel Selection", active: true }, { text: "2. Campaign Details" }, { text: "3. Audience & Budget" }, { text: "4. Review & Submit" } ] %}
+                <li class="compain-menu__item col {% if item.active %}is-active{% endif %}">
                     <a href="#" class="compain-menu__link">
                         <span class="compain-menu__icon">
                             {{ mixins.icon("check") }}
@@ -29,7 +15,7 @@
                 </li>
                 {% endfor %}
             </ul>
-            <div class="channel-selection__content">
+            <div class="channel-selection">
                 <form class="channel-selection__form">
                     <ul class="channel-selection__list">
                         <li class="channel-selection__list-item channel-selection__list-item_youtube">

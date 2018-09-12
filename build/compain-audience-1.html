@@ -90,11 +90,11 @@
     sideMenu.classList.toggle("is-active")
 };
 </script>
-      <div class="compain-audience login">
-        <div class="compain-audience__inner inner inner_lg login-inner">
-          <div class="compain-audience__body dashboard-body">
-            <ul class="compain-audience__nav compain-menu row no-gutters">
-              <li class="compain-audience__nav-item compain-menu__item col ">
+      <div class="login">
+        <div class="compain-inner inner inner_lg login-inner">
+          <div class="compain-body dashboard-body">
+            <ul class="compain-menu row no-gutters">
+              <li class="compain-menu__item col ">
                 <a href="#" class="compain-menu__link">
                   <span class="compain-menu__icon">
                     <svg class="icon icon-check">
@@ -104,7 +104,7 @@
                   <span class="compain-menu__text"> 1. Channel Selection </span>
                 </a>
               </li>
-              <li class="compain-audience__nav-item compain-menu__item col ">
+              <li class="compain-menu__item col ">
                 <a href="#" class="compain-menu__link">
                   <span class="compain-menu__icon">
                     <svg class="icon icon-check">
@@ -114,7 +114,7 @@
                   <span class="compain-menu__text"> 2. Campaign Details </span>
                 </a>
               </li>
-              <li class="compain-audience__nav-item compain-menu__item col is-active">
+              <li class="compain-menu__item col is-active">
                 <a href="#" class="compain-menu__link">
                   <span class="compain-menu__icon">
                     <svg class="icon icon-check">
@@ -124,7 +124,7 @@
                   <span class="compain-menu__text"> 3. Audience &amp; Budget </span>
                 </a>
               </li>
-              <li class="compain-audience__nav-item compain-menu__item col ">
+              <li class="compain-menu__item col ">
                 <a href="#" class="compain-menu__link">
                   <span class="compain-menu__icon">
                     <svg class="icon icon-check">
@@ -135,7 +135,7 @@
                 </a>
               </li>
             </ul>
-            <div class="compain-audience__content">
+            <div class="compain-audience">
               <form class="compain-audience__form">
                 <div class="compain-audience__form-wrap">
                   <div class="compain-audience__row row no-gutters">
@@ -146,59 +146,61 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text compain-input-text">Floor</span>
                           </div>
-                          <div class="form-check compain-audience__form-check">
-                            <input name="floor" class="form-check-input compain-audience__check-input" type="checkbox" id="audience-check1">
-                            <label class="form-check-label compain-check-label compain-audience__check-label" for="audience-check1"> All <span class="compain-check-icon">
-                                <?xml version="1.0" encoding="UTF-8"?>
-                                <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                  <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
-                                  <title>Group</title>
-                                  <desc>Created with Sketch.</desc>
-                                  <defs></defs>
-                                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-                                    <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
-                                      <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
+                          <div class="compain-audience__check-wrap">
+                            <div class="form-check compain-audience__form-check">
+                              <input name="floor" class="form-check-input compain-audience__check-input" type="checkbox" id="audience-check1">
+                              <label class="form-check-label compain-check-label compain-audience__check-label" for="audience-check1"> All <span class="compain-check-icon">
+                                  <?xml version="1.0" encoding="UTF-8"?>
+                                  <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+                                    <title>Group</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <defs></defs>
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                      <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
+                                        <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
+                                      </g>
                                     </g>
-                                  </g>
-                                </svg>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="form-check compain-audience__form-check">
-                            <input name="floor" class="form-check-input compain-audience__check-input" type="checkbox" id="audience-check2">
-                            <label class="form-check-label compain-check-label compain-audience__check-label" for="audience-check2"> Male <span class="compain-check-icon">
-                                <?xml version="1.0" encoding="UTF-8"?>
-                                <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                  <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
-                                  <title>Group</title>
-                                  <desc>Created with Sketch.</desc>
-                                  <defs></defs>
-                                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-                                    <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
-                                      <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
+                                  </svg>
+                                </span>
+                              </label>
+                            </div>
+                            <div class="form-check compain-audience__form-check">
+                              <input name="floor" class="form-check-input compain-audience__check-input" type="checkbox" id="audience-check2">
+                              <label class="form-check-label compain-check-label compain-audience__check-label" for="audience-check2"> Male <span class="compain-check-icon">
+                                  <?xml version="1.0" encoding="UTF-8"?>
+                                  <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+                                    <title>Group</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <defs></defs>
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                      <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
+                                        <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
+                                      </g>
                                     </g>
-                                  </g>
-                                </svg>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="form-check compain-audience__form-check">
-                            <input name="floor" class="form-check-input compain-audience__check-input" type="checkbox" id="audience-check3">
-                            <label class="form-check-label compain-check-label compain-audience__check-label" for="audience-check3"> Female <span class="compain-check-icon">
-                                <?xml version="1.0" encoding="UTF-8"?>
-                                <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                  <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
-                                  <title>Group</title>
-                                  <desc>Created with Sketch.</desc>
-                                  <defs></defs>
-                                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-                                    <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
-                                      <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
+                                  </svg>
+                                </span>
+                              </label>
+                            </div>
+                            <div class="form-check compain-audience__form-check">
+                              <input name="floor" class="form-check-input compain-audience__check-input" type="checkbox" id="audience-check3">
+                              <label class="form-check-label compain-check-label compain-audience__check-label" for="audience-check3"> Female <span class="compain-check-icon">
+                                  <?xml version="1.0" encoding="UTF-8"?>
+                                  <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+                                    <title>Group</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <defs></defs>
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                      <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
+                                        <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
+                                      </g>
                                     </g>
-                                  </g>
-                                </svg>
-                              </span>
-                            </label>
+                                  </svg>
+                                </span>
+                              </label>
+                            </div>
                           </div>
                         </div>
                       </div>

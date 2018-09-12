@@ -21,5 +21,7 @@ PageList:
   ready: 50
 - file: compain-audience-1.html
   ready: 50
+- file: compain-review.html
+  ready: 50
 - file: сampaigns.html
   ready: 100
