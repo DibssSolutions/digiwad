@@ -42,57 +42,7 @@
             +md
                 margin-right: 0
                 margin-bottom: rem(20px)
-    &__textarea-wrap
-        display: flex
-        flex-direction: column
-        max-width: rem(623px)
-        width: 100%
-        margin-left: rem(-8px)
-        +md
-            margin-left: 0
-            max-width: none
-        .compain-details__label
-            padding-left: rem(26px)
-            +md
-                padding-left: rem(24px)
-            +sm
-                padding-left: rem(15px)
-        .compain-input-text
-            padding: rem(17px 28px)
-            font-size: rem(20px)
-            +md
-                font-size: rem(18px)
-                padding-left: rem(24px)
-            +sm
-                font-size: rem(14px)
-                padding-left: rem(15px)
-        .input-group-prepend
-    &__textarea-field
-        box-shadow: 0 2px 4px rgba(#000, .16)
-        background-color: $white
-    &__textarea
-        resize: none
-        border: none
-        color: $gray-900
-        font-size: rem(18px)
-        padding: rem(17px 15px 17px 28px)
-        // padding-left: rem(32px)
-        // padding-right: rem(15px)
-        width: 100%
-        line-height: 1.5
-        &:focus
-            +placeholder
-                font-size: 0
-        +sm
-            padding-left: rem(15px)
-            font-size: rem(16px)
-        +placeholder
-            font-size: rem(20px)
-            line-height: 1.5
-            color: $gray-700
-            +sm
-                font-size: rem(14px)
-                line-height: 1.3
+
     &__submit
         margin-top: rem(17px)
 
@@ -178,6 +128,56 @@
             color: $red
             border-bottom: 1px solid $red
 
+.compain-textarea
+    display: flex
+    flex-direction: column
+    max-width: rem(623px)
+    width: 100%
+    margin-left: rem(-8px)
+    +md
+        margin-left: 0
+        max-width: none
+    .input-group__label
+        padding-left: rem(26px)
+        +md
+            padding-left: rem(24px)
+        +sm
+            padding-left: rem(15px)
+    .compain-input-text
+        padding: rem(17px 28px)
+        font-size: rem(20px)
+        +md
+            font-size: rem(18px)
+            padding-left: rem(24px)
+        +sm
+            font-size: rem(14px)
+            padding-left: rem(15px)
+    &__field
+        box-shadow: 0 2px 4px rgba(#000, .16)
+        background-color: $white
+    &__text
+        resize: none
+        border: none
+        color: $gray-900
+        font-size: rem(18px)
+        padding: rem(17px 15px 17px 28px)
+        // padding-left: rem(32px)
+        // padding-right: rem(15px)
+        width: 100%
+        line-height: 1.5
+        &:focus
+            +placeholder
+                font-size: 0
+        +sm
+            padding-left: rem(15px)
+            font-size: rem(16px)
+        +placeholder
+            font-size: rem(20px)
+            line-height: 1.5
+            color: $gray-700
+            +sm
+                font-size: rem(14px)
+                line-height: 1.3
 
 .compain-input-text
     padding: rem(0 20px 0 24px)
@@ -252,6 +252,7 @@
         &.bs-placeholder>.filter-option
             padding-left: rem(24px)
             color: $gray-700
+            font-size: rem(18px)
             +sm
                 padding-left: rem(15px)
                 padding-right: rem(13px)

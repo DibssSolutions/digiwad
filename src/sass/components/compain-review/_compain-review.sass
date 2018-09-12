@@ -1,20 +1,67 @@
 .compain-review
     padding: rem(81px 72px 101px)
+    +r(1439)
+        padding: rem(81px 20px 101px)
     +md
-        padding: rem(50px 40px 40px)
+        padding: rem(50px 20px 40px)
     +sm
         padding: rem(30px 10px)
     &__input-wrap
-        display: flex
-        flex-wrap: wrap
+        // display: flex
+        // flex-wrap: wrap
+        font-size: 0
+        max-width: rem(1313px)
     &__input-group
         max-width: rem(623px)
-        margin: rem(8px 30px)
-        .input-group__input
+        padding: rem(8px 30px)
+        display: inline-block
+        width: 50%
+        +md
+            width: 100%
+            max-width: none
+            padding: rem(8px 0)
+        .input-group__wrap
+            display: block
+            vertical-align: middle
             background-color: $white
+        .input-group__input
             color: $primary
             font-weight: 400
+            display: inline-block
+            max-width: 40%
+            vertical-align: top
+            +text-overflow
+            +r(1439)
+                font-size: rem(18px)
+            +sm
+                max-width: none
+                font-size: rem(16px)
         .input-group-prepend
             min-width: rem(216px)
+            padding: rem(11px 0)
             flex-shrink: 0
+            background-color: $white
+            display: inline-block
+            max-width: 60%
+        .compain-input-text
+            text-align: left
+            white-space: normal
+            +r(1439)
+                font-size: rem(18px)
+            +sm
+                font-size: rem(14px)
+    &__submit
+        margin: rem(41px 0 0 30px)
+        +md
+            margin-left: 0
+    .compain-textarea
+        padding-left: rem(30px)
+        margin-left: 0
+        margin-top: rem(20px)
+        max-width: rem(1000px)
+        +md
+            padding-left: 0
+        &__text
+            color: $primary
+            font-family: $font-family-montserrat
         
