@@ -1,0 +1,19 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	
+	{# Start header #}
+	{{header.block(false, true)}}
+	{# END header #}
+
+	{# Start compain-audience #}
+	{% include "partials/compain-audience/_compain-audience-1.html" %}
+	{# END compain-audience #}
+
+
+
+{% endblock %}
