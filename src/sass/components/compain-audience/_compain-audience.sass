@@ -33,24 +33,30 @@
     &__row
         width: 100%
     &__col
-        +md
-            width: 100%
         &:not(:last-child)
             margin-right: rem(74px)
             +r(1439)
                 margin-right: rem(40px)
+            +md
+                margin-right: 0
+                margin-bottom: rem(30px)
     &__title
         font-size: rem(26px)
         color: $primary
         margin-bottom: rem(23px)
         +r(1439)
             font-size: rem(24px)
+        +sm
+            font-size: rem(18px)
     &__input-group
         &:not(:last-child)
             margin-bottom: rem(26px)
         .input-group-prepend
             min-width: rem(141px)
             margin-right: rem(38px)
+            +sm
+                margin-right: 0
+                margin-bottom: rem(10px)
         .input-group-text
             background-color: transparent
     &__input-wrap
@@ -60,6 +66,11 @@
             padding: 0
             .input-group-text
                 padding-top: rem(16px)
+    &__check-wrap
+        display: flex
+        +sm
+            padding-left: rem(15px)
+            flex-wrap: wrap
     &__form-check
         min-width: rem(83px)
         padding: 0
@@ -67,6 +78,8 @@
             margin-right: rem(70px)
             +r(1439)
                 margin-right: rem(20px)
+            +sm
+                margin-right: rem(10px)
     &__check-input
         position: absolute
         opacity: 0
@@ -81,6 +94,8 @@
     &__radio
         font-size: 0
         padding: 0
+        +sm
+            padding-left: rem(15px)
     &__radio-item
         padding: 0
         display: inline-block
@@ -90,20 +105,28 @@
         min-width: 124px
     &__creator
         margin-bottom: rem(80px)
+        +md
+            margin-bottom: rem(30px)
     &__text
         font-size: rem(20px)
         border-bottom: 1px solid $gray-900
         padding: rem(10px 0)
         +r(1439)
             font-size: rem(18px)
+        +sm
+            font-size: rem(16px)
         &:not(:last-child)
             margin-bottom: rem(28px)
         span
             font-family: $font-family-montserrat
             color: $primary
             margin-left: rem(40px)
+            +sm
+                margin-left: rem(20px)
     &__submit
         margin-top: rem(210px)
+        +md
+            margin-top: rem(50px)
 
             
         
@@ -118,6 +141,9 @@
     font-family: $font-family-montserrat
     +r(1439)
         font-size: rem(18px)
+    +sm
+        font-size: rem(16px)
+        padding-left: rem(25px)
     &:before
         content: ""
         position: absolute
@@ -164,18 +190,24 @@
 .multi-field
     position: relative
     width: 100%
+    padding: rem(10px 24px)
+    font-size: rem(18px)
+    color: $gray-900
+    font-weight: 500
+    +sm
+        padding: rem(10px 15px)
     &__input
         display: inline-block
-        padding: 5px
-        color: #000
         word-break: break-all
+        line-height: 2
+        min-width: rem(1px)
         &>*
             position: relative
             z-index: 1
         &:empty:before
             content: attr(placeholder)
             display: block
-            color: #000
+            color: $gray-700
         &:after
             position: absolute
             content: ""
@@ -184,5 +216,22 @@
             left: 0
             bottom: 0
             cursor: text
+        &:focus
+            &:before
+                display: none
 .tag
     display: inline-block
+    padding: rem(8px 15px 6px 18px)
+    font-family: $font-family-montserrat
+    border-radius: rem(20px)
+    border: 2px solid $primary
+    line-height: 1
+    &__close
+        font-size: rem(15px)
+        background-color: transparent
+        margin-left: rem(14px)
+        .icon
+            display: block
+            color: $primary
+        &:focus
+            outline: none

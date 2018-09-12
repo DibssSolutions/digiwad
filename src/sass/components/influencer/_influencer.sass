@@ -1,4 +1,4 @@
-.influencer
+.registration
     &__title
         margin-bottom: rem(65px)
         +sm
@@ -8,53 +8,7 @@
         margin-bottom: rem(30px)
         +md
             font-size: rem(16px)
-    &__connect-with
-        max-width: rem(440px)
-        margin: 0 auto
-        display: flex
-        align-items: center
-        justify-content: space-between
-        margin-bottom: rem(50px)
-        +sm
-            margin-bottom: rem(25px)
-        +md
-            flex-direction: column
-            justify-content: center
-    &__text
-        text-transform: uppercase
-        margin-right: rem(15px)
-        +md
-            margin-right: 0
-            margin-bottom: rem(15px)
-        +sm
-            font-size: rem(14px)
-    &__list
-        display: flex
-        margin-bottom: 0
-    &__list-item
-        width: rem(58px)
-        height: rem(58px)
-        border-radius: 50%
-        display: flex
-        align-items: center
-        justify-content: center
-        +sm
-            width: rem(40px)
-            height: rem(40px)
-        &:not(:last-child)
-            margin-right: rem(20px)
-            +sm
-                margin-right: rem(10px)
-        &_google
-            background-color: #DC4E41
-        &_facebook
-            background-color: $blue
-        &_twitch
-            background-color: $indigo
-        .icon
-            font-size: rem(22px)
-            +sm
-                font-size: rem(18px)
+    
     &__form
         max-width: rem(1160px)
         margin: 0 auto
@@ -155,6 +109,59 @@
             color: #00F37A
             &:before
                 background-color: #00F37A
+
+.connect-with
+    max-width: rem(440px)
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: rem(50px)
+    +sm
+        margin-bottom: rem(25px)
+    +md
+        flex-direction: column
+        justify-content: center
+    &__text
+        text-transform: uppercase
+        margin-right: rem(15px)
+        +md
+            margin-right: 0
+            margin-bottom: rem(15px)
+        +sm
+            font-size: rem(14px)
+    &__list
+        display: flex
+        margin-bottom: 0
+        li
+            &:not(:last-child)
+                margin-right: rem(20px)
+                +sm
+                    margin-right: rem(10px)
+    &__list-item
+        width: rem(58px)
+        height: rem(58px)
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        color: $white
+        +sm
+            width: rem(40px)
+            height: rem(40px)
+        &:hover
+            color: $white
+        &_google
+            background-color: #DC4E41
+        &_facebook
+            background-color: $blue
+        &_twitch
+            background-color: $indigo
+        .icon
+            display: block
+            font-size: rem(22px)
+            +sm
+                font-size: rem(18px)
 
 
     
