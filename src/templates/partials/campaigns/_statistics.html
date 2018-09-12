@@ -1,0 +1,128 @@
+<div class="dashboard">
+    <div class="dashboard__inner inner inner_lg">
+        <div class="dashboard__btn">
+            <a href="#" class="btn btn-primary width270">Create a campaign</a>
+        </div>
+        <div class="dashboard__body dashboard-body">
+            <div class="dashboard__header dashboard-header">
+                <div class="filter-select">
+                    <div class="filter-select__text">All</div>
+                </div>
+            </div>
+            <div class="dashboard__out">
+                <!-- begin statisticstable -->
+                <div class="statisticstable">
+                    <div class="statisticstable__row">
+                        {% for item in [
+                            {
+                                numb: '0',
+                                title: 'TOTAL PROPOSALS'
+                            },
+                            {
+                                numb: '0',
+                                title: 'IN PRODUCTION'
+                            },
+                            {
+                                numb: '0',
+                                title: 'COMPLETED'
+                            },
+                            {
+                                numb: '0',
+                                title: 'TOTAL SPEND'
+                            }
+                        ] %}
+                        <div class="statisticstable__col">
+                            <div class="statisticstable__numb">{{ item.numb }}</div>
+                            <div class="statisticstable__title">{{ item.title }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!-- end statisticstable -->
+                <!-- begin user -->
+                <div class="user">
+                    <div class="user__img-wrap">
+                        <div class="user__img" style="background-image: url(./img/user-logo.jpg);"></div>
+                    </div>
+                    <div class="user__wrap">
+                        <div class="user__head">
+                            <div class="user__name">Razer</div>
+                            <div class="user__soc social">
+                                <a href="#" class="social__item">{{ mixins.icon("youtube") }}</a>
+                                <a href="#" class="social__item">{{ mixins.icon("facebook") }}</a>
+                                <a href="#" class="social__item">{{ mixins.icon("twitter") }}</a>
+                            </div>
+                        </div>
+                        <div class="user__out">
+                            {% for row in [
+                                {
+                                    list: [
+                                        {
+                                            numb: 'Up to $100',
+                                            title: 'Budget'
+                                        },
+                                        {
+                                            numb: '0',
+                                            title: 'Proposals'
+                                        },
+                                        {
+                                            numb: '0',
+                                            title: 'Production'
+                                        },
+                                        {
+                                            numb: '0',
+                                            title: 'Completed'
+                                        },
+                                        {
+                                            numb: '$0',
+                                            title: 'Spend'
+                                        }
+                                    ]
+                                },
+                                {
+                                    list: [
+                                        {
+                                            class: 'user__numb_red',
+                                            numb: 'Pending Approval',
+                                            title: 'Status'
+                                        },
+                                        {
+                                            numb: '0',
+                                            title: 'Views'
+                                        },
+                                        {
+                                            numb: '0',
+                                            title: 'Min. Watched'
+                                        },
+                                        {
+                                            numb: '0',
+                                            title: 'Engagement'
+                                        },
+                                        {
+                                            numb: '$0.00',
+                                            title: 'CPV'
+                                        }
+                                    ]
+                                }
+                            ] %}
+                            <div class="user__row">
+                                {% for item in row.list %}
+                                <div class="user__col">
+                                    <div class="user__numb{% if item.class %} {{ item.class }}{% endif %}">{{ item.numb }}</div>
+                                    <div class="user__title">{{ item.title }}</div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="user__footer">
+                            <a href="#" class="btn btn btn-primary width197 btn-sm btn_rad">View Proposals</a>
+                            <a href="#" class="btn btn btn-primary width197 btn-sm btn_rad btn_blue">Actions</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end user -->
+            </div>
+        </div>
+    </div>
+</div>
