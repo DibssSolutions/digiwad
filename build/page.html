@@ -8,16 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
 
   <body>
     <!-- BEGIN content -->
     <div class="out">
       <header class="header header_fixed">
         <div class="header__wrap inner">
-          <div class="logo"> <a href="#">
-                <img src="./img/logo (1)@2x.png" alt="img">
-            </a> </div>
+          <div class="logo">
+            <a href="#">
+              <img src="./img/logo (1)@2x.png" alt="img">
+            </a>
+          </div>
           <div class="header__nav" id="header__nav">
             <nav class="menu-main">
               <ul class="menu-main__list">
@@ -27,22 +30,33 @@
                 <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Contacts</span></a></li>
               </ul>
             </nav>
-            <div class="login-block"> <button href="#" class="btn btn-outline-primary btn_xl btn_bold btn-color-white width173">Login</button>
-              <div class="signup"> <button href="#" class="btn btn-primary btn_xl btn_bold width173">Sign up</button>
-                <div class="login-type"> <a href="#" class="login-type__item">Influencer</a> <a href="#" class="login-type__item">Brands</a> </div>
+            <div class="login-block">
+              <button href="#" class="btn btn-outline-primary btn_xl btn_bold btn-color-white width173">Login</button>
+              <div class="signup">
+                <button href="#" class="btn btn-primary btn_xl btn_bold width173">Sign up</button>
+                <div class="login-type">
+                  <a href="#" class="login-type__item">Influencer</a>
+                  <a href="#" class="login-type__item">Brands</a>
+                </div>
               </div>
             </div>
-          </div> <button type="button" onclick="mnu()" class="toggle-mnu">
+          </div>
+          <button type="button" onclick="mnu()" class="toggle-mnu">
             <span class="sandwich" id="sandwich">
-                <span class="sw-topper"></span>
-                <span class="sw-bottom"><span class="sw-bottom__inner"></span></span>
-                <span class="sw-footer"></span>
+              <span class="sw-topper"></span>
+              <span class="sw-bottom"><span class="sw-bottom__inner"></span></span>
+              <span class="sw-footer"></span>
             </span>
-        </button>
+          </button>
           <div class="side-menu" id="side-menu">
-            <div class="side-menu__btn"> <button href="#" class="btn btn-outline-primary btn_xl btn_bold btn-color-white width173">Login</button>
-              <div class="signup"> <button href="#" class="btn btn-primary btn_xl btn_bold width173">Sign up</button>
-                <div class="login-type"> <a href="#" class="login-type__item">Influencer</a> <a href="#" class="login-type__item">Brands</a> </div>
+            <div class="side-menu__btn">
+              <button href="#" class="btn btn-outline-primary btn_xl btn_bold btn-color-white width173">Login</button>
+              <div class="signup">
+                <button href="#" class="btn btn-primary btn_xl btn_bold width173">Sign up</button>
+                <div class="login-type">
+                  <a href="#" class="login-type__item">Influencer</a>
+                  <a href="#" class="login-type__item">Brands</a>
+                </div>
               </div>
             </div>
             <ul class="side-menu__list">
@@ -54,16 +68,13 @@
           </div>
         </div>
       </header>
-      <script>
-        function mnu()
-        {
-          var sandwich = document.getElementById("sandwich");
-          var sideMenu = document.getElementById("header__nav");
-          sandwich.classList.toggle("is-active");
-          sideMenu.classList.toggle("is-active")
-        };
-
-      </script>
+      <script> function mnu() {
+    var sandwich = document.getElementById("sandwich");
+    var sideMenu = document.getElementById("header__nav");
+    sandwich.classList.toggle("is-active");
+    sideMenu.classList.toggle("is-active")
+};
+</script>
       <div class="main-slider">
         <ul class="dots">
           <li class="dots__item dot active"></li>
@@ -79,11 +90,17 @@
             <div class="slide__inner inner marketplace__inner">
               <div class="marketplace__content">
                 <div class="marketplace__text slide__text">
-                  <h2 class="marketplace__title slide__title"> <span>Digiwad</span> is the exclusive eSports marketplace </h2>
+                  <h2 class="marketplace__title slide__title">
+                    <span>Digiwad</span> is the exclusive eSports marketplace </h2>
                   <p> We are empowering eSports athletes and personalities to get stuff from brands and sponsors for being you to those who like you! </p>
-                  <div class="marketplace__btns slide__btns"> <a href="#" class="btn btn-primary btn-lg btn_xl width212">INFLUENCERS</a> <a href="#" class="btn btn-outline-primary btn-lg btn_xl btn-color-white width212">BRANDS</a> </div>
+                  <div class="marketplace__btns slide__btns">
+                    <a href="#" class="btn btn-primary btn-lg btn_xl width212">INFLUENCERS</a>
+                    <a href="#" class="btn btn-outline-primary btn-lg btn_xl btn-color-white width212">BRANDS</a>
+                  </div>
                 </div>
-                <div class="marketplace__img slide__img"> <img src="./img/marketplace.jpg" alt="img"> </div>
+                <div class="marketplace__img slide__img">
+                  <img src="./img/marketplace.jpg" alt="img">
+                </div>
               </div>
             </div>
           </div>
@@ -95,20 +112,30 @@
                   <h5 class="why-join__advantages"> BIG discounts, FREE gear, $$$, tournament fees, or more you could compete to win. </h5>
                   <ul class="why-join__list branded-list">
                     <li class="why-join__item branded-list__item"><span>
-<svg class="icon icon-icon"><use xlink:href="img/sprite.svg#icon-icon"></use></svg>
-</span>Would I accept money or cool stuff to talk about things I like?</li>
+                        <svg class="icon icon-icon">
+                          <use xlink:href="img/sprite.svg#icon-icon"></use>
+                        </svg>
+                      </span>Would I accept money or cool stuff to talk about things I like?</li>
                     <li class="why-join__item branded-list__item"><span>
-<svg class="icon icon-icon"><use xlink:href="img/sprite.svg#icon-icon"></use></svg>
-</span>Have I ever told friends about something I liked?</li>
+                        <svg class="icon icon-icon">
+                          <use xlink:href="img/sprite.svg#icon-icon"></use>
+                        </svg>
+                      </span>Have I ever told friends about something I liked?</li>
                     <li class="why-join__item branded-list__item"><span>
-<svg class="icon icon-icon"><use xlink:href="img/sprite.svg#icon-icon"></use></svg>
-</span>Do I have at least one social account?</li>
+                        <svg class="icon icon-icon">
+                          <use xlink:href="img/sprite.svg#icon-icon"></use>
+                        </svg>
+                      </span>Do I have at least one social account?</li>
                     <li class="why-join__item branded-list__item"><span>
-<svg class="icon icon-icon"><use xlink:href="img/sprite.svg#icon-icon"></use></svg>
-</span>Do I game or like games?</li>
+                        <svg class="icon icon-icon">
+                          <use xlink:href="img/sprite.svg#icon-icon"></use>
+                        </svg>
+                      </span>Do I game or like games?</li>
                     <li class="why-join__item branded-list__item"><span>
-<svg class="icon icon-icon"><use xlink:href="img/sprite.svg#icon-icon"></use></svg>
-</span>Thousands follow me?</li>
+                        <svg class="icon icon-icon">
+                          <use xlink:href="img/sprite.svg#icon-icon"></use>
+                        </svg>
+                      </span>Thousands follow me?</li>
                   </ul>
                 </div>
                 <div class="why-join__slogan text-center"> Come take a peak and join the digiwad movement. </div>
@@ -118,13 +145,14 @@
           <div class="join slide" style="background-image: url(./img/svgo/join_bg.svg)">
             <div class="slide__inner inner join__inner">
               <div class="join__content">
-                <div class="join__img slide__img"> <img src="./img/join.jpg" alt="img"> </div>
+                <div class="join__img slide__img">
+                  <img src="./img/join.jpg" alt="img">
+                </div>
                 <div class="join__text slide__text">
                   <h2 class="join__title slide__title"> Why join digiwad? </h2>
                   <div class="join__wrap">
                     <h5 class="join__advantages"> Join for free, work with an awesome eSports athlete or personality, create something attention getting, repeat... </h5>
-                    <p> Why use artificial intelligence when REAL is available?! digiwad combines your key metrics with smart data and the right talent to give the highest probability for a successful campaign. Just come up with a way to reward our stars
-                      and we will help you easily manage the entire process. </p>
+                    <p> Why use artificial intelligence when REAL is available?! digiwad combines your key metrics with smart data and the right talent to give the highest probability for a successful campaign. Just come up with a way to reward our stars and we will help you easily manage the entire process. </p>
                   </div>
                 </div>
               </div>
@@ -140,11 +168,12 @@
                   </div>
                   <div class="interest__wrap">
                     <h2 class="interest__title interest__title_lg slide__title"> Can you describe the eSports audience? </h2>
-                    <p> If you are interested in a global audience consisting of 65% tastemaking influential millennials, male and female, aged 18-34 with 43% having a household income of $75,000 or higher consuming more than 6 BILLION hours of streaming
-                      per year and growing. </p>
+                    <p> If you are interested in a global audience consisting of 65% tastemaking influential millennials, male and female, aged 18-34 with 43% having a household income of $75,000 or higher consuming more than 6 BILLION hours of streaming per year and growing. </p>
                   </div>
                 </div>
-                <div class="interest__img slide__img"> <img src="./img/Group446@2x.png" alt="img"> </div>
+                <div class="interest__img slide__img">
+                  <img src="./img/Group446@2x.png" alt="img">
+                </div>
               </div>
             </div>
           </div>
@@ -152,32 +181,49 @@
             <div class="slide__inner inner benefits__inner">
               <div class="benefits__content">
                 <div class="benefits__text slide__text">
-                  <div class="benefits__btns slide__btns"> <a href="#" class="btn btn-primary btn_xs width192">eSports Talent</a> <a href="#" class="btn btn-outline-primary btn_xs btn-color-white width192">Brands & Agencies</a> </div>
+                  <div class="benefits__btns slide__btns">
+                    <a href="#" class="btn btn-primary btn_xs width192">eSports Talent</a>
+                    <a href="#" class="btn btn-outline-primary btn_xs btn-color-white width192">Brands & Agencies</a>
+                  </div>
                   <div class="benefits__wrap">
                     <h2 class="benefits__title slide__title"> ZERO sign up fee; 10% Partner fee </h2>
-                    <p> In exchange for working hard to bring great sponsorships and fun & easy way to get paid or rewarded while doing what you like, a tiny partner fee helps us keep supporting you, the marketplace, and our junk food habit, you keep the
-                      whole rest. </p>
+                    <p> In exchange for working hard to bring great sponsorships and fun & easy way to get paid or rewarded while doing what you like, a tiny partner fee helps us keep supporting you, the marketplace, and our junk food habit, you keep the whole rest. </p>
                   </div>
                   <ul class="benefits__list branded-list">
                     <li class="benefits__item branded-list__item"><span>
-<svg class="icon icon-icon"><use xlink:href="img/sprite.svg#icon-icon"></use></svg>
-</span>Compete for money, free prizes, BIG discounts</li>
+                        <svg class="icon icon-icon">
+                          <use xlink:href="img/sprite.svg#icon-icon"></use>
+                        </svg>
+                      </span>Compete for money, free prizes, BIG discounts</li>
                     <li class="benefits__item branded-list__item"><span>
-<svg class="icon icon-icon"><use xlink:href="img/sprite.svg#icon-icon"></use></svg>
-</span>Earn while you play for talking about brands & stuff you like to those who like you</li>
+                        <svg class="icon icon-icon">
+                          <use xlink:href="img/sprite.svg#icon-icon"></use>
+                        </svg>
+                      </span>Earn while you play for talking about brands & stuff you like to those who like you</li>
                     <li class="benefits__item branded-list__item"><span>
-<svg class="icon icon-icon"><use xlink:href="img/sprite.svg#icon-icon"></use></svg>
-</span>Use simple tools to create & receive campaign prizes</li>
+                        <svg class="icon icon-icon">
+                          <use xlink:href="img/sprite.svg#icon-icon"></use>
+                        </svg>
+                      </span>Use simple tools to create & receive campaign prizes</li>
                   </ul>
                 </div>
                 <div class="benefits__slider benefits-slider">
-                  <div class="benefits-slider__arrows"> <button type="button" class="benefits-slider__prev">
-<svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
-</button> <button type="button" class="benefits-slider__next">
-<svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg>
-</button> </div>
+                  <div class="benefits-slider__arrows">
+                    <button type="button" class="benefits-slider__prev">
+                      <svg class="icon icon-arrow-left">
+                        <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="benefits-slider__next">
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
                   <div class="benefits-slider__wrap">
-                    <div class="benefits-slider__item"> <img src="./img/benefits.jpg" alt="img"> </div>
+                    <div class="benefits-slider__item">
+                      <img src="./img/benefits.jpg" alt="img">
+                    </div>
                   </div>
                 </div>
               </div>
@@ -192,31 +238,49 @@
                 </div>
                 <ul class="friends__list row">
                   <li class="friends__item col-md-4 col-sm-4 col-6">
-                    <div class="logos-wrap"> <img src="./img/Blizzard_Entertainment_Logo.svg" alt="logo"> </div>
+                    <div class="logos-wrap">
+                      <img src="./img/Blizzard_Entertainment_Logo.svg" alt="logo">
+                    </div>
                   </li>
                   <li class="friends__item col-md-4 col-sm-4 col-6">
-                    <div class="logos-wrap"> <img src="./img/Twitch_logo.svg" alt="logo"> </div>
+                    <div class="logos-wrap">
+                      <img src="./img/Twitch_logo.svg" alt="logo">
+                    </div>
                   </li>
                   <li class="friends__item col-md-4 col-sm-4 col-6">
-                    <div class="logos-wrap"> <img src="./img/Blizzard_Entertainment_Logo.svg" alt="logo"> </div>
+                    <div class="logos-wrap">
+                      <img src="./img/Blizzard_Entertainment_Logo.svg" alt="logo">
+                    </div>
                   </li>
                   <li class="friends__item col-md-4 col-sm-4 col-6">
-                    <div class="logos-wrap"> <img src="./img/ea-games.svg" alt="logo"> </div>
+                    <div class="logos-wrap">
+                      <img src="./img/ea-games.svg" alt="logo">
+                    </div>
                   </li>
                   <li class="friends__item col-md-4 col-sm-4 col-6">
-                    <div class="logos-wrap"> <img src="./img/riot-games-1.svg" alt="logo"> </div>
+                    <div class="logos-wrap">
+                      <img src="./img/riot-games-1.svg" alt="logo">
+                    </div>
                   </li>
                   <li class="friends__item col-md-4 col-sm-4 col-6">
-                    <div class="logos-wrap"> <img src="./img/ea-games.svg" alt="logo"> </div>
+                    <div class="logos-wrap">
+                      <img src="./img/ea-games.svg" alt="logo">
+                    </div>
                   </li>
                   <li class="friends__item col-md-4 col-sm-4 col-6">
-                    <div class="logos-wrap"> <img src="./img/Blizzard_Entertainment_Logo.svg" alt="logo"> </div>
+                    <div class="logos-wrap">
+                      <img src="./img/Blizzard_Entertainment_Logo.svg" alt="logo">
+                    </div>
                   </li>
                   <li class="friends__item col-md-4 col-sm-4 col-6">
-                    <div class="logos-wrap"> <img src="./img/Twitch_logo.svg" alt="logo"> </div>
+                    <div class="logos-wrap">
+                      <img src="./img/Twitch_logo.svg" alt="logo">
+                    </div>
                   </li>
                   <li class="friends__item col-md-4 col-sm-4 col-6">
-                    <div class="logos-wrap"> <img src="./img/Blizzard_Entertainment_Logo.svg" alt="logo"> </div>
+                    <div class="logos-wrap">
+                      <img src="./img/Blizzard_Entertainment_Logo.svg" alt="logo">
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -226,14 +290,24 @@
             <div class="contacts__wrap">
               <div class="contacts__inner slide__inner inner">
                 <div class="contacts__content">
-                  <div class="contacts__map"> <img src="./img/maps@2x.jpg" alt="map"> </div>
+                  <div class="contacts__map">
+                    <img src="./img/maps@2x.jpg" alt="map">
+                  </div>
                   <div class="contacts__form">
                     <h2 class="contacts__title">Contact</h2>
                     <form>
-                      <div class="form-group contacts__form-group"> <input type="text" autocomplete="off" class="form-control contacts__input input-dark" placeholder="Full Name"> </div>
-                      <div class="form-group contacts__form-group"> <input type="text" autocomplete="off" class="form-control contacts__input input-dark" placeholder="Enter email"> </div>
-                      <div class="form-group contacts__form-group"> <textarea class="form-control  contacts__input input-dark" autocomplete="off" rows="3" placeholder="Message"></textarea> </div>
-                      <div class="contacts__submit"> <button type="submit" class="btn btn-outline-primary btn_xl btn-color-white width197">SEND</button> </div>
+                      <div class="form-group contacts__form-group">
+                        <input type="text" autocomplete="off" class="form-control contacts__input input-dark" placeholder="Full Name">
+                      </div>
+                      <div class="form-group contacts__form-group">
+                        <input type="text" autocomplete="off" class="form-control contacts__input input-dark" placeholder="Enter email">
+                      </div>
+                      <div class="form-group contacts__form-group">
+                        <textarea class="form-control  contacts__input input-dark" autocomplete="off" rows="3" placeholder="Message"></textarea>
+                      </div>
+                      <div class="contacts__submit">
+                        <button type="submit" class="btn btn-outline-primary btn_xl btn-color-white width197">SEND</button>
+                      </div>
                     </form>
                   </div>
                 </div>
@@ -241,9 +315,11 @@
               <div class="slide__footer">
                 <div class="contacts__footer">
                   <div class="contacts__inner inner">
-                    <div class="contacts__logo"> <a href="#">
-                            <img src="./img/logo (1)@2x.png" alt="img">
-                        </a> </div>
+                    <div class="contacts__logo">
+                      <a href="#">
+                        <img src="./img/logo (1)@2x.png" alt="img">
+                      </a>
+                    </div>
                     <div class="contacts__menu ">
                       <div class="row">
                         <div class="col-12 col-md contacts__col">
@@ -274,13 +350,23 @@
                         <div class="col-12 col-md contacts__col">
                           <div class="contacts__social">
                             <div class="contacts__social-title"> Follow Me On </div>
-                            <div class="social"> <a href="#" class="social__item">
-<svg class="icon icon-youtube"><use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
-</a> <a href="#" class="social__item">
-<svg class="icon icon-facebook"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
-</a> <a href="#" class="social__item">
-<svg class="icon icon-twitter"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
-</a> </div>
+                            <div class="social">
+                              <a href="#" class="social__item">
+                                <svg class="icon icon-youtube">
+                                  <use xlink:href="img/sprite.svg#icon-youtube"></use>
+                                </svg>
+                              </a>
+                              <a href="#" class="social__item">
+                                <svg class="icon icon-facebook">
+                                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                                </svg>
+                              </a>
+                              <a href="#" class="social__item">
+                                <svg class="icon icon-twitter">
+                                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                                </svg>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>

@@ -8,16 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
 
   <body>
     <!-- BEGIN content -->
     <div class="out">
       <header class="header">
         <div class="header__wrap inner inner_lg">
-          <div class="logo"> <a href="#">
-                <img src="./img/logo (1)@2x.png" alt="img">
-            </a> </div>
+          <div class="logo">
+            <a href="#">
+              <img src="./img/logo (1)@2x.png" alt="img">
+            </a>
+          </div>
           <div class="header__nav" id="header__nav">
             <nav class="menu-main">
               <ul class="menu-main__list">
@@ -29,29 +32,46 @@
               </ul>
             </nav>
             <div class="account">
-              <div class="account__name"> Razer <span class="account__icon"></span> </div>
-              <div class="account__logo"> <img src="./img/avatar.jpg" alt="avatar"> </div>
-              <div class="account__details"> <a href="#" class="account__link">Account Settings</a> <a href="#" class="account__link">Profile Settings</a> <a href="#" class="account__link">Sign off / Logout</a> </div>
+              <div class="account__name"> Razer <span class="account__icon"></span>
+              </div>
+              <div class="account__logo">
+                <img src="./img/avatar.jpg" alt="avatar">
+              </div>
+              <div class="account__details">
+                <a href="#" class="account__link">Account Settings</a>
+                <a href="#" class="account__link">Profile Settings</a>
+                <a href="#" class="account__link">Sign off / Logout</a>
+              </div>
             </div>
-            <div class="messages"> <button type="button" class="messages__icon">
-                        
-<svg class="icon icon-close-envelope"><use xlink:href="img/sprite.svg#icon-close-envelope"></use></svg>
-
-                        <span class="counter messages__counter">1</span>
-                    </button>
-              <div class="messages__details"> <a href="#" class="messages__link">You have <span class="messages__number">0</span> new messages</a> <a href="#" class="messages__link">View all messages</a> </div>
+            <div class="messages">
+              <button type="button" class="messages__icon">
+                <svg class="icon icon-close-envelope">
+                  <use xlink:href="img/sprite.svg#icon-close-envelope"></use>
+                </svg>
+                <span class="counter messages__counter">1</span>
+              </button>
+              <div class="messages__details">
+                <a href="#" class="messages__link">You have <span class="messages__number">0</span> new messages</a>
+                <a href="#" class="messages__link">View all messages</a>
+              </div>
             </div>
-          </div> <button type="button" onclick="mnu()" class="toggle-mnu">
+          </div>
+          <button type="button" onclick="mnu()" class="toggle-mnu">
             <span class="sandwich" id="sandwich">
-                <span class="sw-topper"></span>
-                <span class="sw-bottom"><span class="sw-bottom__inner"></span></span>
-                <span class="sw-footer"></span>
+              <span class="sw-topper"></span>
+              <span class="sw-bottom"><span class="sw-bottom__inner"></span></span>
+              <span class="sw-footer"></span>
             </span>
-        </button>
+          </button>
           <div class="side-menu" id="side-menu">
-            <div class="side-menu__btn"> <button href="#" class="btn btn-outline-primary btn_xl btn_bold btn-color-white width173">Login</button>
-              <div class="signup"> <button href="#" class="btn btn-primary btn_xl btn_bold width173">Sign up</button>
-                <div class="login-type"> <a href="#" class="login-type__item">Influencer</a> <a href="#" class="login-type__item">Brands</a> </div>
+            <div class="side-menu__btn">
+              <button href="#" class="btn btn-outline-primary btn_xl btn_bold btn-color-white width173">Login</button>
+              <div class="signup">
+                <button href="#" class="btn btn-primary btn_xl btn_bold width173">Sign up</button>
+                <div class="login-type">
+                  <a href="#" class="login-type__item">Influencer</a>
+                  <a href="#" class="login-type__item">Brands</a>
+                </div>
               </div>
             </div>
             <ul class="side-menu__list">
@@ -63,118 +83,157 @@
           </div>
         </div>
       </header>
-      <script>
-        function mnu()
-        {
-          var sandwich = document.getElementById("sandwich");
-          var sideMenu = document.getElementById("header__nav");
-          sandwich.classList.toggle("is-active");
-          sideMenu.classList.toggle("is-active")
-        };
-
-      </script>
+      <script> function mnu() {
+    var sandwich = document.getElementById("sandwich");
+    var sideMenu = document.getElementById("header__nav");
+    sandwich.classList.toggle("is-active");
+    sideMenu.classList.toggle("is-active")
+};
+</script>
       <div class="compain-details login">
         <div class="compain-details__inner inner inner_lg login-inner">
           <div class="compain-details__body dashboard-body">
             <ul class="compain-details__nav compain-menu row no-gutters">
-              <li class="compain-details__nav-item compain-menu__item col "> <a href="#" class="compain-menu__link">
-                            <span class="compain-menu__icon">
-                                
-<svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-                            </span>
-                            <span class="compain-menu__text">
-                                1. Channel Selection
-                            </span>
-                        </a> </li>
-              <li class="compain-details__nav-item compain-menu__item col is-active"> <a href="#" class="compain-menu__link">
-                            <span class="compain-menu__icon">
-                                
-<svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-                            </span>
-                            <span class="compain-menu__text">
-                                2. Campaign Details
-                            </span>
-                        </a> </li>
-              <li class="compain-details__nav-item compain-menu__item col "> <a href="#" class="compain-menu__link">
-                            <span class="compain-menu__icon">
-                                
-<svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-                            </span>
-                            <span class="compain-menu__text">
-                                3. Audience &amp; Budget
-                            </span>
-                        </a> </li>
-              <li class="compain-details__nav-item compain-menu__item col "> <a href="#" class="compain-menu__link">
-                            <span class="compain-menu__icon">
-                                
-<svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-                            </span>
-                            <span class="compain-menu__text">
-                                4. Review &amp; Submit
-                            </span>
-                        </a> </li>
+              <li class="compain-details__nav-item compain-menu__item col ">
+                <a href="#" class="compain-menu__link">
+                  <span class="compain-menu__icon">
+                    <svg class="icon icon-check">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </span>
+                  <span class="compain-menu__text"> 1. Channel Selection </span>
+                </a>
+              </li>
+              <li class="compain-details__nav-item compain-menu__item col is-active">
+                <a href="#" class="compain-menu__link">
+                  <span class="compain-menu__icon">
+                    <svg class="icon icon-check">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </span>
+                  <span class="compain-menu__text"> 2. Campaign Details </span>
+                </a>
+              </li>
+              <li class="compain-details__nav-item compain-menu__item col ">
+                <a href="#" class="compain-menu__link">
+                  <span class="compain-menu__icon">
+                    <svg class="icon icon-check">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </span>
+                  <span class="compain-menu__text"> 3. Audience &amp; Budget </span>
+                </a>
+              </li>
+              <li class="compain-details__nav-item compain-menu__item col ">
+                <a href="#" class="compain-menu__link">
+                  <span class="compain-menu__icon">
+                    <svg class="icon icon-check">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </span>
+                  <span class="compain-menu__text"> 4. Review &amp; Submit </span>
+                </a>
+              </li>
             </ul>
             <div class="compain-details__content">
               <form class="compain-details__form">
                 <div class="compain-details__form-wrap">
                   <div class="compain-details__input-wrap">
                     <div class="compain-details__row">
-                      <div class="input-group compain-details__input-group is-validated"> <label for="title" class="compain-details__label input-group__label">Campaign Title</label>
+                      <div class="input-group compain-details__input-group is-validated">
+                        <label for="title" class="compain-details__label input-group__label">Campaign Title</label>
                         <div class="input-group__wrap">
-                          <div class="input-group-prepend"> <span class="input-group-text compain-input-text">Campaign Title</span> </div> <input type="text" autocomplete="off" id="title" class="form-control compain-details__input input-group__input" aria-describedby="inputGroupPrepend3">                          </div> <span class="error-label">!</span> <span class="valid-label">
-                                            
-<svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-                                        </span> </div>
-                      <div class="input-group compain-details__input-group is-error"> <label for="url" class="compain-details__label input-group__label">Product URL</label>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text compain-input-text">Campaign Title</span>
+                          </div>
+                          <input type="text" autocomplete="off" id="title" class="form-control compain-details__input input-group__input" aria-describedby="inputGroupPrepend3">
+                        </div>
+                        <span class="error-label">!</span>
+                        <span class="valid-label">
+                          <svg class="icon icon-check">
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                          </svg>
+                        </span>
+                      </div>
+                      <div class="input-group compain-details__input-group is-error">
+                        <label for="url" class="compain-details__label input-group__label">Product URL</label>
                         <div class="input-group__wrap">
-                          <div class="input-group-prepend"> <span class="input-group-text compain-input-text">Product URL</span> </div> <input type="text" autocomplete="off" id="url" class="form-control compain-details__input input-group__input"> </div> <span class="error-label">!</span>                        <span class="valid-label">
-                                            
-<svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-                                        </span> </div>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text compain-input-text">Product URL</span>
+                          </div>
+                          <input type="text" autocomplete="off" id="url" class="form-control compain-details__input input-group__input">
+                        </div>
+                        <span class="error-label">!</span>
+                        <span class="valid-label">
+                          <svg class="icon icon-check">
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                          </svg>
+                        </span>
+                      </div>
                     </div>
                     <div class="compain-details__row">
-                      <div class="input-group compain-details__input-group"> <label for="title" class="compain-details__label input-group__label">Product Category</label>
-                        <div class="input-group__wrap"> <select class="js-select form-control compain-select" title="Product Category">
-                                                <option value="1">1</option>
-                                                <option value="1">1</option>
-                                                <option value="1">1</option>
-                                            </select> </div>
-                      </div>
-                      <div class="input-group compain-details__input-group"> <label for="shipping" class="compain-details__label input-group__label">Product Shipping</label>
+                      <div class="input-group compain-details__input-group">
+                        <label for="title" class="compain-details__label input-group__label">Product Category</label>
                         <div class="input-group__wrap">
-                          <div class="input-group-prepend"> <span class="input-group-text compain-input-text">Product Shipping</span> </div> <input type="text" autocomplete="off" id="shipping" class="form-control compain-details__input input-group__input"> </div> <span class="error-label">!</span>                        <span class="valid-label">
-                                            
-<svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-                                        </span> </div>
+                          <select class="js-select form-control compain-select" title="Product Category">
+                            <option value="1">1</option>
+                            <option value="1">1</option>
+                            <option value="1">1</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="input-group compain-details__input-group">
+                        <label for="shipping" class="compain-details__label input-group__label">Product Shipping</label>
+                        <div class="input-group__wrap">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text compain-input-text">Product Shipping</span>
+                          </div>
+                          <input type="text" autocomplete="off" id="shipping" class="form-control compain-details__input input-group__input">
+                        </div>
+                        <span class="error-label">!</span>
+                        <span class="valid-label">
+                          <svg class="icon icon-check">
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                          </svg>
+                        </span>
+                      </div>
                     </div>
                     <div class="compain-details__row">
-                      <div class="input-group compain-details__input-group"> <label for="title" class="compain-details__label input-group__label">Campaign Listing Duration</label>
-                        <div class="input-group__wrap"> <select class="js-select form-control compain-select" title="Campaign Listing Duration">
-                                                <option value="1">1</option>
-                                                <option value="1">1</option>
-                                                <option value="1">1</option>
-                                            </select> </div>
-                      </div>
-                      <div class="input-group compain-details__input-group"> <label for="image" class="compain-details__label input-group__label">Product Image</label>
+                      <div class="input-group compain-details__input-group">
+                        <label for="title" class="compain-details__label input-group__label">Campaign Listing Duration</label>
                         <div class="input-group__wrap">
-                          <div class="custom-file compain-file"> <input type="file" class="custom-file-input compain-file__input" id="image" aria-describedby="image"> <label class="custom-file-label compain-file__label" for="image">Product Image</label> </div>
-                        </div> <span for="image" class="compain-details__label-bottom input-group__label-bottom">Only format: jpg, png, bmp. No more than 10 mb.</span> </div>
+                          <select class="js-select form-control compain-select" title="Campaign Listing Duration">
+                            <option value="1">1</option>
+                            <option value="1">1</option>
+                            <option value="1">1</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="input-group compain-details__input-group">
+                        <label for="image" class="compain-details__label input-group__label">Product Image</label>
+                        <div class="input-group__wrap">
+                          <div class="custom-file compain-file">
+                            <input type="file" class="custom-file-input compain-file__input" id="image" aria-describedby="image">
+                            <label class="custom-file-label compain-file__label" for="image">Product Image</label>
+                          </div>
+                        </div>
+                        <span for="image" class="compain-details__label-bottom input-group__label-bottom">Only format: jpg, png, bmp. No more than 10 mb.</span>
+                      </div>
                     </div>
-                    <div class="input-group compain-details__textarea-wrap"> <label class="compain-details__label input-group__label" for="textarea1">Campaign Details</label>
-                      <div class="compain-details__textarea-field"> <textarea class="compain-details__textarea" id="textarea1" rows="5" placeholder="Campaign Details"></textarea> </div>
+                    <div class="input-group compain-details__textarea-wrap">
+                      <label class="compain-details__label input-group__label" for="textarea1">Campaign Details</label>
+                      <div class="compain-details__textarea-field">
+                        <textarea class="compain-details__textarea" id="textarea1" rows="5" placeholder="Campaign Details"></textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="compain-details__submit compain-submit"> <button type="button" class="btn btn-outline-primary btn_bold btn-lg btn_sm">Next 
-<svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg>
-</button> </div>
+                <div class="compain-details__submit compain-submit">
+                  <button type="button" class="btn btn-outline-primary btn_bold btn-lg btn_sm">Next <svg class="icon icon-arrow-right">
+                      <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                    </svg>
+                  </button>
+                </div>
               </form>
             </div>
           </div>

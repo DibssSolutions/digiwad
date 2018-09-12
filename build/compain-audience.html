@@ -8,16 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
 
   <body>
     <!-- BEGIN content -->
     <div class="out">
       <header class="header">
         <div class="header__wrap inner inner_lg">
-          <div class="logo"> <a href="#">
-                <img src="./img/logo (1)@2x.png" alt="img">
-            </a> </div>
+          <div class="logo">
+            <a href="#">
+              <img src="./img/logo (1)@2x.png" alt="img">
+            </a>
+          </div>
           <div class="header__nav" id="header__nav">
             <nav class="menu-main">
               <ul class="menu-main__list">
@@ -29,29 +32,46 @@
               </ul>
             </nav>
             <div class="account">
-              <div class="account__name"> Razer <span class="account__icon"></span> </div>
-              <div class="account__logo"> <img src="./img/avatar.jpg" alt="avatar"> </div>
-              <div class="account__details"> <a href="#" class="account__link">Account Settings</a> <a href="#" class="account__link">Profile Settings</a> <a href="#" class="account__link">Sign off / Logout</a> </div>
+              <div class="account__name"> Razer <span class="account__icon"></span>
+              </div>
+              <div class="account__logo">
+                <img src="./img/avatar.jpg" alt="avatar">
+              </div>
+              <div class="account__details">
+                <a href="#" class="account__link">Account Settings</a>
+                <a href="#" class="account__link">Profile Settings</a>
+                <a href="#" class="account__link">Sign off / Logout</a>
+              </div>
             </div>
-            <div class="messages"> <button type="button" class="messages__icon">
-                        
-<svg class="icon icon-close-envelope"><use xlink:href="img/sprite.svg#icon-close-envelope"></use></svg>
-
-                        <span class="counter messages__counter">1</span>
-                    </button>
-              <div class="messages__details"> <a href="#" class="messages__link">You have <span class="messages__number">0</span> new messages</a> <a href="#" class="messages__link">View all messages</a> </div>
+            <div class="messages">
+              <button type="button" class="messages__icon">
+                <svg class="icon icon-close-envelope">
+                  <use xlink:href="img/sprite.svg#icon-close-envelope"></use>
+                </svg>
+                <span class="counter messages__counter">1</span>
+              </button>
+              <div class="messages__details">
+                <a href="#" class="messages__link">You have <span class="messages__number">0</span> new messages</a>
+                <a href="#" class="messages__link">View all messages</a>
+              </div>
             </div>
-          </div> <button type="button" onclick="mnu()" class="toggle-mnu">
+          </div>
+          <button type="button" onclick="mnu()" class="toggle-mnu">
             <span class="sandwich" id="sandwich">
-                <span class="sw-topper"></span>
-                <span class="sw-bottom"><span class="sw-bottom__inner"></span></span>
-                <span class="sw-footer"></span>
+              <span class="sw-topper"></span>
+              <span class="sw-bottom"><span class="sw-bottom__inner"></span></span>
+              <span class="sw-footer"></span>
             </span>
-        </button>
+          </button>
           <div class="side-menu" id="side-menu">
-            <div class="side-menu__btn"> <button href="#" class="btn btn-outline-primary btn_xl btn_bold btn-color-white width173">Login</button>
-              <div class="signup"> <button href="#" class="btn btn-primary btn_xl btn_bold width173">Sign up</button>
-                <div class="login-type"> <a href="#" class="login-type__item">Influencer</a> <a href="#" class="login-type__item">Brands</a> </div>
+            <div class="side-menu__btn">
+              <button href="#" class="btn btn-outline-primary btn_xl btn_bold btn-color-white width173">Login</button>
+              <div class="signup">
+                <button href="#" class="btn btn-primary btn_xl btn_bold width173">Sign up</button>
+                <div class="login-type">
+                  <a href="#" class="login-type__item">Influencer</a>
+                  <a href="#" class="login-type__item">Brands</a>
+                </div>
               </div>
             </div>
             <ul class="side-menu__list">
@@ -63,60 +83,57 @@
           </div>
         </div>
       </header>
-      <script>
-        function mnu()
-        {
-          var sandwich = document.getElementById("sandwich");
-          var sideMenu = document.getElementById("header__nav");
-          sandwich.classList.toggle("is-active");
-          sideMenu.classList.toggle("is-active")
-        };
-
-      </script>
+      <script> function mnu() {
+    var sandwich = document.getElementById("sandwich");
+    var sideMenu = document.getElementById("header__nav");
+    sandwich.classList.toggle("is-active");
+    sideMenu.classList.toggle("is-active")
+};
+</script>
       <div class="compain-audience login">
         <div class="compain-audience__inner inner inner_lg login-inner">
           <div class="compain-audience__body dashboard-body">
             <ul class="compain-audience__nav compain-menu row no-gutters">
-              <li class="compain-audience__nav-item compain-menu__item col "> <a href="#" class="compain-menu__link">
-                        <span class="compain-menu__icon">
-                            
-<svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-                        </span>
-                        <span class="compain-menu__text">
-                            1. Channel Selection
-                        </span>
-                    </a> </li>
-              <li class="compain-audience__nav-item compain-menu__item col "> <a href="#" class="compain-menu__link">
-                        <span class="compain-menu__icon">
-                            
-<svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-                        </span>
-                        <span class="compain-menu__text">
-                            2. Campaign Details
-                        </span>
-                    </a> </li>
-              <li class="compain-audience__nav-item compain-menu__item col is-active"> <a href="#" class="compain-menu__link">
-                        <span class="compain-menu__icon">
-                            
-<svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-                        </span>
-                        <span class="compain-menu__text">
-                            3. Audience &amp; Budget
-                        </span>
-                    </a> </li>
-              <li class="compain-audience__nav-item compain-menu__item col "> <a href="#" class="compain-menu__link">
-                        <span class="compain-menu__icon">
-                            
-<svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-                        </span>
-                        <span class="compain-menu__text">
-                            4. Review &amp; Submit
-                        </span>
-                    </a> </li>
+              <li class="compain-audience__nav-item compain-menu__item col ">
+                <a href="#" class="compain-menu__link">
+                  <span class="compain-menu__icon">
+                    <svg class="icon icon-check">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </span>
+                  <span class="compain-menu__text"> 1. Channel Selection </span>
+                </a>
+              </li>
+              <li class="compain-audience__nav-item compain-menu__item col ">
+                <a href="#" class="compain-menu__link">
+                  <span class="compain-menu__icon">
+                    <svg class="icon icon-check">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </span>
+                  <span class="compain-menu__text"> 2. Campaign Details </span>
+                </a>
+              </li>
+              <li class="compain-audience__nav-item compain-menu__item col is-active">
+                <a href="#" class="compain-menu__link">
+                  <span class="compain-menu__icon">
+                    <svg class="icon icon-check">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </span>
+                  <span class="compain-menu__text"> 3. Audience &amp; Budget </span>
+                </a>
+              </li>
+              <li class="compain-audience__nav-item compain-menu__item col ">
+                <a href="#" class="compain-menu__link">
+                  <span class="compain-menu__icon">
+                    <svg class="icon icon-check">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </span>
+                  <span class="compain-menu__text"> 4. Review &amp; Submit </span>
+                </a>
+              </li>
             </ul>
             <div class="compain-audience__content">
               <form class="compain-audience__form">
@@ -126,116 +143,147 @@
                       <h4 class="compain-audience__title">Target Audience</h4>
                       <div class="input-group compain-audience__input-group">
                         <div class="input-group__wrap compain-audience__input-wrap">
-                          <div class="input-group-prepend"> <span class="input-group-text compain-input-text">Floor</span> </div>
-                          <div class="form-check compain-audience__form-check"> <input name="floor" class="form-check-input compain-audience__check-input" type="checkbox" id="audience-check1"> <label class="form-check-label compain-check-label compain-audience__check-label" for="audience-check1">
-                                                All
-                                                <span class="compain-check-icon">
-                                                        <?xml version="1.0" encoding="UTF-8"?>
-                                                        <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                            <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
-                                                            <title>Group</title>
-                                                            <desc>Created with Sketch.</desc>
-                                                            <defs></defs>
-                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-                                                                <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
-                                                                    <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
-                                                                </g>
-                                                            </g>
-                                                        </svg>
-                                                </span>
-                                            </label> </div>
-                          <div class="form-check compain-audience__form-check"> <input name="floor" class="form-check-input compain-audience__check-input" type="checkbox" id="audience-check2"> <label class="form-check-label compain-check-label compain-audience__check-label" for="audience-check2">
-                                                Male
-                                                <span class="compain-check-icon">
-                                                    <?xml version="1.0" encoding="UTF-8"?>
-                                                    <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                        <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
-                                                        <title>Group</title>
-                                                        <desc>Created with Sketch.</desc>
-                                                        <defs></defs>
-                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-                                                            <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
-                                                                <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
-                                                            </g>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                            </label> </div>
-                          <div class="form-check compain-audience__form-check"> <input name="floor" class="form-check-input compain-audience__check-input" type="checkbox" id="audience-check3"> <label class="form-check-label compain-check-label compain-audience__check-label" for="audience-check3">
-                                                Female
-                                                <span class="compain-check-icon">
-                                                    <?xml version="1.0" encoding="UTF-8"?>
-                                                    <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                        <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
-                                                        <title>Group</title>
-                                                        <desc>Created with Sketch.</desc>
-                                                        <defs></defs>
-                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-                                                            <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
-                                                                <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
-                                                            </g>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                            </label> </div>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text compain-input-text">Floor</span>
+                          </div>
+                          <div class="form-check compain-audience__form-check">
+                            <input name="floor" class="form-check-input compain-audience__check-input" type="checkbox" id="audience-check1">
+                            <label class="form-check-label compain-check-label compain-audience__check-label" for="audience-check1"> All <span class="compain-check-icon">
+                                <?xml version="1.0" encoding="UTF-8"?>
+                                <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                  <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+                                  <title>Group</title>
+                                  <desc>Created with Sketch.</desc>
+                                  <defs></defs>
+                                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                    <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
+                                      <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
+                                    </g>
+                                  </g>
+                                </svg>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form-check compain-audience__form-check">
+                            <input name="floor" class="form-check-input compain-audience__check-input" type="checkbox" id="audience-check2">
+                            <label class="form-check-label compain-check-label compain-audience__check-label" for="audience-check2"> Male <span class="compain-check-icon">
+                                <?xml version="1.0" encoding="UTF-8"?>
+                                <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                  <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+                                  <title>Group</title>
+                                  <desc>Created with Sketch.</desc>
+                                  <defs></defs>
+                                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                    <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
+                                      <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
+                                    </g>
+                                  </g>
+                                </svg>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form-check compain-audience__form-check">
+                            <input name="floor" class="form-check-input compain-audience__check-input" type="checkbox" id="audience-check3">
+                            <label class="form-check-label compain-check-label compain-audience__check-label" for="audience-check3"> Female <span class="compain-check-icon">
+                                <?xml version="1.0" encoding="UTF-8"?>
+                                <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                  <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+                                  <title>Group</title>
+                                  <desc>Created with Sketch.</desc>
+                                  <defs></defs>
+                                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                    <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
+                                      <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
+                                    </g>
+                                  </g>
+                                </svg>
+                              </span>
+                            </label>
+                          </div>
                         </div>
                       </div>
                       <div class="input-group compain-audience__input-group">
                         <div class="input-group__wrap compain-audience__input-wrap compain-audience__input-wrap_radio">
-                          <div class="input-group-prepend"> <span class="input-group-text compain-input-text">Age group</span> </div>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text compain-input-text">Age group</span>
+                          </div>
                           <div class="compain-audience__radio">
                             <!-- <div class="row compain-audience__radio-row no-gutters"> -->
                             <!-- <div class="col compain-audience__radio-col"> -->
-                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item"> <input type="radio" id="compainRadio1" name="compainRadio" class="custom-control-input compain-radio__input"> <label class="custom-control-label compain-radio__label" for="compainRadio1">Any Age</label> </div>
+                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item">
+                              <input type="radio" id="compainRadio1" name="compainRadio" class="custom-control-input compain-radio__input">
+                              <label class="custom-control-label compain-radio__label" for="compainRadio1">Any Age</label>
+                            </div>
                             <!-- <div class="custom-control custom-radio compain-radio">
                                                             <input type="radio" id="compainRadio11" name="compainRadio" class="custom-control-input compain-radio__input">
                                                             <label class="custom-control-label compain-radio__label" for="compainRadio11">Any Age</label>
                                                         </div> -->
                             <!-- </div> -->
                             <!-- <div class="col compain-audience__radio-col"> -->
-                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item"> <input type="radio" id="compainRadio2" name="compainRadio" class="custom-control-input compain-radio__input"> <label class="custom-control-label compain-radio__label" for="compainRadio2">35-44</label> </div>
+                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item">
+                              <input type="radio" id="compainRadio2" name="compainRadio" class="custom-control-input compain-radio__input">
+                              <label class="custom-control-label compain-radio__label" for="compainRadio2">35-44</label>
+                            </div>
                             <!-- <div class="custom-control custom-radio compain-radio">
                                                             <input type="radio" id="compainRadio12" name="compainRadio" class="custom-control-input compain-radio__input">
                                                             <label class="custom-control-label compain-radio__label" for="compainRadio12">Any Age</label>
                                                         </div> -->
                             <!-- </div> -->
                             <!-- <div class="col compain-audience__radio-col"> -->
-                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item"> <input type="radio" id="compainRadio3" name="compainRadio" class="custom-control-input compain-radio__input"> <label class="custom-control-label compain-radio__label" for="compainRadio3">13-17</label> </div>
+                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item">
+                              <input type="radio" id="compainRadio3" name="compainRadio" class="custom-control-input compain-radio__input">
+                              <label class="custom-control-label compain-radio__label" for="compainRadio3">13-17</label>
+                            </div>
                             <!-- <div class="custom-control custom-radio compain-radio">
                                                             <input type="radio" id="compainRadio13" name="compainRadio" class="custom-control-input compain-radio__input">
                                                             <label class="custom-control-label compain-radio__label" for="compainRadio13">Any Age</label>
                                                         </div> -->
                             <!-- </div> -->
                             <!-- <div class="col compain-audience__radio-col"> -->
-                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item"> <input type="radio" id="compainRadio4" name="compainRadio" class="custom-control-input compain-radio__input"> <label class="custom-control-label compain-radio__label" for="compainRadio4">45-54</label> </div>
+                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item">
+                              <input type="radio" id="compainRadio4" name="compainRadio" class="custom-control-input compain-radio__input">
+                              <label class="custom-control-label compain-radio__label" for="compainRadio4">45-54</label>
+                            </div>
                             <!-- <div class="custom-control custom-radio compain-radio">
                                                             <input type="radio" id="compainRadio14" name="compainRadio" class="custom-control-input compain-radio__input">
                                                             <label class="custom-control-label compain-radio__label" for="compainRadio14">Any Age</label>
                                                         </div> -->
                             <!-- </div> -->
                             <!-- <div class="col compain-audience__radio-col"> -->
-                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item"> <input type="radio" id="compainRadio5" name="compainRadio" class="custom-control-input compain-radio__input"> <label class="custom-control-label compain-radio__label" for="compainRadio5">18-24</label> </div>
+                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item">
+                              <input type="radio" id="compainRadio5" name="compainRadio" class="custom-control-input compain-radio__input">
+                              <label class="custom-control-label compain-radio__label" for="compainRadio5">18-24</label>
+                            </div>
                             <!-- <div class="custom-control custom-radio compain-radio">
                                                             <input type="radio" id="compainRadio15" name="compainRadio" class="custom-control-input compain-radio__input">
                                                             <label class="custom-control-label compain-radio__label" for="compainRadio15">Any Age</label>
                                                         </div> -->
                             <!-- </div> -->
                             <!-- <div class="col compain-audience__radio-col"> -->
-                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item"> <input type="radio" id="compainRadio6" name="compainRadio" class="custom-control-input compain-radio__input"> <label class="custom-control-label compain-radio__label" for="compainRadio6">55-64</label> </div>
+                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item">
+                              <input type="radio" id="compainRadio6" name="compainRadio" class="custom-control-input compain-radio__input">
+                              <label class="custom-control-label compain-radio__label" for="compainRadio6">55-64</label>
+                            </div>
                             <!-- <div class="custom-control custom-radio compain-radio">
                                                             <input type="radio" id="compainRadio16" name="compainRadio" class="custom-control-input compain-radio__input">
                                                             <label class="custom-control-label compain-radio__label" for="compainRadio16">Any Age</label>
                                                         </div> -->
                             <!-- </div> -->
                             <!-- <div class="col compain-audience__radio-col"> -->
-                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item"> <input type="radio" id="compainRadio7" name="compainRadio" class="custom-control-input compain-radio__input"> <label class="custom-control-label compain-radio__label" for="compainRadio7">25-34</label> </div>
+                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item">
+                              <input type="radio" id="compainRadio7" name="compainRadio" class="custom-control-input compain-radio__input">
+                              <label class="custom-control-label compain-radio__label" for="compainRadio7">25-34</label>
+                            </div>
                             <!-- <div class="custom-control custom-radio compain-radio">
                                                             <input type="radio" id="compainRadio17" name="compainRadio" class="custom-control-input compain-radio__input">
                                                             <label class="custom-control-label compain-radio__label" for="compainRadio17">Any Age</label>
                                                         </div> -->
                             <!-- </div> -->
                             <!-- <div class="col compain-audience__radio-col"> -->
-                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item"> <input type="radio" id="compainRadio8" name="compainRadio" class="custom-control-input compain-radio__input"> <label class="custom-control-label compain-radio__label" for="compainRadio8">65+</label> </div>
+                            <div class="custom-control custom-radio compain-radio compain-audience__radio-item">
+                              <input type="radio" id="compainRadio8" name="compainRadio" class="custom-control-input compain-radio__input">
+                              <label class="custom-control-label compain-radio__label" for="compainRadio8">65+</label>
+                            </div>
                             <!-- <div class="custom-control custom-radio compain-radio">
                                                             <input type="radio" id="compainRadio18" name="compainRadio" class="custom-control-input compain-radio__input">
                                                             <label class="custom-control-label compain-radio__label" for="compainRadio18">Any Age</label>
@@ -245,12 +293,15 @@
                           </div>
                         </div>
                       </div>
-                      <div class="input-group compain-audience__input-group"> <label for="image" class="compain-audience__label input-group__label">Countries</label>
+                      <div class="input-group compain-audience__input-group">
+                        <label for="image" class="compain-audience__label input-group__label">Countries</label>
                         <div class="input-group__wrap">
                           <div class="multi-field">
                             <div class="multi-field__input" contenteditable="true" placeholder="Countries"><span contenteditable="false" class="tag">USA<button type="button" class="tag__close">
-<svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
-</button></span></div>
+                                  <svg class="icon icon-arrow-left">
+                                    <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                                  </svg>
+                                </button></span></div>
                           </div>
                         </div>
                       </div>
@@ -263,15 +314,20 @@
                       </div>
                       <div class="compain-audience__budget">
                         <h4 class="compain-audience__title">Content Budget</h4>
-                        <div class="compain-audience__text"> The size of the budget<span>1000$</span> </div>
-                        <div class="compain-audience__text"> Audience size<span>400-500k</span> </div>
+                        <div class="compain-audience__text"> The size of the budget<span>1000$</span>
+                        </div>
+                        <div class="compain-audience__text"> Audience size<span>400-500k</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="compain-audience__submit compain-submit"> <button type="button" class="btn btn-outline-primary btn_bold btn-lg btn_sm">Next 
-<svg class="icon icon-arrow-right"><use xlink:href="img/sprite.svg#icon-arrow-right"></use></svg>
-</button> </div>
+                <div class="compain-audience__submit compain-submit">
+                  <button type="button" class="btn btn-outline-primary btn_bold btn-lg btn_sm">Next <svg class="icon icon-arrow-right">
+                      <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                    </svg>
+                  </button>
+                </div>
               </form>
             </div>
           </div>
