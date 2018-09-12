@@ -1,129 +1,111 @@
-<div class="compain-details login">
-        <div class="compain-details__inner inner inner_lg login-inner">
-            <div class="compain-details__body dashboard-body">
-                <ul class="compain-details__nav compain-menu row no-gutters">
-                    {% for item in [
-                        {
-                            text: "1. Channel Selection"
-                        },
-                        {
-                            text: "2. Campaign Details",
-                            active: true
-                        },
-                        {
-                            text: "3. Audience & Budget"
-                        },
-                        {
-                            text: "4. Review & Submit"
-                        }
-                    ] %}
-                    <li class="compain-details__nav-item compain-menu__item col {% if item.active %}is-active{% endif %}">
-                        <a href="#" class="compain-menu__link">
-                            <span class="compain-menu__icon">
+<div class="login">
+    <div class="compain-inner inner inner_lg login-inner">
+        <div class="compain-body dashboard-body">
+            <ul class="compain-menu row no-gutters">
+                {% for item in [ { text: "1. Channel Selection" }, { text: "2. Campaign Details", active: true }, { text: "3. Audience & Budget" }, { text: "4. Review & Submit" } ] %}
+                <li class="compain-menu__item col {% if item.active %}is-active{% endif %}">
+                    <a href="#" class="compain-menu__link">
+                        <span class="compain-menu__icon">
                                 {{ mixins.icon("check") }}
                             </span>
-                            <span class="compain-menu__text">
+                        <span class="compain-menu__text">
                                 {{ item.text }}
                             </span>
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <div class="compain-details__content">
-                    <form class="compain-details__form">
-                        <div class="compain-details__form-wrap">
-                            <div class="compain-details__input-wrap">
-                                <div class="compain-details__row">
-                                    <div class="input-group compain-details__input-group is-validated">
-                                        <label for="title" class="compain-details__label input-group__label">Campaign Title</label>
-                                        <div class="input-group__wrap">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text compain-input-text">Campaign Title</span>
-                                            </div>
-                                            <input type="text" autocomplete="off" id="title" class="form-control compain-details__input input-group__input" aria-describedby="inputGroupPrepend3">
-                                        </div>
-                                        <span class="error-label">!</span>
-                                        <span class="valid-label">
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="compain-details">
+                <form class="compain-details__form">
+                    <div class="compain-details__form-wrap">
+                        <div class="compain-details__input-wrap">
+                            <div class="compain-details__row">
+                                <div class="input-group compain-details__input-group is-validated">
+                                    <label for="title" class="compain-details__label input-group__label">Campaign Title</label>
+                                    <div class="input-group__wrap">
+                                        {#
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text compain-input-text">Campaign Title</span>
+                                        </div> #}
+                                        <input type="text" autocomplete="off" id="title" class="form-control compain-details__input input-group__input" aria-describedby="inputGroupPrepend3" placeholder="Campaign Title">
+                                    </div>
+                                    <span class="error-label">!</span>
+                                    <span class="valid-label">
                                             {{ mixins.icon("check") }}
                                         </span>
-                                    </div>
-                                    <div class="input-group compain-details__input-group is-error">
-                                        <label for="url" class="compain-details__label input-group__label">Product URL</label>
-                                        <div class="input-group__wrap">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text compain-input-text">Product URL</span>
-                                            </div>
-                                            <input type="text" autocomplete="off" id="url" class="form-control compain-details__input input-group__input">
-                                        </div>
-                                        <span class="error-label">!</span>
-                                        <span class="valid-label">
-                                            {{ mixins.icon("check") }}
-                                        </span>
-                                    </div>
                                 </div>
-                                <div class="compain-details__row">
-                                    <div class="input-group compain-details__input-group">
-                                        <label for="title" class="compain-details__label input-group__label">Product Category</label>
-                                        <div class="input-group__wrap">
-                                            {# <div class="input-group-prepend">
-                                                <span class="input-group-text compain-input-text">Product URL</span>
-                                            </div> #}
-                                            <select class="js-select form-control compain-select" title="Product Category">
+                                <div class="input-group compain-details__input-group is-error">
+                                    <label for="url" class="compain-details__label input-group__label">Product URL</label>
+                                    <div class="input-group__wrap">
+                                        {#
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text compain-input-text">Product URL</span>
+                                        </div> #}
+                                        <input type="text" autocomplete="off" id="url" class="form-control compain-details__input input-group__input" placeholder="Product URL">
+                                    </div>
+                                    <span class="error-label">!</span>
+                                    <span class="valid-label">
+                                            {{ mixins.icon("check") }}
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="compain-details__row">
+                                <div class="input-group compain-details__input-group">
+                                    <label for="title" class="compain-details__label input-group__label">Product Category</label>
+                                    <div class="input-group__wrap">
+                                        <select class="js-select form-control compain-select" title="Product Category">
                                                 <option value="1">1</option>
                                                 <option value="1">1</option>
                                                 <option value="1">1</option>
                                             </select>
-                                        </div>
-                                    </div>
-                                    <div class="input-group compain-details__input-group">
-                                        <label for="shipping" class="compain-details__label input-group__label">Product Shipping</label>
-                                        <div class="input-group__wrap">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text compain-input-text">Product Shipping</span>
-                                            </div>
-                                            <input type="text" autocomplete="off" id="shipping" class="form-control compain-details__input input-group__input">
-                                        </div>
-                                        <span class="error-label">!</span>
-                                        <span class="valid-label">
-                                            {{ mixins.icon("check") }}
-                                        </span>
                                     </div>
                                 </div>
-                                <div class="compain-details__row">
-                                    <div class="input-group compain-details__input-group">
-                                        <label for="title" class="compain-details__label input-group__label">Campaign Listing Duration</label>
-                                        <div class="input-group__wrap">
-                                            <select class="js-select form-control compain-select" title="Campaign Listing Duration">
+                                <div class="input-group compain-details__input-group">
+                                    <label for="shipping" class="compain-details__label input-group__label">Product Shipping</label>
+                                    <div class="input-group__wrap">
+                                        <input type="text" autocomplete="off" id="shipping" class="form-control compain-details__input input-group__input" placeholder="Product Shipping">
+                                    </div>
+                                    <span class="error-label">!</span>
+                                    <span class="valid-label">
+                                            {{ mixins.icon("check") }}
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="compain-details__row">
+                                <div class="input-group compain-details__input-group">
+                                    <label for="title" class="compain-details__label input-group__label">Campaign Listing Duration</label>
+                                    <div class="input-group__wrap">
+                                        <select class="js-select form-control compain-select" title="Campaign Listing Duration">
                                                 <option value="1">1</option>
                                                 <option value="1">1</option>
                                                 <option value="1">1</option>
                                             </select>
-                                        </div>
-                                    </div>
-                                    <div class="input-group compain-details__input-group">
-                                        <label for="image" class="compain-details__label input-group__label">Product Image</label>
-                                        <div class="input-group__wrap">
-                                            <div class="custom-file compain-file">
-                                                <input type="file" class="custom-file-input compain-file__input" id="image" aria-describedby="image">
-                                                <label class="custom-file-label compain-file__label" for="image">Product Image</label>
-                                            </div>
-                                        </div>
-                                        <span for="image" class="compain-details__label-bottom input-group__label-bottom">Only format: jpg, png, bmp. No more than 10 mb.</span>
                                     </div>
                                 </div>
-                                <div class="input-group compain-details__textarea-wrap">
-                                    <label class="compain-details__label input-group__label" for="textarea1">Campaign Details</label>
-                                    <div class="compain-details__textarea-field">
-                                        <textarea class="compain-details__textarea" id="textarea1" rows="5" placeholder="Campaign Details"></textarea>
+                                <div class="input-group compain-details__input-group">
+                                    <label for="image" class="compain-details__label input-group__label">Product Image</label>
+                                    <div class="input-group__wrap">
+                                        <div class="custom-file compain-file">
+                                            <input type="file" class="custom-file-input compain-file__input" id="image" aria-describedby="image">
+                                            <label class="custom-file-label compain-file__label" for="image">Product Image</label>
+                                        </div>
                                     </div>
+                                    <span for="image" class="compain-details__label-bottom input-group__label-bottom">Only format: jpg, png, bmp. No more than 10 mb.</span>
+                                </div>
+                            </div>
+                            <div class="input-group compain-details__textarea-wrap">
+                                <label class="compain-details__label input-group__label" for="textarea1">Campaign Details</label>
+                                <div class="compain-details__textarea-field">
+                                    <textarea class="compain-details__textarea" id="textarea1" rows="5" placeholder="Campaign Details"></textarea>
                                 </div>
                             </div>
                         </div>
-                        <div class="compain-details__submit compain-submit">
-                            <button type="button" class="btn btn-outline-primary btn_bold btn-lg btn_sm">Next {{ mixins.icon("arrow-right") }}</button>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="compain-details__submit compain-submit">
+                        <button type="button" class="btn btn-outline-primary btn_bold btn-lg btn_sm">Next {{ mixins.icon("arrow-right") }}</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
