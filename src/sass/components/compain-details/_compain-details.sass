@@ -19,7 +19,7 @@
     &__row
         width: 100%
         display: flex
-        align-items: center
+        align-items: flex-start
         justify-content: space-between
         +md
             flex-direction: column
@@ -28,11 +28,11 @@
             +md
                 margin-bottom: rem(20px)
         &:nth-child(3)
-            margin-bottom: rem(51px)
+            margin-bottom: rem(6px)
             +md
-                margin-bottom: rem(41px)
+                margin-bottom: rem(21px)
             +sm
-                margin-bottom: rem(53px)
+                margin-bottom: rem(18px)
     &__input-group
         padding-right: rem(40px)
         +sm
@@ -60,6 +60,9 @@
         padding-left: rem(24px)
         +sm
             padding-left: rem(15px)
+        &_big
+            color: $gray-900
+            font-size: rem(18px)
     &__input
         padding-left: rem(24px)
         border: none
@@ -77,6 +80,9 @@
             +sm
                 font-size: rem(14px)
                 line-height: 1.3
+        &_sm
+            font-family: $font-family-inconsolata
+            font-size: rem(18px)
         &:focus
             +placeholder
                 font-size: 0
@@ -86,15 +92,17 @@
     &__label-bottom
         padding-left: rem(24px)
         font-size: rem(16px)
-        position: absolute
-        left: 0
-        bottom: rem(-45px)
+        margin-top: rem(45px)
         +md
             font-size: rem(14px)
-            bottom: rem(-20px)
+            margin-top: rem(20px)
         +sm
-            bottom: rem(-35px)
+            // margin-top: rem(35px)
             padding-left: rem(15px)
+        &_small
+            font-size: rem(15px)
+            color: $gray-700
+            margin-top: rem(20px)
     &.is-validated
         .valid-label
             display: block

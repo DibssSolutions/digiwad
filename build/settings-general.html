@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Index page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <header class="header">
+        <div class="header__wrap inner inner_lg">
+          <div class="logo"> <a href="./index.html">
+                <img src="./img/logo (1)@2x.png" alt="img">
+            </a> </div>
+          <div class="header__nav" id="header__nav">
+            <nav class="menu-main">
+              <ul class="menu-main__list">
+                <li class="menu-main__item is-active"><a class="menu-main__link" href="#"><span class="menu-main__text">Dashboard</span></a></li>
+                <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Campaigns</span></a></li>
+                <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Influencers</span></a></li>
+                <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Messages</span><span class="counter">1</span></a></li>
+                <li class="menu-main__item"><a class="menu-main__link" href="#"><span class="menu-main__text">Content</span></a></li>
+              </ul>
+            </nav>
+            <div class="account">
+              <div class="account__name"> Razer <span class="account__icon"></span> </div>
+              <div class="account__logo"> <img src="./img/avatar.jpg" alt="avatar"> </div>
+              <div class="account__details"> <a href="#" class="account__link">Account Settings</a> <a href="#" class="account__link">Profile Settings</a> <a href="#" class="account__link">Sign off / Logout</a> </div>
+            </div>
+            <div class="messages"> <button type="button" class="messages__icon">
+                        
+<svg class="icon icon-close-envelope"><use xlink:href="img/sprite.svg#icon-close-envelope"></use></svg>
+
+                        <span class="counter messages__counter">1</span>
+                    </button>
+              <div class="messages__details"> <a href="#" class="messages__link">You have <span class="messages__number">0</span> new messages</a> <a href="#" class="messages__link">View all messages</a> </div>
+            </div>
+          </div> <button type="button" onclick="mnu()" class="toggle-mnu">
+            <span class="sandwich" id="sandwich">
+                <span class="sw-topper"></span>
+                <span class="sw-bottom"><span class="sw-bottom__inner"></span></span>
+                <span class="sw-footer"></span>
+            </span>
+        </button>
+          <div class="side-menu" id="side-menu">
+            <div class="side-menu__btn"> <button href="#" class="btn btn-outline-primary btn_xl btn_bold btn-color-white width173">Login</button>
+              <div class="signup"> <button href="#" class="btn btn-primary btn_xl btn_bold width173">Sign up</button>
+                <div class="login-type"> <a href="#" class="login-type__item">Influencer</a> <a href="#" class="login-type__item">Brands</a> </div>
+              </div>
+            </div>
+            <ul class="side-menu__list">
+              <li class="side-menu__item"><a href="#">Talent</a></li>
+              <li class="side-menu__item"><a href="#">Brands & Agencies</a></li>
+              <li class="side-menu__item"><a href="#">Pricing</a></li>
+              <li class="side-menu__item"><a href="#">Contacts</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <script>
+        function mnu()
+        {
+          var sandwich = document.getElementById("sandwich");
+          var sideMenu = document.getElementById("header__nav");
+          sandwich.classList.toggle("is-active");
+          sideMenu.classList.toggle("is-active")
+        };
+
+      </script>
+      <div class="login">
+        <div class="compain-inner inner inner_lg login-inner">
+          <div class="dashboard__btn"> <a href="#" class="btn btn-primary width270">Create a campaign</a> </div>
+          <div class="compain-body dashboard-body">
+            <div class="settings-general">
+              <ul class="tab-list">
+                <li class="tab is-active"><a href="#" class="tab__link">General</a></li>
+                <li class="tab "><a href="#" class="tab__link">Address</a></li>
+                <li class="tab "><a href="#" class="tab__link">Profile</a></li>
+                <li class="tab "><a href="#" class="tab__link">Notifications</a></li>
+                <li class="tab "><a href="#" class="tab__link">Change Password</a></li>
+                <li class="tab "><a href="#" class="tab__link">Hire History</a></li>
+              </ul>
+              <form class="tab-content">
+                <h2 class="settings-title">GENERAL</h2>
+                <div class="tab-content__wrap">
+                  <div class="row tab-content__row">
+                    <div class="col">
+                      <div class="input-group"> <label for="nickname" class="input-group__label input-group__label_big">Display Name</label>
+                        <div class="input-group__wrap"> <input type="text" autocomplete="off" id="nickname" class="form-control input-group__input" aria-describedby="inputGroupPrepend3" placeholder="Razer"> </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group"> <label for="site" class="input-group__label input-group__label_big">Company Website</label>
+                        <div class="input-group__wrap"> <input type="text" autocomplete="off" id="site" class="form-control input-group__input" aria-describedby="inputGroupPrepend3" placeholder="https://test.com"> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row tab-content__row">
+                    <div class="col">
+                      <div class="input-group"> <label for="name" class="input-group__label input-group__label_big">First Name</label>
+                        <div class="input-group__wrap"> <input type="text" autocomplete="off" id="name" class="form-control input-group__input" aria-describedby="inputGroupPrepend3" placeholder="Test 1"> </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group"> <label for="surname" class="input-group__label input-group__label_big">Last Name</label>
+                        <div class="input-group__wrap"> <input type="text" autocomplete="off" id="surname" class="form-control input-group__input" aria-describedby="inputGroupPrepend3" placeholder="Test 2"> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row tab-content__row">
+                    <div class="col">
+                      <div class="input-group"> <label for="phone" class="input-group__label input-group__label_big">Phone</label>
+                        <div class="input-group__wrap"> <input type="text" autocomplete="off" id="phone" class="form-control input-group__input" aria-describedby="inputGroupPrepend3" placeholder="Test"> </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group"> <label for="email" class="input-group__label input-group__label_big">Email</label>
+                        <div class="input-group__wrap"> <input type="text" autocomplete="off" id="email" class="form-control input-group__input" aria-describedby="inputGroupPrepend3" placeholder="Test"> </div> <span for="email" class="input-group__label-bottom input-group__label-bottom_small">Note: Changing this email address will change your login email.</span>                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-content__submit"> <button type="button" class="btn btn-primary btn_bold btn-lg btn_sm">Save</button> </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+
+</html>
