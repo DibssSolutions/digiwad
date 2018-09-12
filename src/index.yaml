@@ -2,15 +2,15 @@ ProjectTitle: digiwad
 
 PageList:
 - file: page.html
-  ready: 50
+  ready: 100
 - file: login.html
-  ready: 50
+  ready: 100
 - file: forgot-password.html
-  ready: 50
+  ready: 100
 - file: influencer.html
-  ready: 50
+  ready: 100
 - file: brand.html
-  ready: 50
+  ready: 100
 - file: dashboard.html
   ready: 50
 - file: channel-selection.html
@@ -23,3 +23,5 @@ PageList:
   ready: 50
 - file: compain-review.html
   ready: 50
+- file: сampaigns.html
+  ready: 100
