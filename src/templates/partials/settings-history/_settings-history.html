@@ -6,7 +6,7 @@
             <div class="compain-body dashboard-body">
                     <div class="tabs">
                         <button type="button" class="tabs__current">
-                            Notifications
+                            Hire History
                         </button>
                         <ul class="tabs__list">
                             {% for tab in [
@@ -20,21 +20,21 @@
                                     text: "Profile"
                                 },
                                 {
-                                    text: "Notifications",
-                                    active: true
+                                    text: "Notifications"
                                 },
                                 {
                                     text: "Change Password"
                                 },
                                 {
-                                    text: "Hire History"
+                                    text: "Hire History",
+                                    active: true
                                 }
                             ] %}
                             <li class="tabs__item {% if tab.active %}is-active{% endif %}"><a href="#" class="tabs__link">{{ tab.text }}</a></li>
                             {% endfor %}
                         </ul>
                         <form class="tabs__content">
-                            <h2 class="settings-title">Notification</h2>
+                            <h2 class="settings-title">Hire History</h2>
                             <div class="tabs__content-wrap">
                                 <div class="tabs__radio">
                                     {% for item in [

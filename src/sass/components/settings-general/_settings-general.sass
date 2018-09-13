@@ -5,6 +5,7 @@
         flex-direction: column
     &__current
         display: none
+        position: relative
         padding: rem(21px 50px)
         color: $gray-900
         text-align: left
@@ -17,6 +18,13 @@
             padding: rem(15px 30px)
         &:focus
             outline: none
+        &:before
+            position: absolute
+            content: "" 
+            top: 50%
+            right: 30px
+            margin-top: -3px
+            +arr(12,6,#191919,b)
     &__list
         flex-basis: rem(347px)
         background-color: $gray-100
