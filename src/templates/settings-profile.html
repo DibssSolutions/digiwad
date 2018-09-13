@@ -1,0 +1,17 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{# Start header #}
+{{header.block(false, true)}}
+{# END header #}
+
+{# Start settings-profile #}
+{% include "partials/settings-profile/_settings-profile.html" %}
+{# END settings-profile #}
+
+
+{% endblock %}

@@ -1,0 +1,68 @@
+<div class="login">
+        <div class="compain-inner inner inner_lg login-inner">
+            <div class="dashboard__btn">
+                <a href="#" class="btn btn-primary width270">Create a campaign</a>
+            </div>
+            <div class="compain-body dashboard-body">
+                    <div class="tabs">
+                        <button type="button" class="tabs__current">
+                            Notifications
+                        </button>
+                        <ul class="tabs__list">
+                            {% for tab in [
+                                {
+                                    text: "General"
+                                },
+                                {
+                                    text: "Address"
+                                },
+                                {
+                                    text: "Profile"
+                                },
+                                {
+                                    text: "Notifications",
+                                    active: true
+                                },
+                                {
+                                    text: "Change Password"
+                                },
+                                {
+                                    text: "Hire History"
+                                }
+                            ] %}
+                            <li class="tabs__item {% if tab.active %}is-active{% endif %}"><a href="#" class="tabs__link">{{ tab.text }}</a></li>
+                            {% endfor %}
+                        </ul>
+                        <form class="tabs__content">
+                            <h2 class="settings-title">Notification</h2>
+                            <div class="tabs__content-wrap">
+                                <div class="tabs__radio">
+                                    {% for item in [
+                                        {
+                                            text1: "Never"
+                                        },
+                                        {
+                                            text1: "Immediate"
+                                        },
+                                        {
+                                            text1: "Roll Up"
+                                        }
+                                    ]%}
+                                    <div class="custom-control custom-radio compain-radio compain-radio_info">
+                                        <input type="radio" id="settingsRadio{{ loop.index }}" name="settingsRadio" class="custom-control-input compain-radio__input">
+                                        <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_big compain-radio__label_info" for="settingsRadio{{ loop.index }}">{{ item.text1 }}</label>
+                                        <span class="info-box" title="info-box">
+                                            ?
+                                        </span>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="tabs__content-submit tabs__content-submit_ml">
+                                        <button type="submit" class="btn btn-primary width216 btn-sm btn_rad">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </div>
