@@ -47,15 +47,25 @@
             +sm
                 font-size: rem(12px)
                 margin-top: rem(1px)
+    &__wrapper
+        display: table
+        table-layout: fixed
+        width: 100%
     &__wind
-        padding: 38px 70px 70px 50px
+        padding: rem(38px 70px 70px 50px)
+        vertical-align: top
+        display: table-cell
     &__description
-        font-size: 22px
+        font-size: rem(22px)
         line-height: 1.45
         &:not(:last-child)
             margin-bottom: 38px
-
-
+    &__sitebar
+        padding: rem(36px 70px 70px 36px) 
+        border-left: 1px solid #D5D5D5 
+        width: rem(453px) 
+        vertical-align: top
+        display: table-cell
 
 .dashboard-body
     width: 100%
