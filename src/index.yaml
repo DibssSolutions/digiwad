@@ -25,3 +25,5 @@ PageList:
   ready: 50
 - file: сampaigns.html
   ready: 100
+- file: settings-general.html
+  ready: 100

@@ -1,0 +1,17 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{# Start header #}
+{{header.block(false, true)}}
+{# END header #}
+
+{# Start settings-general #}
+{% include "partials/settings-general/_settings-general.html" %}
+{# END settings-general #}
+
+
+{% endblock %}
