@@ -25,28 +25,6 @@
             margin-left: rem(10px)
         +sm
             margin-bottom: rem(35px)
-    &__switcher
-        display: none
-        margin-bottom: rem(15px)
-    &__switch
-        display: flex
-        align-items: center
-        background-color: transparent
-        color: $gray-900
-        +sm
-            font-size: rem(14px)
-            line-height: 1
-        &:focus
-            outline: none
-        &:hover
-            color: $primary
-        .icon
-            display: inline-block
-            font-size: rem(15px)
-            margin-right: rem(12px)
-            +sm
-                font-size: rem(12px)
-                margin-top: rem(1px)
     &__wrapper
         display: table
         table-layout: fixed
@@ -72,6 +50,29 @@
     &__field
         &:not(:last-child)
             margin-bottom: rem(13px) 
+
+.chat-switcher
+    display: none
+    margin-bottom: rem(15px)
+    &__btn
+        display: flex
+        align-items: center
+        background-color: transparent
+        color: $gray-900
+        +sm
+            font-size: rem(14px)
+            line-height: 1
+        &:focus
+            outline: none
+        &:hover
+            color: $primary
+        .icon
+            display: inline-block
+            font-size: rem(15px)
+            margin-right: rem(12px)
+            +sm
+                font-size: rem(12px)
+                margin-top: rem(1px)
 
 .dashboard-body
     width: 100%

@@ -5,8 +5,8 @@
         </div>
         <div class="dashboard__body dashboard-body">
             <div class="dashboard__header dashboard-header">
-                <div class="dashboard__switcher md-show">
-                    <button type="button" class="dashboard__switch">{{ mixins.icon("arrow-left") }} back to list</button>
+                <div class="dashboard__switcher chat-switcher md-show">
+                    <button type="button" class="dashboard__switch chat-switcher__btn">{{ mixins.icon("arrow-left") }} back to list</button>
                 </div>
 
                 <h5 class="dashboard__title">Dashboard</h5>
@@ -20,7 +20,8 @@
                                 title: "DigiBot",
                                 name: "Razer",
                                 message: "Do I game or like games?",
-                                author: "You"
+                                author: "You",
+                                active: true
                             },
                             {
                                 img: "avatar.jpg",
@@ -31,7 +32,7 @@
                             }
                             ] %}
                         <li>
-                            <a href="#" class="chat__contact chat-contact">
+                            <a href="#" class="chat__contact chat-contact {% if i.active %}is-active{% endif %}">
                                 <div class="row chat-contact__row">
                                     <div class="chat-contact__col col-4">
                                         <div class="chat-contact__img">
