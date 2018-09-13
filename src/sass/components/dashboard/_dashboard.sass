@@ -25,10 +25,19 @@
             margin-left: rem(10px)
         +sm
             margin-bottom: rem(35px)
-    &__switcher
-        display: none
-        margin-bottom: rem(15px)
-    &__switch
+    &__wind
+        padding: 38px 70px 70px 50px
+    &__description
+        font-size: 22px
+        line-height: 1.45
+        &:not(:last-child)
+            margin-bottom: 38px
+
+
+.chat-switcher
+    display: none
+    margin-bottom: rem(15px)
+    &__btn
         display: flex
         align-items: center
         background-color: transparent
@@ -47,15 +56,6 @@
             +sm
                 font-size: rem(12px)
                 margin-top: rem(1px)
-    &__wind
-        padding: 38px 70px 70px 50px
-    &__description
-        font-size: 22px
-        line-height: 1.45
-        &:not(:last-child)
-            margin-bottom: 38px
-
-
 
 .dashboard-body
     width: 100%

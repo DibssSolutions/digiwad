@@ -39,3 +39,5 @@ PageList:
   ready: 50
 - file: settings-history.html
   ready: 50
+- file: messages.html
+  ready: 50
