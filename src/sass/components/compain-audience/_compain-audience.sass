@@ -150,6 +150,7 @@
 
 
 .compain-radio
+    display: inline-block
     &__input
         &:checked~.compain-radio__label:before
             border-color: $dark-gray
@@ -169,6 +170,15 @@
             border: 1px solid $gray-800
         &:after
             display: none
+        &_transparent
+            &:before
+                background-color: transparent
+        &_big
+            font-size: rem(18px)
+            font-family: $font-family-inconsolata
+    &_info
+        padding-right: rem(28px)
+        padding-top: rem(14px)
 .multi-field
     position: relative
     width: 100%

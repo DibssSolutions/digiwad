@@ -1,38 +1,129 @@
-.settings-general
+.tabs
     display: flex
-    
-    
-.tab-list
-    flex-basis: rem(347px)
-    background-color: $gray-100
-    margin-bottom: 0
-    flex-shrink: 0
-    // height: 100%
-.tab
-    border: 1px solid $gray-200
-    &.is-active
-        border-left: 5px solid $primary
+    position: relative
+    +md
+        flex-direction: column
+    &__current
+        display: none
+        padding: rem(21px 50px)
+        color: $gray-900
+        text-align: left
         background-color: $white
-        box-shadow: 0 1px 2px rgba(#000, .16)
-        .tab__link
-            padding-left: rem(50px)
+        border: 1px solid $gray-200
+        border-left: 5px solid $primary
+        +md
+            display: block
+        +sm
+            padding: rem(15px 30px)
+        &:focus
+            outline: none
+    &__list
+        flex-basis: rem(347px)
+        background-color: $gray-100
+        margin-bottom: 0
+        flex-shrink: 0
+        +md
+            position: absolute
+            left: 0
+            right: 0
+            top: rem(63px)
+            z-index: 1
+            display: none
+        +sm
+            top: rem(48px)
+        &.is-active
+            +md
+                display: block
+    &__item
+        border: 1px solid $gray-200
+        &.is-active
+            border-left: 5px solid $primary
+            background-color: $white
+            box-shadow: 0 1px 2px rgba(#000, .16)
+            .tabs__link
+                padding-left: rem(50px)
+                +md
+                    padding-left: rem(30px)
     &__link
         display: block
         padding: rem(21px 55px)
         color: $gray-900
+        +sm
+            padding: rem(15px 35px)
         &:hover
             text-decoration: none
             color: $gray-900
-
-.tab-content
-    width: 100%
-    padding: rem(0 53px)
-    min-height: rem(830px)
-    &__row
+    &__content
+        width: 100%
+        padding: rem(0 53px)
+        min-height: rem(830px)
+        +md
+            padding: rem(0 20px)
+        +sm
+            padding: rem(0 15px 20px)
+            min-height: auto
+    &__content-row
         &:not(:last-child)
             margin-bottom: rem(60px)
-    &__submit
-        margin-top: rem(21px)
+            +md
+                margin-bottom: rem(30px)
+            +sm
+                margin-bottom: rem(15px)
+    &__content-col
+        &:not(:last-child)
+            +md
+                margin-bottom: rem(30px)
+            +sm
+                margin-bottom: rem(15px)
+        &_order
+            &:not(:last-child)
+                +md
+                    order: 2
+                    margin-top: 20px
+                    margin-bottom: 0
+                +sm
+                    margin-bottom: 0
+    &__content-submit
+        margin-top: rem(50px)
+        &_ml
+            margin-left: rem(24px)
+    &__input-file
+        position: relative
+        margin-top: rem(50px)
+        margin-bottom: 0
+        input
+            position: absolute
+            opacity: 0
+            visibility: hidden
+    &__profile
+    &__profile-wrap
+        padding-top: rem(33px)
+        display: flex
+        justify-content: center
+        +md
+            padding-top: 0
+    &__img
+        max-width: rem(387px)
+        img
+            display: block
+            width: 100%
+    &__radio
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        .compain-radio
+            &:not(:last-child)
+                margin-bottom: rem(20px)
+            
+    .compain-textarea
+        margin-top: rem(40px)
+        +md
+            margin-top: rem(20px)
+    // .password-complexity
+    //     position: absolute
+    //     left: 0
+    //     right: 0
+    //     top: 100%
 .settings-title
     font-family: $font-family-montserrat
     text-transform: uppercase
@@ -42,3 +133,22 @@
     text-align: center
     font-weight: 700
     padding: rem(32px 0 61px)
+    margin-bottom: 0
+    +md
+        padding: rem(25px 0)
+    +sm
+        font-size: rem(28px)
+        padding: rem(15px 0)
+
+.info-box
+    font-size: rem(13px)
+    font-weight: 700
+    width: rem(18px)
+    height: rem(18px)
+    border-radius: 50%
+    border: 1px solid $gray-700
+    position: absolute
+    text-align: center
+    right: 0
+    top: 0
+    cursor: pointer

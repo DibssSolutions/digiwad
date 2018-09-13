@@ -27,3 +27,13 @@ PageList:
   ready: 100
 - file: settings-general.html
   ready: 100
+- file: settings-address.html
+  ready: 100
+- file: settings-profile.html
+  ready: 50
+- file: settings-notification.html
+  ready: 50
+- file: settings-password.html
+  ready: 50
+- file: settings-history.html
+  ready: 50

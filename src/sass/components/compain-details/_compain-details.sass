@@ -63,6 +63,10 @@
         &_big
             color: $gray-900
             font-size: rem(18px)
+            +md
+                font-size: rem(16px)
+            +sm
+                font-size: rem(14px)
     &__input
         padding-left: rem(24px)
         border: none
@@ -103,6 +107,8 @@
             font-size: rem(15px)
             color: $gray-700
             margin-top: rem(20px)
+            +md
+                margin-top: rem(10px)
     &.is-validated
         .valid-label
             display: block
@@ -145,14 +151,16 @@
     +md
         margin-left: 0
         max-width: none
+    &_nm
+        margin-left: 0
     .input-group__label
-        padding-left: rem(26px)
+        padding-left: rem(24px)
         +md
             padding-left: rem(24px)
         +sm
             padding-left: rem(15px)
     .compain-input-text
-        padding: rem(17px 28px)
+        padding: rem(17px 24px)
         font-size: rem(20px)
         +md
             font-size: rem(18px)
@@ -168,7 +176,7 @@
         border: none
         color: $gray-900
         font-size: rem(18px)
-        padding: rem(17px 15px 17px 28px)
+        padding: rem(16px 15px 16px 24px)
         // padding-left: rem(32px)
         // padding-right: rem(15px)
         width: 100%
@@ -257,6 +265,11 @@
             box-shadow: none
         &:after
             display: none
+        .filter-option
+            padding-left: rem(24px)
+            +sm
+                padding-left: rem(15px)
+                padding-right: rem(13px)
         &.bs-placeholder>.filter-option
             padding-left: rem(24px)
             color: $gray-700
@@ -274,6 +287,8 @@
         color: #777777
     .dropdown-item
         color: $gray-700
+        padding-top: rem(13px)
+        padding-bottom: rem(13px)
         &.active,
         &:active
             color: $gray-700

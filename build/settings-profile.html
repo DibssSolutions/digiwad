@@ -78,56 +78,44 @@
           <div class="dashboard__btn"> <a href="#" class="btn btn-primary width270">Create a campaign</a> </div>
           <div class="compain-body dashboard-body">
             <div class="tabs"> <button type="button" class="tabs__current">
-                        General
-                    </button>
+                            Address
+                        </button>
               <ul class="tabs__list">
-                <li class="tabs__item is-active"><a href="#" class="tabs__link">General</a></li>
+                <li class="tabs__item "><a href="#" class="tabs__link">General</a></li>
                 <li class="tabs__item "><a href="#" class="tabs__link">Address</a></li>
-                <li class="tabs__item "><a href="#" class="tabs__link">Profile</a></li>
+                <li class="tabs__item is-active"><a href="#" class="tabs__link">Profile</a></li>
                 <li class="tabs__item "><a href="#" class="tabs__link">Notifications</a></li>
                 <li class="tabs__item "><a href="#" class="tabs__link">Change Password</a></li>
                 <li class="tabs__item "><a href="#" class="tabs__link">Hire History</a></li>
               </ul>
               <form class="tabs__content">
-                <h2 class="settings-title">GENERAL</h2>
+                <h2 class="settings-title">Address</h2>
                 <div class="tabs__content-wrap">
                   <div class="row tabs__content-row">
-                    <div class="col-lg tabs__content-col">
-                      <div class="input-group"> <label for="nickname" class="input-group__label input-group__label_big">Display Name</label>
-                        <div class="input-group__wrap"> <input type="text" autocomplete="off" id="nickname" class="form-control input-group__input" aria-describedby="inputGroupPrepend3" placeholder="Razer"> </div>
+                    <div class="col-lg tabs__content-col tabs__content-col_order">
+                      <div class="input-group"> <label for="email" class="input-group__label input-group__label_big">Country</label>
+                        <div class="input-group__wrap"> <select class="js-select form-control compain-select" title="Country">
+                                                    <option value="1">Russia</option>
+                                                    <option value="2">Russia</option>
+                                                    <option value="3">Russia</option>
+                                                </select> </div>
                       </div>
+                      <div class="input-group compain-textarea compain-textarea_nm"> <label for="email" class="input-group__label input-group__label_big">Country</label>
+                        <div class="compain-textarea__field"> <textarea class="compain-textarea__text" id="textarea1" rows="9" placeholder="Campaign Details"></textarea> </div>
+                      </div>
+                      <div class="tabs__content-submit"> <button type="submit" class="btn btn-primary width216 btn-sm btn_rad">Save</button> </div>
                     </div>
                     <div class="col-lg tabs__content-col">
-                      <div class="input-group"> <label for="site" class="input-group__label input-group__label_big">Company Website</label>
-                        <div class="input-group__wrap"> <input type="text" autocomplete="off" id="site" class="form-control input-group__input" aria-describedby="inputGroupPrepend3" placeholder="https://test.com"> </div>
+                      <div class="tabs__profile-wrap">
+                        <div class="tabs__profile">
+                          <div class="tabs__img"><img src="./img/user-logo@2x.jpg" alt="img"></div> <label for="file" class="tabs__input-file">
+                                                    <input type="file" id="file">
+                                                    <span class="btn btn-primary width216 btn-sm btn_rad btn_blue">Upload</span>
+                                                </label> </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="row tabs__content-row">
-                    <div class="col-lg tabs__content-col">
-                      <div class="input-group"> <label for="name" class="input-group__label input-group__label_big">First Name</label>
-                        <div class="input-group__wrap"> <input type="text" autocomplete="off" id="name" class="form-control input-group__input" aria-describedby="inputGroupPrepend3" placeholder="Test 1"> </div>
-                      </div>
-                    </div>
-                    <div class="col-lg tabs__content-col">
-                      <div class="input-group"> <label for="surname" class="input-group__label input-group__label_big">Last Name</label>
-                        <div class="input-group__wrap"> <input type="text" autocomplete="off" id="surname" class="form-control input-group__input" aria-describedby="inputGroupPrepend3" placeholder="Test 2"> </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row tabs__content-row">
-                    <div class="col-lg tabs__content-col">
-                      <div class="input-group"> <label for="phone" class="input-group__label input-group__label_big">Phone</label>
-                        <div class="input-group__wrap"> <input type="text" autocomplete="off" id="phone" class="form-control input-group__input" aria-describedby="inputGroupPrepend3" placeholder="Test"> </div>
-                      </div>
-                    </div>
-                    <div class="col-lg tabs__content-col">
-                      <div class="input-group"> <label for="email" class="input-group__label input-group__label_big">Email</label>
-                        <div class="input-group__wrap"> <input type="text" autocomplete="off" id="email" class="form-control input-group__input" aria-describedby="inputGroupPrepend3" placeholder="Test"> </div> <span for="email" class="input-group__label-bottom input-group__label-bottom_small">Note: Changing this email address will change your login email.</span>                        </div>
                     </div>
                   </div>
                 </div>
-                <div class="tabs__content-submit"> <button type="submit" class="btn btn btn-primary width216 btn-sm btn_rad">Save</button> </div>
               </form>
             </div>
           </div>
