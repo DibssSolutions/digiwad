@@ -1,5 +1,20 @@
 .sm-tabs
-	font-size: 0 
+	font-size: 0
+	&__head
+		padding: rem(25px 58px)
+		border-bottom: 1px solid #D5D5D5
+		margin: rem(0 -53px)
+		+md
+			padding: rem(15px 20px)
+			margin: rem(0 -20px)
+		+sm
+			padding: rem(15px 15px)
+			margin: rem(0 -15px)
+	&__content
+		padding: rem(55px 0)
+		min-height: rem(532px)
+		+sm
+			min-height: auto
 	&__list
 		margin: 0
 	&__current

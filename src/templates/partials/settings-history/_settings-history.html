@@ -6,7 +6,7 @@
             <div class="compain-body dashboard-body">
                     <div class="tabs">
                         <button type="button" class="tabs__current">
-                            Notifications
+                            Hire History
                         </button>
                         <ul class="tabs__list">
                             {% for tab in [
@@ -20,45 +20,41 @@
                                     text: "Profile"
                                 },
                                 {
-                                    text: "Notifications",
-                                    active: true
+                                    text: "Notifications"
                                 },
                                 {
                                     text: "Change Password"
                                 },
                                 {
-                                    text: "Hire History"
+                                    text: "Hire History",
+                                    active: true
                                 }
                             ] %}
                             <li class="tabs__item {% if tab.active %}is-active{% endif %}"><a href="#" class="tabs__link">{{ tab.text }}</a></li>
                             {% endfor %}
                         </ul>
                         <form class="tabs__content">
-                            <h2 class="settings-title">Notification</h2>
+                            <h2 class="settings-title settings-title_low">Hire History</h2>
                             <div class="tabs__content-wrap">
-                                <div class="tabs__radio">
-                                    {% for item in [
-                                        {
-                                            text1: "Never"
-                                        },
-                                        {
-                                            text1: "Immediate"
-                                        },
-                                        {
-                                            text1: "Roll Up"
-                                        }
-                                    ]%}
-                                    <div class="custom-control custom-radio compain-radio compain-radio_info">
-                                        <input type="radio" id="settingsRadio{{ loop.index }}" name="settingsRadio" class="custom-control-input compain-radio__input">
-                                        <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_big compain-radio__label_info" for="settingsRadio{{ loop.index }}">{{ item.text1 }}</label>
-                                        <span class="info-box" title="info-box">
-                                            ?
-                                        </span>
+                                    <!-- begin sm-tabs -->
+                                    <div class="sm-tabs">
+                                        <div class="sm-tabs__head">
+                                            <div class="sm-tabs__current">Discover</div>
+                                            <ul class="sm-tabs__list">
+                                                {% for text in ['Discover','Hired'] %}
+                                                <li class="sm-tabs__item{% if loop.first %} is-active{% endif %}">
+                                                    <a href="#" class="sm-tabs__link">{{ text }}</a>
+                                                </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                        <div class="sm-tabs__content">
+                                            <span class="no-hires">No YouTube Hires Yet...</span>
+                                        </div>
                                     </div>
-                                    {% endfor %}
-                                </div>
+                                    <!-- end sm-tabs -->
                             </div>
-                            <div class="tabs__content-submit tabs__content-submit_ml">
+                            <div class="tabs__content-submit">
                                 <button type="submit" class="btn btn-primary width216 btn-sm btn_rad">Save</button>
                             </div>
                         </form>
