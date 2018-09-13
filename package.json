@@ -57,6 +57,7 @@
     "lint-staged": "^4.0.2",
     "lodash": "^4.3.0",
     "lost": "^7.1.0",
+    "nouislider": "^11.1.0",
     "popper.js": "^1.14.4",
     "postcss-csso": "^2.0.0",
     "require-dir": "^0.3.2",

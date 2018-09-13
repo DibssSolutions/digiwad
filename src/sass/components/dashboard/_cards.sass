@@ -1,28 +1,27 @@
 .cards
 	&__wrap
-		margin: 0 -22px
+		margin: rem(0 -22px)
 		display: flex
 		flex-wrap: wrap
-		width: 100%
 	&__col
-		margin-bottom: 46px
-		padding: 0 22px
+		margin-bottom: rem(46px)
+		padding: rem(0 22px)
 		flex: 0 0 50%
 		max-width: 50%
 .d-card
 	box-shadow: 0 2px 4px rgba(#000000, .16) 
 	&__head
-		padding: 30px 0 19px
+		padding: rem(30px 0 19px)
 		width: 100%
 		display: table
 		table-layout: fixed
 	&__img-wrap
-		padding-left: 30px
+		padding-left: rem(30px)
 		width: 30%
 		vertical-align: top
 		display: table-cell
 	&__content
-		padding-left: 28px
+		padding-left: rem(28px)
 		vertical-align: middle
 		display: table-cell
 	&__img
@@ -32,35 +31,36 @@
 		background-size: cover
 		background-position: 50% 50%
 	&__name
-		margin-bottom: 15px
+		margin-bottom: rem(15px)
 		color: #40B9A6
-		font-size: 20px  
-		font-weight: 700 
+		font-size: rem(20px)  
+		font-weight: rem(700) 
 	&__rating
-		margin-bottom: 15px
+		margin-bottom: rem(15px)
 	&__subject
-		font-size: 16px
-		max-width: 130px
+		font-size: rem(16px)
+		max-width: rem(130px)
 	&__item
-		padding: 14px 30px
+		padding: rem(14px 30px)
 		display: flex
+		flex-wrap: wrap 
 		justify-content: space-between
 		align-items: center
 		border-bottom: 1px solid #D5D5D5 
 	&__label
-		font-size: 16px
+		font-size: rem(16px)
 	&__right
-		padding-left: 15px
+		padding-left: rem(15px)
 	&__size
 		font-weight: 700 
-		font-size: 16px
+		font-size: rem(16px)
 	&__footer
-		padding: 24px 30px 32px
+		padding: rem(24px 30px 32px)
 		text-align: center
 		font-size: 0
 		.btn
 			&:not(:first-child)
-				margin-left: 33px
+				margin-left: rem(33px)
 .rating
 	position: relative
 	font-size: 0
@@ -76,4 +76,4 @@
 		&:hover
 			opacity: 0.7
 		&:not(:first-child)
-			margin-left: 5px
+			margin-left: rem(5px)
