@@ -63,10 +63,10 @@
             color: $gray-900
     &__content
         width: 100%
-        padding: rem(0 53px)
+        padding: rem(0 53px 20px)
         min-height: rem(830px)
         +md
-            padding: rem(0 20px)
+            padding: rem(0 20px 20px)
         +sm
             padding: rem(0 15px 20px)
             min-height: auto
@@ -147,6 +147,8 @@
     +sm
         font-size: rem(28px)
         padding: rem(15px 0)
+    &_low
+        padding-bottom: rem(17px)
 
 .info-box
     font-size: rem(13px)
@@ -160,3 +162,9 @@
     right: 0
     top: 0
     cursor: pointer
+
+.no-hires
+    font-size: rem(30px)
+    font-weight: 700
+    +sm
+        font-size: rem(20px)
