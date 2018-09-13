@@ -399,3 +399,21 @@
     &_readed
         .dialogue-message__check
             color: $primary
+
+.filter-select
+    vertical-align: top
+    display: inline-block
+    &__text
+        position: relative
+        cursor: pointer 
+        user-select: none
+        padding-right: 32px 
+        vertical-align: top
+        display: inline-block
+        &:before
+            position: absolute
+            content: "" 
+            top: 50%
+            right: 0
+            margin-top: -3px
+            +arr(12,6,#191919,b)
