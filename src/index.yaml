@@ -27,17 +27,21 @@ PageList:
   ready: 100
 - file: influencers.html
   ready: 100
+- file: influencers-open-filter-tablet.html
+  ready: 100
+- file: influencers-open-tabs-tablet.html
+  ready: 100
 - file: settings-general.html
   ready: 100
 - file: settings-address.html
   ready: 100
 - file: settings-profile.html
-  ready: 50
+  ready: 100
 - file: settings-notification.html
-  ready: 50
+  ready: 100
 - file: settings-password.html
-  ready: 50
+  ready: 100
 - file: settings-history.html
-  ready: 50
+  ready: 100
 - file: messages.html
-  ready: 50
+  ready: 100

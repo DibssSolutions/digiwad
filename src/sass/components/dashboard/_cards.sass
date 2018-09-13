@@ -3,11 +3,23 @@
 		margin: rem(0 -22px)
 		display: flex
 		flex-wrap: wrap
+		+xl
+			margin: rem(0 -10px)
+		+sm
+			margin: 0
 	&__col
 		margin-bottom: rem(46px)
 		padding: rem(0 22px)
 		flex: 0 0 50%
 		max-width: 50%
+		+xl
+			margin-bottom: rem(20px)
+			padding: rem(0 10px)
+		+sm
+			margin-bottom: rem(15px)
+			padding: 0
+			flex: 0 0 100%
+			max-width: 100%
 .d-card
 	box-shadow: 0 2px 4px rgba(#000000, .16) 
 	&__head
@@ -15,15 +27,22 @@
 		width: 100%
 		display: table
 		table-layout: fixed
+		+sm
+			padding: rem(15px 0 10px)
 	&__img-wrap
 		padding-left: rem(30px)
 		width: 30%
 		vertical-align: top
 		display: table-cell
+		+sm
+			padding-left: rem(15px) 
+			width: rem(115px)
 	&__content
 		padding-left: rem(28px)
 		vertical-align: middle
 		display: table-cell
+		+sm
+			padding-left: rem(15px)
 	&__img
 		width: 100%
 		padding-bottom: 100%
@@ -35,11 +54,18 @@
 		color: #40B9A6
 		font-size: rem(20px)  
 		font-weight: rem(700) 
+		+sm
+			margin-bottom: rem(10px)
+			font-size: rem(18px)  
 	&__rating
 		margin-bottom: rem(15px)
+		+sm
+			margin-bottom: rem(10px)
 	&__subject
 		font-size: rem(16px)
 		max-width: rem(130px)
+	&__list
+		margin: 0
 	&__item
 		padding: rem(14px 30px)
 		display: flex
@@ -47,6 +73,8 @@
 		justify-content: space-between
 		align-items: center
 		border-bottom: 1px solid #D5D5D5 
+		+sm
+			padding: rem(10px 15px) 
 	&__label
 		font-size: rem(16px)
 	&__right
@@ -54,13 +82,16 @@
 	&__size
 		font-weight: 700 
 		font-size: rem(16px)
+		+sm
+			font-size: rem(14px)
 	&__footer
-		padding: rem(24px 30px 32px)
+		padding: rem(26px 0 16px)
 		text-align: center
 		font-size: 0
+		+sm
+			padding: rem(15px 0 8px)
 		.btn
-			&:not(:first-child)
-				margin-left: rem(33px)
+			margin: rem(0 10px 7px)
 .rating
 	position: relative
 	font-size: 0
