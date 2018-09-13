@@ -12,18 +12,20 @@ PageList:
 - file: brand.html
   ready: 100
 - file: dashboard.html
-  ready: 50
+  ready: 100
 - file: channel-selection.html
-  ready: 50
+  ready: 100
 - file: compain-details.html
-  ready: 50
+  ready: 100
 - file: compain-audience.html
-  ready: 50
+  ready: 100
 - file: compain-audience-1.html
-  ready: 50
+  ready: 100
 - file: compain-review.html
-  ready: 50
+  ready: 100
 - file: сampaigns.html
+  ready: 100
+- file: influencers.html
   ready: 100
 - file: settings-general.html
   ready: 100

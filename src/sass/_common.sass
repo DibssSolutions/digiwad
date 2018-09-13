@@ -4,159 +4,166 @@ $blue-chat: #0066AA
 $gray-text: #9095A4
 $red-bright: #FF0000
 $dark-gray: #777777
-    
+	
 body
-    position: relative
+	position: relative
 
 
 .btn-color-white
-    color: $white
+	color: $white
 .btn
-    &:focus
-        outline: none
-        box-shadow: none
-    &_upper
-        text-transform: uppercase
-    &_bold
-        font-weight: 700
-    &_xxl
-        font-size: rem(21px)
-        +sm
-            font-size: rem(18px)
-    &_xl
-        font-size: rem(20px)
-        +r(1439)
-            font-size: rem(16px)
-    &_m
-        font-size: rem(18px)
-    &_xs
-        font-size: rem(14px)
-    &_popup
-        font-size: rem(19px)
-        line-height: 1
-        padding: rem(12px 35px)
-        +sm
-            font-size: rem(16px)
-            padding: rem(10px 25px)
-    &_sm
-        padding: rem(6px 40px)
-        line-height: 1
-    &_blue
-        background-color: #0066AA 
-        border-color: #0066AA 
-        &:hover
-            background-color: darken(#0066AA, 8%) 
-            border-color: darken(#0066AA, 8%) 
-    &_rad
-        border-radius: rem(20px )
-    
+	&:focus
+		outline: none
+		box-shadow: none
+	&_upper
+		text-transform: uppercase
+	&_bold
+		font-weight: 700
+	&_xxl
+		font-size: rem(21px)
+		+sm
+			font-size: rem(18px)
+	&_xl
+		font-size: rem(20px)
+		+r(1439)
+			font-size: rem(16px)
+	&_m
+		font-size: rem(18px)
+	&_xs
+		font-size: rem(14px)
+	&_popup
+		font-size: rem(19px)
+		line-height: 1
+		padding: rem(12px 35px)
+		+sm
+			font-size: rem(16px)
+			padding: rem(10px 25px)
+	&_sm
+		padding: rem(6px 40px)
+		line-height: 1
+	&_blue
+		background-color: #0066AA 
+		border-color: #0066AA 
+		&:hover
+			background-color: darken(#0066AA, 8%) 
+			border-color: darken(#0066AA, 8%) 
+	&_rad
+		border-radius: rem(20px)
 
 .width173
-    width: rem(173px)
-    +r(1439)
-        width: rem(120px)
+	width: rem(173px)
+	+r(1439)
+		width: rem(120px)
 .width192
-    width: rem(192px)
+	width: rem(192px)
 .width197
-    width: rem(197px)
+	width: rem(197px)
 .width212
-    width: rem(212px)
+	width: rem(212px)
 .width216
-    width: rem(216px)
+	width: rem(216px)
 .width270
-    width: rem(270px)
+	width: rem(270px)
 .width309
-    width: rem(309px)
-    +sm
-        width: rem(250px)
+	width: rem(309px)
+	+sm
+		width: rem(250px)
 
 .branded-list
-    &__item
-        position: relative
-        padding-left: rem(36px)
-        font-weight: 300
-        font-size: rem(23px)
-        +r(1439)
-            font-size: rem(18px)
-        +sm
-            font-size: rem(14px)
-        &:not(:last-child)
-            margin-bottom: rem(29px)
-            +sm
-                margin-bottom: rem(15px)
-        span
-            position: absolute
-            left: 0
-            top: 50%
-            transform: translateY(-50%)
-            display: block
-            width: rem(17px)
-            height: rem(17px)
-            overflow: hidden
-            background-color: #fff
-            border-radius: 50%
-            font-size: 0
-            +sm
-                top: rem(1px)
-                transform: none
-        .icon-icon
-            font-size: rem(20px)
-            position: relative
-            top: 50%
-            left: 50%
-            transform: translate(-50%, -50%)
+	&__item
+		position: relative
+		padding-left: rem(36px)
+		font-weight: 300
+		font-size: rem(23px)
+		+r(1439)
+			font-size: rem(18px)
+		+sm
+			font-size: rem(14px)
+		&:not(:last-child)
+			margin-bottom: rem(29px)
+			+sm
+				margin-bottom: rem(15px)
+		span
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			display: block
+			width: rem(17px)
+			height: rem(17px)
+			overflow: hidden
+			background-color: #fff
+			border-radius: 50%
+			font-size: 0
+			+sm
+				top: rem(1px)
+				transform: none
+		.icon-icon
+			font-size: rem(20px)
+			position: relative
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
 
 .social
-    display: flex
-    &__item
-        width: rem(36px)
-        height: rem(36px)
-        border-radius: 50%
-        background-color: $primary
-        display: flex
-        align-items: center
-        justify-content: center
-        font-size: rem(19px)
-        +r(1439)
-            width: rem(22px)
-            height: rem(22px)
-            font-size: rem(14px)
-        &:not(:last-child)
-            margin-right: rem(22px)
-            +r(1439)
-                margin-right: rem(15px)
-        .icon
-            color: $gray-900
+	display: flex
+	&__item
+		width: rem(36px)
+		height: rem(36px)
+		border-radius: 50%
+		background-color: $primary
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: rem(19px)
+		+r(1439)
+			width: rem(22px)
+			height: rem(22px)
+			font-size: rem(14px)
+		&:not(:last-child)
+			margin-right: rem(22px)
+			.social_simple &
+				margin-right: 15px
+			+r(1439)
+				margin-right: rem(15px)
+		.icon
+			color: $gray-900
 
 
 .input-dark
-    background-color: transparent
-    border: none
-    border-bottom: 1px solid $white
-    border-radius: 0
-    resize: none
-    color: $white
-    font-size: rem(18px)
-    padding: rem(13px 0)
-    +placeholder
-        color: $white
-    &:-webkit-autofill,
-    &:-webkit-autofill:hover,
-    &:-webkit-autofill:focus
-    &:-webkit-autofill
-        -webkit-text-fill-color: $white !important
-        background-color: transparent !important
-        box-shadow: inset 0 0 0 1000px $gray-900 !important
-    &:focus
-        background-color: transparent
-        color: $white
-        &::placeholder
-            font-size: 0
+	background-color: transparent
+	border: none
+	border-bottom: 1px solid $white
+	border-radius: 0
+	resize: none
+	color: $white
+	font-size: rem(18px)
+	padding: rem(13px 0)
+	+placeholder
+		color: $white
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus
+	&:-webkit-autofill
+		-webkit-text-fill-color: $white !important
+		background-color: transparent !important
+		box-shadow: inset 0 0 0 1000px $gray-900 !important
+	&:focus
+		background-color: transparent
+		color: $white
+		&::placeholder
+			font-size: 0
 
 .md-hide
-    +md
-        display: none
+	+md
+		display: none
 
 .md-show
-    +md
-        display: block
+	+md
+		display: block
+
+.link
+	border-bottom: 1px solid
+	transition: border-color .3s
+	&:hover
+		text-decoration: none

@@ -1,0 +1,94 @@
+<div class="dashboard">
+    <div class="dashboard__inner inner inner_lg">
+        <div class="dashboard__btn">
+            <a href="#" class="btn btn-primary width270">Create a campaign</a>
+        </div>
+        <div class="dashboard__body dashboard-body">
+            <div class="dashboard__header dashboard-header">
+                <!-- begin sm-tabs -->
+                <div class="sm-tabs">
+                    <div class="sm-tabs__current">Discover</div>
+                    <ul class="sm-tabs__list">
+                        {% for text in ['Discover','Hired'] %}
+                        <li class="sm-tabs__item{% if loop.first %} is-active{% endif %}">
+                            <a href="#" class="sm-tabs__link">{{ text }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <!-- end sm-tabs -->
+            </div>
+            <div class="dashboard__wrapper">
+                <div class="dashboard__wind">
+                    <div class="dashboard__description">Here are some of our over 72,000 Creators. <a href="#" class="link link_green">Create a campaign</a> to start inviting!</div>
+                    <div class="dashboard__cards cards">
+                        <div class="cards__wrap">
+                            {% for i in range(0,6) %}
+                            <div class="cards__col">
+                                <!-- begin d-card -->
+                                <div class="d-card">
+                                    <div class="d-card__head">
+                                        <div class="d-card__img-wrap">
+                                            <div class="d-card__img" style="background-image: url('./img/card-img.png');"></div>
+                                        </div>
+                                        <div class="d-card__content">
+                                            <div class="d-card__name">Arika Sato</div>
+                                            <ul class="d-card__rating rating">
+                                                <li class="rating__item"><img src="./img/star.png" alt="star"></li>
+                                                <li class="rating__item"><img src="./img/star.png" alt="star"></li>
+                                                <li class="rating__item"><img src="./img/star.png" alt="star"></li>
+                                                <li class="rating__item"><img src="./img/star.png" alt="star"></li>
+                                                <li class="rating__item"><img src="./img/star.png" alt="star"></li>
+                                                <input type="range">
+                                            </ul>
+                                            <div class="d-card__subject">Gaming & Apps Unknown</div>
+                                        </div>
+                                    </div>
+                                    <ul class="d-card__list">
+                                        <li class="d-card__item">
+                                            <div class="d-card__label">Channels Offered</div>
+                                            <div class="d-card__right">
+                                                <div class="social social_simple"> 
+                                                    <a href="#" class="social__item">{{ mixins.icon("youtube") }}</a>
+                                                    <a href="#" class="social__item">{{ mixins.icon("facebook") }}</a>
+                                                    <a href="#" class="social__item">{{ mixins.icon("twitter") }}</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="d-card__item">
+                                            <div class="d-card__label">Total Reach</div>
+                                            <div class="d-card__right">
+                                                <div class="d-card__size">19.8K</div>
+                                            </div>
+                                        </li>
+                                        <li class="d-card__item">
+                                            <div class="d-card__label">Audience</div>
+                                            <div class="d-card__right">
+                                                <div class="d-card__size">Male 25-34 (36%)</div>
+                                            </div>
+                                        </li>
+                                        <li class="d-card__item">
+                                            <div class="d-card__label">Audience Country</div>
+                                            <div class="d-card__right">
+                                                <div class="d-card__size">USA (78%)</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="d-card__footer">
+                                        <a href="#" class="btn btn btn-primary width197 btn-sm btn_rad">View Proposals</a>
+                                        <a href="#" class="btn btn btn-primary width197 btn-sm btn_rad btn_blue">Actions</a>
+                                    </div>
+                                </div>
+                                <!-- end d-card -->
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard__sitebar">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
