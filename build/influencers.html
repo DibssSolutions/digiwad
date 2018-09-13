@@ -534,21 +534,246 @@
                 </div>
               </div>
               <div class="dashboard__sitebar">
-                <div class="title-sm">SORT BY</div>
-                <div class="title-sm">CREATORS</div>
-                <!-- begin range-slider -->
-                <div class="range-slider">
-                  <div class="js-range-slider range-slider" data-range-max="48900" data-range-min="199" data-range-start="199" data-range-end="48900"></div>
-                  <div class="js-range-min"></div>
-                  <div class="js-range-max"></div>
+                <div class="dashboard__group">
+                  <div class="title-sm">SORT BY</div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="sortRadio1" name="sortRadio" class="custom-control-input compain-radio__input" checked>
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="sortRadio1">Most Hired</label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="sortRadio2" name="sortRadio" class="custom-control-input compain-radio__input">
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="sortRadio2">Best Cost Per Follower</label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="sortRadio3" name="sortRadio" class="custom-control-input compain-radio__input">
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="sortRadio3">Best Cost Per Engagement</label>
+                    </div>
+                  </div>
                 </div>
-                <!-- end range-slider -->
-                <div class="title-sm">REACH</div>
-                <div class="title-sm">PRIMARY AUDIENCE GENDER</div>
-                <div class="title-sm">PRIMARY AUDIENCE AGE</div>
-                <div class="title-sm">AUDIENCE COUNTRY</div>
-                <div class="title-sm">CREATOR'S COUNTRY</div>
-                <div class="title-sm">CHANNEL CATEGORY</div>
+                <div class="dashboard__group">
+                  <div class="title-sm">CREATORS</div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="creators1" name="creators" class="custom-control-input compain-radio__input" checked>
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="creators1">Most Hired</label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="creators2" name="creators" class="custom-control-input compain-radio__input">
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="creators2">Best Cost Per Follower</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="dashboard__group">
+                  <div class="title-sm">REACH</div>
+                  <!-- begin range-slider -->
+                  <div class="range-slider">
+                    <div class="js-range-slider range-slider__input" data-range-max="48900" data-range-min="199" data-range-start="199" data-range-end="48900"></div>
+                    <div class="range-slider__diapason">
+                      <div class="range-slider__min">
+                        <span class="range-slider__numb js-range-min"></span>K </div>
+                      <div class="range-slider__hyphen">-</div>
+                      <div class="range-slider__max">
+                        <span class="range-slider__numb js-range-max"></span>M </div>
+                    </div>
+                  </div>
+                  <!-- end range-slider -->
+                </div>
+                <div class="dashboard__group">
+                  <div class="title-sm">PRIMARY AUDIENCE GENDER</div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="audience1" name="audience" class="custom-control-input compain-radio__input" checked>
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="audience1">Any Gender</label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="audience2" name="audience" class="custom-control-input compain-radio__input">
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="audience2">Female</label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="audience3" name="audience" class="custom-control-input compain-radio__input">
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="audience3">Male</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="dashboard__group">
+                  <div class="title-sm">PRIMARY AUDIENCE AGE</div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="age1" name="age" class="custom-control-input compain-radio__input">
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="age1">Any Age</label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="age2" name="age" class="custom-control-input compain-radio__input">
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="age2">13 - 17</label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="age3" name="age" class="custom-control-input compain-radio__input">
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="age3">18 - 24</label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="age4" name="age" class="custom-control-input compain-radio__input">
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="age4">25 - 34</label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="age5" name="age" class="custom-control-input compain-radio__input">
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="age5">35 - 44</label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="age6" name="age" class="custom-control-input compain-radio__input">
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="age6">45 - 54</label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="age7" name="age" class="custom-control-input compain-radio__input">
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="age7">55 - 64</label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="custom-control custom-radio compain-radio">
+                      <input type="radio" id="age8" name="age" class="custom-control-input compain-radio__input">
+                      <label class="custom-control-label compain-radio__label compain-radio__label_transparent compain-radio__label_inconsolata" for="age8">65+</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="dashboard__group">
+                  <div class="title-sm">AUDIENCE COUNTRY</div>
+                  <div class="input-group">
+                    <div class="input-group__wrap">
+                      <select class="js-select form-control compain-select" title="All">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="dashboard__group">
+                  <div class="title-sm">CREATOR'S COUNTRY</div>
+                  <div class="input-group">
+                    <div class="input-group__wrap">
+                      <select class="js-select form-control compain-select" title="All">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="dashboard__group">
+                  <div class="title-sm">CHANNEL CATEGORY</div>
+                  <div class="dashboard__field">
+                    <div class="form-check form-check_green form-check_simple">
+                      <input name="floor" class="form-check-input" type="checkbox" id="chanel1" checked>
+                      <label class="form-check-label compain-check-label" for="chanel1"> Beauty &amp; Fashion <span class="compain-check-icon">
+                          <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                              <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
+                                <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
+                              </g>
+                            </g>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="form-check form-check_green form-check_simple">
+                      <input name="floor" class="form-check-input" type="checkbox" id="chanel2">
+                      <label class="form-check-label compain-check-label" for="chanel2"> Health &amp; Fitness <span class="compain-check-icon">
+                          <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                              <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
+                                <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
+                              </g>
+                            </g>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="form-check form-check_green form-check_simple">
+                      <input name="floor" class="form-check-input" type="checkbox" id="chanel3">
+                      <label class="form-check-label compain-check-label" for="chanel3"> Gaming &amp; Apps <span class="compain-check-icon">
+                          <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                              <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
+                                <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
+                              </g>
+                            </g>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="form-check form-check_green form-check_simple">
+                      <input name="floor" class="form-check-input" type="checkbox" id="chanel4">
+                      <label class="form-check-label compain-check-label" for="chanel4"> Tech <span class="compain-check-icon">
+                          <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                              <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
+                                <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
+                              </g>
+                            </g>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="form-check form-check_green form-check_simple">
+                      <input name="floor" class="form-check-input" type="checkbox" id="chanel5">
+                      <label class="form-check-label compain-check-label" for="chanel5"> Pets <span class="compain-check-icon">
+                          <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                              <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
+                                <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
+                              </g>
+                            </g>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="dashboard__field">
+                    <div class="form-check form-check_green form-check_simple">
+                      <input name="floor" class="form-check-input" type="checkbox" id="chanel6">
+                      <label class="form-check-label compain-check-label" for="chanel6"> Other <span class="compain-check-icon">
+                          <svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                              <g transform="translate(1.000000, 1.000000)" stroke="#979797" stroke-width="1.5">
+                                <polyline points="0.0601204267 5.12349333 3.37336547 8.41358327 11.760971 0.061742759"></polyline>
+                              </g>
+                            </g>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -121,6 +121,8 @@
     font-size: rem(20px)
     font-weight: 500
     font-family: $font-family-montserrat
+    .form-check_simple &
+        font-weight: 400 
     +r(1439)
         font-size: rem(18px)
     +sm
@@ -136,28 +138,50 @@
         border: 2px solid $gray-200
         +r(1439)
             top: rem(1px)
+.form-check
+    position: relative
+    padding-left: 0
+    input
+        position: absolute
+        visibility: hidden
+.form-check-input
+    &:checked 
+        & ~ .form-check-label 
+            &:before
+                .form-check_green &
+                    border-color: #40B9A6 
+            .compain-check-icon
+                display: block
 .compain-check-icon
     position: absolute
     top: rem(6px)
     left: rem(3px)
     font-size: rem(11px)
     color: $gray-200
+    display: none
     +r(1439)
         top: rem(4px)
     .icon
         width: rem(14px)
         height: rem(11px)
+    svg g > g
+        .form-check_green &
+            stroke: #40B9A6 
+            stroke-width: 2.5px
 
 
 .compain-radio
+    line-height: 1.25
     display: inline-block
     &__input
         &:checked~.compain-radio__label:before
             border-color: $dark-gray
             background-color: $primary
     &__label
-        padding-left: rem(35px)
+        padding-left: rem(33px)
         font-size: rem(16px)
+        cursor: pointer
+        user-select: none
         font-family: $font-family-montserrat
         width: 100%
         &:before
@@ -173,6 +197,7 @@
         &_transparent
             &:before
                 background-color: transparent
+                border-color: #717171 
         &_big
             font-size: rem(18px)
         &_inconsolata
