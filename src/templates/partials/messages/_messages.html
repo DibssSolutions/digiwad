@@ -5,7 +5,7 @@
         </div>
         <div class="dashboard__body dashboard-body">
             <div class="messages-chat">
-                <div class="messages-contacts">
+                <div class="messages-contacts md-hide">
                     <div class="messages-contacts__head">
                         <div class="filter-select">
                             <div class="filter-select__text">Filter by</div>
@@ -13,20 +13,176 @@
                     </div>
                     <div class="messages-contacts__body">
                         <div class="messages-search">
-                            <input type="text" class="messages-search__input" placeholder="Find people and conversations">
+                            <div class="search-bar">
+                                <buttom class="search-bar__icon">{{ mixins.icon("search") }}</buttom>
+                                <input type="text" class="search-bar__input" placeholder="Find people and conversations">
+                            </div>
                             <button type="button" class="add-new">+</button>
                         </div>
                         <ul class="contacts-list">
-                            <li class="contact-item"></li>
+                            {% for item in [
+                                {
+                                    img: "ghost@2x.jpg",
+                                    active: true,
+                                    online: true
+                                },
+                                {
+                                    img: "ghost@2x.jpg"
+                                },
+                                {
+                                    img: "ghost@2x.jpg"
+                                }
+                            ] %}
+                            <li class="contact-item {% if item.active %}is-active{% endif %}">
+                                <a href="#" class="contact-item__link">
+                                    <div class="contact-item__avatar">
+                                        <div class="contact-item__img">
+                                            <img src="./img/{{ item.img }}" alt="avatar">
+                                        </div>
+                                        <div class="online-indicator{% if item.online %} online-indicator_online{% endif %} online-indicator_big"></div>
+                                    </div>
+                                    <div class="contact-item__details">
+                                        <div class="contact-item__info">
+                                            <div class="contact-item__name">Digibot</div>
+                                            <div class="contact-item__call">Connecting Call</div>
+                                            <div class="contact-item__status">Online</div>
+                                        </div>
+                                        <div class="contact-item__time">
+                                            <div class="chat-dots">
+                                                <span class="chat-dot"></span>
+                                                <span class="chat-dot"></span>
+                                                <span class="chat-dot"></span>
+                                            </div>
+                                            <span>7:47 PM</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
                 <div class="messages-dialogue">
                     <div class="messages-dialogue__head">
-
+                        <div class="chat-switcher md-show">
+                            <button type="button" class="chat-switcher__btn">{{ mixins.icon("arrow-left") }} back to list</button>
+                        </div>
+                        <div class="search-bar search-bar_bg">
+                            <buttom class="search-bar__icon">{{ mixins.icon("search") }}</buttom>
+                            <input type="text" class="search-bar__input" placeholder="Search">
+                        </div>
+                        <div class="interlocutor">
+                            <div class="interlocutor__img"> <img src="./img/ghost@2x.jpg" alt="avatar"> </div>
+                            <div class="interlocutor__name"> DigiBot </div>
+                            <div class="online-indicator online-indicator_online online-indicator_medium interlocutor__indicator"> </div>
+                        </div>
                     </div>
                     <div class="messages-dialogue__body">
-                        
+                        <div class="message-wrap">
+                            {% for item in [
+                                {
+                                    img: "ghost@2x.jpg",
+                                    author: "Digibot",
+                                    time: "Yesterday 8:20 PM",
+                                    text: "It was delicious!",
+                                    inbox: true,
+                                    readed: true
+                                },
+                                {
+                                    img: "avatar.jpg",
+                                    author: "Razer",
+                                    time: "7:46 PM",
+                                    text: "I did, our whole team rubbed it allll over their bread.",
+                                    inbox: false,
+                                    readed: true
+                                },
+                                {
+                                    img: "ghost@2x.jpg",
+                                    author: "Digibot",
+                                    time: "7:49 PM",
+                                    text: "I did, our whole team rubbed it allll over their bread.",
+                                    inbox: true,
+                                    readed: true
+                                },
+                                {
+                                    img: "ghost@2x.jpg",
+                                    author: "Digibot",
+                                    time: "7:49 PM",
+                                    text: "It was delicious!",
+                                    inbox: true,
+                                    readed: true,
+                                    sameAuthor: true
+                                },
+                                {
+                                    img: "avatar.jpg",
+                                    author: "Razer",
+                                    time: "7:50 PM",
+                                    text: "I did, our whole team rubbed it allll over their bread.",
+                                    inbox: false,
+                                    readed: false
+                                }
+                            ] %}
+                                <div class="message{% if item.inbox %} message_inbox{% endif %}{% if item.readed %} message_readed{% endif %}">
+                                    {% if not item.sameAuthor %}
+                                    <div class="message__row">
+                                        <div class="message__col-1">
+                                        </div>
+                                        <div class="message__col">
+                                            <div class="message__details">
+                                                <span class="message__author">
+                                                    {{ item.author }}</span>, 
+                                                <span class="message__time">{{ item.time }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    <div class="message__row">
+                                        <div class="message__col-1">
+                                            {% if not item.sameAuthor %}
+                                            <div class="message__img">
+                                                <img src="./img/{{ item.img }}" alt="avatar">
+                                                <div class="online-indicator online-indicator_online message__indicator"></div>
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                        <div class="message__col">
+                                            <span class="message__text">
+                                                {{ item.text }}
+                                                <span class="message__check">
+                                                    {{ mixins.icon("check") }}
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="typing is-typing">
+                            <span class="typing__text">
+                                Digibot is typing
+                            </span>
+                            <span class="dots-animated">
+                                <span class="dots-animated__dot dots-animated__dot_1"></span>
+                                <span class="dots-animated__dot dots-animated__dot_2"></span>
+                                <span class="dots-animated__dot dots-animated__dot_3"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="messages-dialogue__footer">
+                        <div class="message-enter">
+                            <div class="message-enter__text">
+                                    <textarea autocomplete="off" class="form-control message-enter__input" placeholder="Message Digibot"></textarea>
+                            </div>
+                            <div class="message-enter__btns">
+                                <button type="submit" class="message-enter__submit">
+                                    {{ mixins.icon("send") }}
+                                </button>
+                                <div class="message-enter__divider"></div>
+                                <button type="button" class="message-enter__smileys">
+                                    {{ mixins.icon("emojis") }}
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
