@@ -1,0 +1,127 @@
+.messages-contacts
+    background-color: $gray-100
+    border: 1px solid $gray-600
+    &__head
+        padding: rem(26px 58px)
+        border-bottom: 1px solid $gray-200
+    &__body
+
+.messages-search
+    padding: rem(22px 75px 22px 58px)
+    background-color: $gray-400
+    position: relative
+    .add-new
+        position: absolute
+        top: 50%
+        right: rem(34px)
+        transform: translateY(-50%)
+.search-bar
+    display: flex
+    align-items: center
+    &__icon
+        color: $gray-text
+        margin-right: rem(14px)
+    &__input
+        width: 100%
+        background-color: transparent
+        +placeholder
+            font-size: rem(12px)
+            color: #B6B9C3
+    &_bg
+        padding: rem(13px 10px 11px 14px)
+        background-color: $white
+        box-shadow: 0 2px 4px rgba(#000,.06)
+        
+.add-new
+    background-color: $blue-chat
+    border-radius: 50%
+    color: $white
+    width: rem(34px)
+    height: rem(34px)
+    position: relative
+    padding-bottom: rem(2px)
+    &:after
+        content: ""
+        position: absolute
+        top: rem(-7px)
+        left: rem(-7px)
+        right: rem(-7px)
+        bottom: rem(-7px)
+        background-color: rgba(#8472FC, .06)
+        border-radius: 50%
+        
+.contacts-list
+    padding: rem(37px 0)
+    margin-bottom: 0
+    border-top: 1px solid $gray-200
+
+.contact-item
+    border-top: 1px solid $gray-200
+    border-bottom: 1px solid $gray-200
+    &:not(:last-child)
+        margin-bottom: rem(6px)
+    &__link
+        display: flex
+        padding: rem(19px 40px 16px 60px)
+        color: $gray-700
+        +xl
+            padding: rem(19px 30px 16px)
+        &:hover
+            color: $gray-700
+            text-decoration: none
+    &__avatar
+        position: relative
+        margin-right: rem(17px)
+        .online-indicator
+            right: 0
+            bottom: rem(1px)
+    &__img
+        max-width: rem(60px)
+        max-height: rem(60px)
+        width: 100%
+        border-radius: 50%
+        overflow: hidden
+        img
+            display: block
+            width: 100%
+            object-fit: cover
+            object-position: 50% 50%
+    &__details
+        position: relative
+        width: 100%
+        font-size: rem(12px)
+        color: $gray-700
+        display: flex
+    &__info
+        display: flex
+        // flex-wrap: wrap
+        flex-direction: column
+        justify-content: space-around
+    &__time
+        position: absolute
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        .chat-dots
+            margin-bottom: rem(8px)
+    &.is-active
+        border: none
+        border-left: 5px solid $primary
+        .contact-item__link
+            padding-left: rem(55px)
+            +xl
+                padding-left: rem(25px)
+
+.chat-dots
+    display: flex
+.chat-dot
+    display: block
+    width: rem(5px)
+    height: rem(5px)
+    border-radius: 50%
+    background-color: $gray-700
+    &:not(:last-child)
+        margin-right: rem(3px)

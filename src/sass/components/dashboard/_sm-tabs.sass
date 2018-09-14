@@ -5,17 +5,28 @@
 		padding: rem(25px 58px)
 		border-bottom: 1px solid #D5D5D5
 		margin: rem(0 -53px)
+		+xl
+			padding: rem(20px 30px)
 		+md
-			padding: rem(15px 20px)
+			padding: rem(15px 30px)
 			margin: rem(0 -20px)
 		+sm
-			padding: rem(15px 15px)
+			padding: rem(15px 30px 15px 15px)
 			margin: rem(0 -15px)
+		&_solo
+			margin: 0
+			+md
+				margin: 0
+			+sm
+				margin: 0
 	&__content
 		padding: rem(55px 0)
 		min-height: rem(532px)
 		+sm
 			min-height: auto
+			padding-top: rem(25px)
+		&_solo
+			padding: rem(55px 15px)
 	&__list
 		margin: 0
 		+md
@@ -58,6 +69,8 @@
 			display: block
 		&:not(:first-child)
 			margin-left: rem(70px)
+			+xl
+				margin-left: rem(35px)
 			+md
 				margin-left: 0
 				border-top: 1px solid #d5d5d5 
