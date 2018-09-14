@@ -29,21 +29,78 @@
         display: table
         table-layout: fixed
         width: 100%
+        +md
+            display: flex
+            flex-direction: column
     &__wind
         padding: rem(38px 70px 70px 50px)
         vertical-align: top
         display: table-cell
+        +xl
+            padding: rem(38px 20px 30px)
+        +md
+            padding: rem(26px 15px)
+            order: 2
+            display: block
     &__description
         font-size: rem(22px)
         line-height: 1.45
+        +sm
+            font-size: rem(18px)
         &:not(:last-child)
-            margin-bottom: 38px
+            margin-bottom: rem(38px)
+            +md
+                margin-bottom: rem(20px)
     &__sitebar
         padding: rem(36px 70px 70px 36px) 
         border-left: 1px solid #D5D5D5 
         width: rem(453px) 
         vertical-align: top
         display: table-cell
+        +xl
+            width: rem(320px) 
+            padding: rem(36px 20px 70px) 
+        +md
+            padding: rem(30px 15px 0)
+            border-left: none 
+            width: 100%
+    &__toggle
+        display: none
+        +md
+            display: block
+    &__sitebar-out
+        +md
+            display: none
+        .dashboard__sitebar.is-open &
+            +md
+                display: block
+    &__in
+        +md
+            padding: rem(30px 0) 
+            order: 1
+            display: flex
+            flex-wrap: wrap
+    &__group
+        +md
+            flex: 0 0 50%
+            max-width: 50%
+        &:nth-of-type(2n+1)
+            +md
+                padding-right: rem(30px)
+            +xs
+                padding-right: 0
+        +xs
+            flex: 0 0 100%
+            max-width: 100%
+        &:not(:last-child)
+            margin-bottom: rem(45px) 
+            +xl
+                margin-bottom: rem(30px) 
+    &__field
+        &:not(:last-child)
+            margin-bottom: rem(13px) 
+            +xl
+                margin-bottom: rem(6px) 
 
 .chat-switcher
     display: none
@@ -83,7 +140,7 @@
     +md
         padding: rem(15px 20px)
     +sm
-        padding: rem(15px 10px)
+        padding: rem(15px)
 
 .chat
     font-size: rem(17px)

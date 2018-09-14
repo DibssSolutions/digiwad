@@ -14,8 +14,8 @@ if (sliders) {
     let min = $(container).parent().find('.js-range-min');
     let max = $(container).parent().find('.js-range-max');
    	container.noUiSlider.on('update', function( values, handle ) {
-    	min.text(values[0]);
-    	max.text(values[1]);
+    	min.text(Math.round(values[0]));
+    	max.text(Math.round(values[1]));
     });
   }
 }
