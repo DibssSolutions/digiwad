@@ -179,3 +179,33 @@
         transform: translateY(-60%)
     100%
         transform: translateY(0)
+
+.message-day
+    position: relative
+    text-align: center
+    z-index: 1
+    vertical-align: middle
+    line-height: 1.3
+    font-size: 0
+    margin: rem(20px 0 37px)
+    &:after
+        position: absolute
+        content: ""
+        left: rem(-42px)
+        right: rem(-80px)
+        top: rem(10px)
+        height: rem(1px)
+        background-color: $gray-400
+        z-index: -1
+        +md
+            left: rem(-40px)
+            right: rem(-40px)
+        +sm
+            left: rem(-15px)
+            right: rem(-15px)
+    &__text
+        display: inline-block
+        color: #B6B9C3
+        background-color: #fcfcfc
+        padding: rem(0 33px 0 26px)
+        font-size: rem(14px)
